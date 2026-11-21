@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-02",
+  "scope": "data/raw/gov24 파일 해시가 _collection.json과 다른 원인 확인 (원본 수정 없음)",
+  "files": {
+    "gov24_serviceList.csv": {"bytes_now": 12563633, "bytes_logged": 12633115, "sha256_match": false},
+    "gov24_serviceDetail.csv": {"bytes_now": 14450191, "bytes_logged": 14559830, "sha256_match": false},
+    "gov24_supportConditions.csv": {"bytes_now": 1385863, "bytes_logged": 1385863, "sha256_match": true}
+  },
+  "checks": [
+    "현재 세 파일 모두 줄바꿈이 LF뿐이고 CR이 0개다. 행 구분은 LF(10,943줄 = 헤더 + 10,942행).",
+    "목록: 셀 안 줄바꿈 69,528개, 바이트 차이 69,482. 상세: 셀 안 줄바꿈 109,695개, 바이트 차이 109,639. 지원조건: 셀 안 줄바꿈 0개, 차이 0.",
+    "2026-10-31 21:52 원자료로 만든 data/processed/gov24_merged.csv에는 셀 안 CRLF가 남아 있다(91,439개).",
+    "목록 21개 컬럼: 현재 원자료와 gov24_merged.csv의 차이 셀 12,556개, 셀 안 줄바꿈(CRLF/CR→LF)을 맞추면 0개.",
+    "상세: gov24_merged.csv에 들어간 7개 컬럼(서비스목적, 구비서류, 문의처, 온라인신청사이트URL, 법령, 자치법규, 행정규칙) 차이 셀 4,458개, 줄바꿈을 맞추면 0개. 나머지 13개 컬럼은 비교 대상이 없어 바이트 수로만 확인.",
+    "gov24_merged.csv의 원래 문자열로 목록 파일을 다시 쓰면(pandas to_csv, utf-8-sig, lineterminator LF) SHA-256이 수집 로그와 정확히 일치한다. 재구성 파일은 저장소 밖 임시 폴더에만 만들었다.",
+    "세 파일·README·_collection.json의 수정 시각이 모두 2026-11-02 13:10:03(KST)으로 같다. 파일들은 Git에 커밋된 적이 없다."
+  ],
+  "conclusion": "값 변경이 아니라 수집 뒤 셀 안 줄바꿈이 CRLF/CR에서 LF로 바뀐 것이다. 목록 파일은 재구성으로 확인했고, 상세 파일은 비교 가능한 7개 컬럼과 바이트 수로 확인했다(13개 컬럼은 간접 확인). 2026-11-02 13:10 전후의 폴더 이동·복사 과정에서 바뀐 것으로 보이며, 구체적인 도구는 확인하지 못했다.",
+  "impact": "STEP 00 정제(clean_text)가 \\r을 줄바꿈으로 바꾸므로 분석 값에는 영향이 없다. 수집 로그 해시로는 현재 파일을 검증할 수 없다.",
+  "action": "원본은 덮어쓰지 않았다. 현재 파일의 해시는 logs/validation/raw_hashes_step00.json에 기록되어 이후 불변 검사의 기준이 된다. 수집 로그를 다시 쓸지(재수집 또는 해시 갱신)는 수집 담당자가 정한다."
+}

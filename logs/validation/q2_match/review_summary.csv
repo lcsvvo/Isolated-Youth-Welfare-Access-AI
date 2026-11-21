@@ -1,0 +1,5 @@
+﻿tier,n_items,n_judged,n_same,n_diff,n_unknown,n_unresolved,n_alt_found,same_share,diff_share,unknown_share,same_share_excl_unknown,status
+A,15,0,0,0,0,0,0,,,,,미완료
+B,15,0,0,0,0,0,0,,,,,미완료
+C,27,0,0,0,0,0,0,,,,,미완료
+U,15,0,0,0,0,0,0,,,,,미완료

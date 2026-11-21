@@ -1,0 +1,18 @@
+﻿원래 어떻게 달랐는지,합의안
+23 · R3 동일 / R1 다름,다름
+44 · R1 다름 / R4 동일,다름
+57 · R1 다름 / R4 동일,다름
+83 · R4 동일 / R1 판단불가,다름
+87 · R2 동일 / R1 판단불가,동일
+117 · R4 동일 / R1 판단불가,판단불가
+G-age-gov-04 · R2 부분 / R3 명시,부분
+G-income-ssis-03 · R3 명시 / R4 부분,미명시
+G-residence-ssis-01 · R4 미명시 / R3 명시,미명시
+G-channel-ssis-01 · R3 부분 / R4 명시,명시
+G-channel-ssis-04 · R3 판단불가 / R1 미명시,미명시
+G-channel-gov-03 · R1 미명시 / R2 명시,미명시
+G-channel-gov-08 · R4 부분 / R2 명시,명시
+G-period-gov-08 · R2 명시 / R3 미명시,명시
+G-documents-ssis-01 · R4 미명시 / R2 부분,부분
+G-contact-ssis-08 · R2 부분 / R3 미명시,부분
+G-contact-gov-04 · R1 미명시 / R2 부분,부분

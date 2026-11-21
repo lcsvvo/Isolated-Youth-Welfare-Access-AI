@@ -1,0 +1,4 @@
+﻿item,side,scope,rule_id,n_units,n_explicit,n_partial,n_not_explicit,n_meta_na,n_meta_undecidable,note
+period,gov,all,gov_deadline_default,655,655,0,0,0,0,"AB_nonshared 쌍. 명시 단위만 기본값 제외 민감도 대상. 해당없음, 판단불가는 원래 분모에서 빠짐"
+documents,gov,all,gov_docs_ambiguous,226,0,0,0,0,226,"AB_nonshared 쌍. 명시 단위만 기본값 제외 민감도 대상. 해당없음, 판단불가는 원래 분모에서 빠짐"
+documents,gov,all,gov_docs_na_consistent,101,0,0,0,101,0,"AB_nonshared 쌍. 명시 단위만 기본값 제외 민감도 대상. 해당없음, 판단불가는 원래 분모에서 빠짐"

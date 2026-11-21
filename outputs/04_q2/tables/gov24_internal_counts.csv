@@ -1,0 +1,10 @@
+﻿column,value,n_pairs,n_gov_services,scope
+elig_income_check,구간 경계,16,15,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_income_check,불일치,14,14,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_income_check,비교 불가,1995,1828,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_income_check,일치,190,179,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_income_conflict,False,2201,2022,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_income_conflict,True,14,14,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_age_text_differs,False,2132,1958,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_age_text_differs,True,83,78,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개
+elig_age_conflict,False,2215,2036,보조금24 내부(JA 구조화 조건 대 본문) 불일치: 플랫폼 간 차이와 별개

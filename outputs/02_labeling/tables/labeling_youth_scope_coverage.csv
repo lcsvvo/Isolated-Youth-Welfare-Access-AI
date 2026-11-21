@@ -1,0 +1,13 @@
+﻿youth_scope,youth_scope_basis,N_population,n_key,n_S,n_P,n_J
+A,age_band,17,0.0,0.0,0.0,0.0
+A,name_text,274,34.0,6.0,6.0,22.0
+B,age_overlap,395,43.0,28.0,9.0,6.0
+B,tag_only,829,78.0,43.0,16.0,23.0
+B,target_text_mention,15,4.0,2.0,1.0,1.0
+B,text_mention,8,0.0,0.0,0.0,0.0
+C,age_excludes,285,16.0,6.0,4.0,6.0
+U,age_may_refer_to_dependent,305,27.0,12.0,6.0,9.0
+U,age_partial,428,14.0,6.0,5.0,3.0
+U,conflict,56,5.0,2.0,1.0,2.0
+U,no_evidence,1390,76.0,37.0,14.0,28.0
+U,tag_non_youth,1286,55.0,18.0,17.0,20.0

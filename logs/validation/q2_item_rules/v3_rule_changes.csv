@@ -1,0 +1,18 @@
+﻿rule_id,change,reason,pilot_sample_ids
+gov_docs_na_consistent,보조금24 구비서류 '해당없음/없음'이고 신청 없는 서비스(분류·기한·본문 신청 불필요)이면 meta 해당없음,조정 요청(파일럿 전 반영): 필드값과 서비스 성격이 일치하는 경우를 분리,
+gov_docs_field_contradicted,"구비서류 '해당없음/없음'인데 apply·target 본문에 서류가 있으면 필드값을 무시하고 본문 수준 사용, 증거에 필드값 기록",조정 요청(파일럿 전 반영): 필드 기본값 오입력 가능성,
+gov_docs_ambiguous,위 두 경우가 아니면 meta 판단불가 유지,조정 요청(파일럿 전 반영),
+gov_deadline_contradicted,신청기한 '상시신청'이어도 apply 본문에 신청 기간(날짜·월·공고 시)이 있으면 본문 수준 사용. 아니면 gov_deadline_default 유지,조정 요청(파일럿 전 반영): 시스템 기본값 가능성,
+gov_deadline_partial,신청기한이 별도 공고·기관별 상이·시군구에 따라 다름 문구이면 명시가 아니라 부분,코드북 period 부분 사례와 일치시키기 위해 gov_deadline_text(명시) 일반 규칙의 예외로 둠(파일럿 전 반영),
+period_not_needed/documents_not_needed,신청 불필요 문구가 있어도 같은 본문에 누락자 등 별도 신청 경로가 있으면 해당없음 보류,직권 지급+누락 시 신청 문구(참전명예수당 등)를 신청 없는 서비스로 오분류 방지(파일럿 전 반영),
+channel_method_label,"'방문 : ○○', '온라인 : 정부24' 같은 방법 라벨 절을 신청 방법으로 인정",신청 단어가 없는 방법 라벨 줄을 놓침,P-channel-gov-064
+channel_bare_route,신청방법 필드의 짧은 절(50자 이하)에 방법·장소만 있고 문의·제공·지급 등 단어가 없으면 명시,"신청 행위어 없이 '방문 및 전화', '읍면동 주민센터에 방문'만 있는 신청방법 필드를 놓침",P-channel-gov-068;P-channel-gov-071
+ACT(예약),신청 행위어에 예약 추가,'이용 예약'을 신청 행위로 보는 판정과 일치(경계 사례),P-channel-gov-065
+PLACE(의료원·조리원 등),장소 어휘에 의료원·조리원·조합·위원회·본부 추가,'삼척의료원 ... 사전예약 신청'에서 기관명 누락,P-channel-gov-070
+documents_named(sticky context),서류 문맥 절 뒤 6개 절은 목록으로 보고 서류명을 인정,'증빙자료 첨부' 아래 줄에 나열된 서류명(재학증명서 등) 누락,P-documents-gov-111
+income_explicit(소득 기준 : 없음),'소득 기준 : 없음' 등 콜론 표기를 소득 무관(명시)으로 인정,콜론이 있어 소득 기준 부분으로 오분류,P-income-gov-028
+income_explicit(보험료 이하),'보험료 ... 이하/미만' 패턴 추가(건강보험료 단어 없이 '보험료 부과금액이 최저 보험료 이하'),수치 기준 보험료 조건 누락,P-income-ssis-022
+res_strong/res_kwan/res_region,"'주민등록 주소지가 ○○군', '주소지를 ○○에 둔', '주소를 계속 두', '도내·시내·군내 거주' 패턴 추가",지역이 명시되었는데 부분으로 분류,P-residence-ssis-040;P-residence-ssis-043;P-residence-gov-046;P-residence-gov-049
+res_strong(주민등록상 나이),'주민등록상 나이·연령·생년' 은 거주 요건에서 제외,연령 표기를 거주로 오분류,P-residence-gov-051
+res_generic(함께 거주),'○○이 함께 거주하는 세대' 를 가구 형태로 보고 제외,가구 형태를 거주 요건으로 오분류,P-residence-gov-052
+contact_office_inquiry,상담 제거: '주민센터 방문하여 상담 및 신청' 은 연락처 아님,신청 시 상담을 문의처로 오분류,P-contact-ssis-116;P-contact-ssis-119

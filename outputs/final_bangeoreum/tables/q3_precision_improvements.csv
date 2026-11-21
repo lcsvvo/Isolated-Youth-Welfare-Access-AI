@@ -1,0 +1,4 @@
+﻿measure,comparison,n_pairs,mean_a,mean_b,mean_diff,n_pos,n_neg,n_zero,ci95_lo,ci95_hi,sign_test_p,arm_a,arm_b
+precision_at_k,검색 결합: RRF - BM25,32,0.0875,0.21250000000000002,0.125,17,4,11,0.05625,0.2,0.007197380065917969,bm25,rrf
+precision_at_k,규칙 효과: 규칙(Q1 0점) - RRF,32,0.21250000000000002,0.23124999999999998,0.018750000000000003,5,2,25,-0.012500000000000004,0.05,0.453125,rrf,rules_q1off
+precision_at_k,Q1 가점 효과: +1점 - 0점,32,0.23124999999999998,0.23124999999999998,0.0,0,0,32,0.0,0.0,,rules_q1off,recommendation

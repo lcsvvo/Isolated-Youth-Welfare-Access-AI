@@ -1,0 +1,9 @@
+# UI and real pipeline with mock models; no GPU model packages.
+streamlit==1.67.0
+pandas
+pyyaml
+numpy
+rank_bm25
+kiwipiepy==0.23.2
+kiwipiepy_model==0.23.0
+google-genai>=3.4

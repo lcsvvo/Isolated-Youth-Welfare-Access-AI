@@ -1,0 +1,87 @@
+﻿file,row_key,column,original,corrected,basis,status
+review_R1.csv,170,gov_id,5.19E+11,519000000116,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,170,h_conflict,"기관, 지역",기관|지역,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,108,gov_id,4.04E+11,404000000105,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,108,h_basis,"기관, 지역, 내용",기관|지역|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,152,gov_id,4.05E+11,405000000634,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,152,h_basis,"이름, 기관, 지역, 내용",이름|기관|지역|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,81,gov_id,3.04E+11,304000000124,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,81,h_basis,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,81,h_conflict,"기관, 지역, 목적",기관|지역|목적,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,62,gov_id,3.11E+11,311000000117,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,62,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,11,gov_id,5.31E+11,531000000111,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,11,h_basis,"기관, 대상, 목적, 내용",기관|대상|목적|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,96,gov_id,6.45E+11,645000000107,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,96,h_basis,"기관, 지역",기관|지역,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,96,h_conflict,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,117,gov_id,3.67E+11,367000000117,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,117,h_basis,"지역, 대상, 내용",지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,117,h_conflict,"이름, 기관",이름|기관,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,23,gov_id,4.06E+11,406000000103,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,23,h_basis,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,23,h_conflict,"기관, 지역, 목적",기관|지역|목적,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,68,gov_id,3.4E+11,340000000134,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,68,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,79,gov_id,6.41E+11,641000000173,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,79,h_basis,"기관, 대상, 목적, 내용",기관|대상|목적|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,33,gov_id,4.74E+11,474000000153,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,33,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,95,gov_id,4.4E+11,440000000110,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,95,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,122,gov_id,4.43E+11,443000000103,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,122,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,83,gov_id,4.3E+11,430000000134,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,83,h_basis,"목적, 내용",목적|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,83,h_conflict,"기관, 지역, 대상",기관|지역|대상,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,44,gov_id,4.08E+11,408000000533,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,44,h_basis,"기관, 대상, 목적, 내용",기관|대상|목적|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,105,gov_id,4.82E+11,482000000116,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,105,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,98,gov_id,4.95E+11,495000000435,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,98,h_basis,"기관, 지역, 대상, 내용",기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,49,gov_id,3.2E+11,320000000102,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,49,h_basis,"이름, 기관, 지역, 대상, 내용",이름|기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,145,gov_id,1.79039E+11,179038700004,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,145,h_basis,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,145,h_conflict,"기관, 목적",기관|목적,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,13,gov_id,6.31E+11,631000000721,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,13,h_basis,"이름, 기관, 지역, 대상, 내용",이름|기관|지역|대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,87,gov_id,3.14E+11,314000000112,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R1.csv,87,h_basis,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,87,h_conflict,"기관, 지역, 목적",기관|지역|목적,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,115,h_basis,"대상, 내용",대상|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,115,h_conflict,"기관, 목적",기관|목적,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R1.csv,57,h_basis,"대상, 목적, 내용",대상|목적|내용,"구분자 형식 통일(q2_review.validate는 '|' 구분, 모든 토큰이 CODES 허용값)",fixed
+review_R3.csv,72,gov_id,3.71E+11,371000000107,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,73,gov_id,5.06E+11,506000000108,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,73,h_alt_gov_id,5.24E+11,524000000176,지수 표기가 같은 id 중 h_alt_query·h_note와 서비스명이 부분 일치하는 후보 1개,fixed
+review_R3.csv,150,gov_id,5.44E+11,544000000101,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,4,gov_id,3.86E+11,386000000133,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,160,gov_id,5.13E+11,513000000353,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,119,gov_id,3.07E+11,307000000180,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,52,gov_id,5.69E+11,569000000383,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,65,gov_id,1.40E+11,140000000176,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,50,gov_id,5.13E+11,513000000113,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,122,gov_id,4.43E+11,443000000103,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,128,gov_id,3.94E+11,394000000111,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,10,gov_id,3.18E+11,318000000117,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,10,h_alt_gov_id,3.19E+11,,지수 표기 일치 51개 중 서비스명 부분 일치 후보 0개: ,unresolved
+review_R3.csv,126,gov_id,4.61E+11,461000000135,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,20,gov_id,6.50E+11,650000000238,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,143,gov_id,5.05E+11,505000000102,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,143,h_alt_gov_id,4.20E+11,420000000147,지수 표기가 같은 id 중 h_alt_query·h_note와 서비스명이 부분 일치하는 후보 1개,fixed
+review_R3.csv,23,gov_id,4.06E+11,406000000103,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,169,gov_id,3.49E+11,349000000107,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,166,gov_id,4.73E+11,473000000103,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,166,h_alt_gov_id,3.58E+11,,지수 표기 일치 31개 중 서비스명 부분 일치 후보 0개: ,unresolved
+review_R3.csv,112,gov_id,4.34E+11,434000000108,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,33,gov_id,4.74E+11,474000000153,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,94,gov_id,3.01E+11,301000000112,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,28,gov_id,6.47E+11,647000000159,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,88,gov_id,6.43E+11,643000000758,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,88,h_alt_gov_id,6.43E+11,,지수 표기 일치 62개 중 서비스명 부분 일치 후보 0개: ,unresolved
+review_R3.csv,98,gov_id,4.95E+11,495000000435,"지수 표기 복원: servId 일치, 배정 gov_id의 지수 표기가 원본과 일치, gov_name이 해당 id의 서비스명과 일치",fixed
+review_R3.csv,98,"reviewer,reviewed_at",,,"h_same은 입력됐으나 reviewer, reviewed_at 공란. 채우지 않음",note_unchanged
+item_review_R1.csv,G-period-ssis-02,h_meta,신청기한 : 신생아 출생일로부터 1년 이내,,h_meta 허용값은 해당없음/판단불가뿐(q2_item_review.META_H). 텍스트는 designated_text([apply])의 원문 부분 문자열이고 h_evidence가 비어 있어 증거가 한 칸 왼쪽에 입력된 것으로 봄,fixed
+item_review_R1.csv,G-period-ssis-02,h_evidence,,신청기한 : 신생아 출생일로부터 1년 이내,h_meta 허용값은 해당없음/판단불가뿐(q2_item_review.META_H). 텍스트는 designated_text([apply])의 원문 부분 문자열이고 h_evidence가 비어 있어 증거가 한 칸 왼쪽에 입력된 것으로 봄,fixed

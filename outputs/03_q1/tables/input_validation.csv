@@ -1,0 +1,80 @@
+﻿check,expected,observed,status,note
+master rows,5288,5288,pass,
+master cols == meta.cols,153,153,pass,
+servId duplicates,0,0,pass,
+source central,461,461,pass,
+source local,4827,4827,pass,
+원문 필드 존재(5개 + *_raw 5개),missing=[],missing=[],pass,
+youth_scope values,"subset of ['A', 'B', 'C', 'U']",all within,pass,
+youth_scope distribution,(기록용),"{""U"": 3465, ""B"": 1247, ""A"": 291, ""C"": 285}",note,A 청년 특화 / B 연령 겹침 / U 판단 불가 / C 제외
+q21_10_tier values,"subset of ['candidate', 'excluded', 'main']",all within,pass,
+q21_10_type values,"subset of ['asset', 'compensation', 'earmarked', 'expense_relief', 'form_only', 'living', 'lump_sum', 'none', 'org_target', 'unrestricted_cash']",all within,pass,
+q21_07_beneficiary values,"subset of ['N', 'both', 'dependent', 'self']",all within,pass,
+need_area_q21 tokens,"subset of ['N', 'q21_01', 'q21_02', 'q21_03', 'q21_04', 'q21_05', 'q21_06', 'q21_07', 'q21_08', 'q21_09', 'q21_10', 'q21_11']",all within,pass,
+⑦이 아닌데 q21_07_beneficiary 값이 있는 행,0,0,pass,
+은둔 응답자,4448,4448,pass,
+고립 보조 응답자,3032,3032,pass,
+pid 중복(은둔),0,0,pass,
+pid 중복(고립),0,0,pass,
+은둔·고립 pid 겹침,0,0,pass,
+연령 코드 sq1a1 (은둔),"subset of ['1', '2', '3']",all within,pass,
+연령 코드 sq1a1 (고립),"subset of ['1', '2', '3']",all within,pass,
+은둔 sq3 코드,"subset of ['1', '2', '3', '4']",all within,pass,
+q21_01 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_01 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_02 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_02 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_03 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_03 결측 수 (hikikomori),(기록용),4,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_04 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_04 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_05 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_05 결측 수 (hikikomori),(기록용),3,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_06 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_06 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_07 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_07 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_08 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_08 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_09 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_09 결측 수 (hikikomori),(기록용),1,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_10 유효값 (hikikomori),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_10 결측 수 (hikikomori),(기록용),2,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_01 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_01 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_02 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_02 결측 수 (isolated_aux),(기록용),1,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_03 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_03 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_04 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_04 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_05 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_05 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_06 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_06 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_07 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_07 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_08 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_08 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_09 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_09 결측 수 (isolated_aux),(기록용),0,note,분모에서 제외하며 0으로 바꾸지 않음
+q21_10 유효값 (isolated_aux),"subset of ['1', '2', '3', '4']",all within,pass,
+q21_10 결측 수 (isolated_aux),(기록용),1,note,분모에서 제외하며 0으로 바꾸지 않음
+q4 유효값 (은둔),"subset of ['1', '2', '3', '4', '5', '6', '7']",all within,pass,
+q4 결측 수 (은둔),(기록용),5,note,별도 수준으로 만들지 않고 제외
+은둔 코드북 q4 문구,은둔 생활을 한지 총 얼마나 되었나요?,은둔 생활을 한지 총 얼마나 되었나요?,pass,
+고립 코드북 q4 문구,(기록용),고립 생활을 한지 총 얼마나 되었나요?,note,고립 시트 q4는 '고립 생활' 기간이라 은둔 기간과 정의가 달라 집단 비교에 쓰지 않음(q4_isolation)
+Q21 문구 (은둔 코드북),startswith '은둔생활을 벗어나기위한',은둔생활을 벗어나기위한 도움 필요도_눈치 보지 않고 들러서 머물 수 있는 공간,note,은둔 '은둔생활을…' vs 고립 '고립생활을…': 문구가 달라 직접 비교에 한계
+Q21 문구 (고립 코드북),startswith '고립생활을 벗어나기위한',고립생활을 벗어나기위한 도움 필요도_눈치 보지 않고 들러서 머물 수 있는 공간,note,은둔 '은둔생활을…' vs 고립 '고립생활을…': 문구가 달라 직접 비교에 한계
+hq1 유효값 (hikikomori),"subset of ['1', '2']",all within,pass,
+hq1 결측 수 (hikikomori),(기록용),0,note,
+hq1 유효값 (isolated_aux),"subset of ['1', '2']",all within,pass,
+hq1 결측 수 (isolated_aux),(기록용),0,note,
+meta.rows == 파일 행수,5288,5288,pass,
+meta.columns == 파일 열 순서,identical,identical,pass,
+meta.inputs_sha256 파일 해시 일치,mismatch=[],mismatch=[],pass,
+meta.code_sha256 파일 해시 일치,mismatch=[],mismatch=[],pass,
+meta.code_dirty,False,False,pass,
+meta.code_commit가 HEAD의 조상,True,True,pass,
+meta.code_commit vs HEAD,c56a93d,0d86a1d,note,마스터 생성 이후 커밋이 더 쌓임(마스터 입력 코드의 해시는 위에서 일치 확인)
+services_master_spec.md 열 수 표기,153,142,note,문서 표기 불일치(문서 142열 vs 실제 153열). 값은 meta·테스트와 일치하며 이 단계에서 문서를 고치지 않음

@@ -1,0 +1,15 @@
+﻿check,expected,observed,status,note
+질의쌍(v2) 수,30,30,pass,
+질의 수(쌍 × 일상어·행정어),60,60,pass,
+pair_id 유일,중복 0,0,pass,
+질의쌍(v1) 수,30,30,pass,
+v1·v2 pair_id 집합,일치,0건 차이,pass,
+서비스 마스터 행 수,5288,5288,pass,
+master.meta rows,5288,5288,pass,
+BASELINE_VERSION,q3_kw_v1.1,q3_kw_v1.1,pass,코드 상수
+검색 조건 수(주 2 + 민감도 6),8,8,pass,"short_t0_or, full_t0_or, short_t1_or, full_t1_or, short_t0_and, full_t0_and, short_t0_or_nodf, full_t0_or_nodf"
+개발용 말뭉치 행 수,300,300,pass,
+마스터 sha256(앞 12자),기록,347875f29728,note,
+질의 v2 sha256(앞 12자),기록,23ce2a59f437,note,
+검수 파일 존재: q3_intent_review_sheet.csv,있음,있음,pass,
+검수 파일 존재: q3_intent_codebook.csv,있음,있음,pass,

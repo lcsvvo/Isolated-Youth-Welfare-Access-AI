@@ -1,0 +1,9 @@
+﻿source,column,list_missing,detail_missing,set_differs,string_differs
+central,lifeArray,165,165,0,209
+central,trgterIndvdlArray,181,181,0,90
+central,intrsThemaArray,12,56,44,255
+central,srvPvsnNm,0,45,45,80
+local,lifeNmArray,1469,1469,0,1146
+local,trgterIndvdlNmArray,2779,2779,0,259
+local,intrsThemaNmArray,1220,1220,0,908
+local,srvPvsnNm,1,1,0,125

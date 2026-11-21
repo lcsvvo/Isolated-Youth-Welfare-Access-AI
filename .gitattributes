@@ -1,0 +1,8 @@
+# 저장소에는 LF로 저장한다. OS별 줄바꿈 차이로 생기는 가짜 변경을 막는다.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+
+# GitHub 언어 통계에서 HTML 결과 요약 제외
+*.html linguist-detectable=false

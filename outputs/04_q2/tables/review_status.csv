@@ -1,0 +1,12 @@
+﻿group,file,role,n_rows,n_unique_ids,judgment_cols,n_filled,status
+매칭 사람 검수,logs/validation/q2_match/human/review_R1.csv,사람 표본 시트,24,24.0,h_same,0,검수 전(판정 0건)
+매칭 사람 검수,logs/validation/q2_match/human/review_R2.csv,사람 표본 시트,24,24.0,h_same,0,검수 전(판정 0건)
+매칭 사람 검수,logs/validation/q2_match/human/review_R3.csv,사람 표본 시트,24,24.0,h_same,0,검수 전(판정 0건)
+매칭 사람 검수,logs/validation/q2_match/human/review_R4.csv,사람 표본 시트,24,24.0,h_same,0,검수 전(판정 0건)
+매칭 AI 검수 시트,logs/validation/q2_match/match_review_sheet.csv,AI 검수 시트(사람 표본과 다름),170,170.0,h_same,0,검수 전(판정 0건)
+항목 사람 검수,logs/validation/q2_item_rules/human/item_review_R1.csv,사람 표본 시트,40,40.0,h_level|h_meta,0,검수 전(판정 0건)
+항목 사람 검수,logs/validation/q2_item_rules/human/item_review_R2.csv,사람 표본 시트,39,39.0,h_level|h_meta,0,검수 전(판정 0건)
+항목 사람 검수,logs/validation/q2_item_rules/human/item_review_R3.csv,사람 표본 시트,39,39.0,h_level|h_meta,0,검수 전(판정 0건)
+항목 사람 검수,logs/validation/q2_item_rules/human/item_review_R4.csv,사람 표본 시트,40,40.0,h_level|h_meta,0,검수 전(판정 0건)
+항목 사람 검수,logs/validation/q2_item_rules/human/item_gold_index.csv,표본 색인,128,128.0,없음,0,색인(판정 열 없음)
+보조금24 화면 점검,logs/validation/q2_item_rules/human/gov24_screen_check.csv,화면 점검 시트,45,,h_page_found|h_page_docs|h_page_deadline|h_docs_match_api|h_deadline_match_api,0,검수 전(판정 0건)

@@ -1,0 +1,147 @@
+﻿scenario,econ_rule,area,area_label,youth_scope,youth_scope_basis,n_services,n_youth_scope_review,n_area_review,n_method_rule
+S1_A,v4_main,q21_02,일상생활 회복 지원,A,name_text,2,1,2,2
+S1_A,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,A,name_text,8,0,8,8
+S1_A,v4_main,q21_05,전문가에 의한 상담·치료,A,name_text,1,0,1,1
+S1_A,v4_main,q21_07,교육·학습 지원,A,age_band,4,0,4,4
+S1_A,v4_main,q21_07,교육·학습 지원,A,name_text,51,0,51,51
+S1_A,v4_main,q21_08,취업(정보)·일 경험 지원,A,age_band,6,0,6,6
+S1_A,v4_main,q21_08,취업(정보)·일 경험 지원,A,name_text,134,7,134,134
+S1_A,v4_main,q21_10,경제적 지원,A,age_band,2,0,1,2
+S1_A,v4_main,q21_10,경제적 지원,A,name_text,6,2,5,6
+S1_A,v4_main,q21_11,주거 (Q21에 대응 없음),A,age_band,2,0,2,2
+S1_A,v4_main,q21_11,주거 (Q21에 대응 없음),A,name_text,108,10,108,108
+S2_AB_strict,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,age_overlap,1,0,1,1
+S2_AB_strict,v4_main,q21_02,일상생활 회복 지원,A,name_text,2,1,2,2
+S2_AB_strict,v4_main,q21_02,일상생활 회복 지원,B,age_overlap,3,1,3,3
+S2_AB_strict,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,A,name_text,8,0,8,8
+S2_AB_strict,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,age_overlap,41,8,41,41
+S2_AB_strict,v4_main,q21_05,전문가에 의한 상담·치료,A,name_text,1,0,1,1
+S2_AB_strict,v4_main,q21_05,전문가에 의한 상담·치료,B,age_overlap,17,4,17,17
+S2_AB_strict,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",B,age_overlap,4,0,4,4
+S2_AB_strict,v4_main,q21_07,교육·학습 지원,A,age_band,4,0,4,4
+S2_AB_strict,v4_main,q21_07,교육·학습 지원,A,name_text,51,0,51,51
+S2_AB_strict,v4_main,q21_07,교육·학습 지원,B,age_overlap,51,19,51,51
+S2_AB_strict,v4_main,q21_08,취업(정보)·일 경험 지원,A,age_band,6,0,6,6
+S2_AB_strict,v4_main,q21_08,취업(정보)·일 경험 지원,A,name_text,134,7,134,134
+S2_AB_strict,v4_main,q21_08,취업(정보)·일 경험 지원,B,age_overlap,68,16,68,68
+S2_AB_strict,v4_main,q21_10,경제적 지원,A,age_band,2,0,1,2
+S2_AB_strict,v4_main,q21_10,경제적 지원,A,name_text,6,2,5,6
+S2_AB_strict,v4_main,q21_10,경제적 지원,B,age_overlap,31,13,18,31
+S2_AB_strict,v4_main,q21_11,주거 (Q21에 대응 없음),A,age_band,2,0,2,2
+S2_AB_strict,v4_main,q21_11,주거 (Q21에 대응 없음),A,name_text,108,10,108,108
+S2_AB_strict,v4_main,q21_11,주거 (Q21에 대응 없음),B,age_overlap,38,9,38,38
+S2_AB,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,age_overlap,1,0,1,1
+S2_AB,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,tag_only,1,1,1,1
+S2_AB,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,target_text_mention,1,1,1,1
+S2_AB,v4_main,q21_02,일상생활 회복 지원,A,name_text,2,1,2,2
+S2_AB,v4_main,q21_02,일상생활 회복 지원,B,age_overlap,3,1,3,3
+S2_AB,v4_main,q21_02,일상생활 회복 지원,B,tag_only,1,1,1,1
+S2_AB,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,A,name_text,8,0,8,8
+S2_AB,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,age_overlap,41,8,41,41
+S2_AB,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,tag_only,48,48,48,48
+S2_AB,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,target_text_mention,1,1,1,1
+S2_AB,v4_main,q21_04,같이 하는 취미·문화·체육활동 지원,B,tag_only,3,3,3,3
+S2_AB,v4_main,q21_05,전문가에 의한 상담·치료,A,name_text,1,0,1,1
+S2_AB,v4_main,q21_05,전문가에 의한 상담·치료,B,age_overlap,17,4,17,17
+S2_AB,v4_main,q21_05,전문가에 의한 상담·치료,B,tag_only,18,18,18,18
+S2_AB,v4_main,q21_05,전문가에 의한 상담·치료,B,target_text_mention,1,1,1,1
+S2_AB,v4_main,q21_05,전문가에 의한 상담·치료,B,text_mention,1,1,1,1
+S2_AB,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",B,age_overlap,4,0,4,4
+S2_AB,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",B,tag_only,2,2,2,2
+S2_AB,v4_main,q21_07,교육·학습 지원,A,age_band,4,0,4,4
+S2_AB,v4_main,q21_07,교육·학습 지원,A,name_text,51,0,51,51
+S2_AB,v4_main,q21_07,교육·학습 지원,B,age_overlap,51,19,51,51
+S2_AB,v4_main,q21_07,교육·학습 지원,B,tag_only,68,68,68,68
+S2_AB,v4_main,q21_07,교육·학습 지원,B,target_text_mention,1,1,1,1
+S2_AB,v4_main,q21_07,교육·학습 지원,B,text_mention,1,1,1,1
+S2_AB,v4_main,q21_08,취업(정보)·일 경험 지원,A,age_band,6,0,6,6
+S2_AB,v4_main,q21_08,취업(정보)·일 경험 지원,A,name_text,134,7,134,134
+S2_AB,v4_main,q21_08,취업(정보)·일 경험 지원,B,age_overlap,68,16,68,68
+S2_AB,v4_main,q21_08,취업(정보)·일 경험 지원,B,tag_only,51,51,51,51
+S2_AB,v4_main,q21_08,취업(정보)·일 경험 지원,B,target_text_mention,4,4,4,4
+S2_AB,v4_main,q21_10,경제적 지원,A,age_band,2,0,1,2
+S2_AB,v4_main,q21_10,경제적 지원,A,name_text,6,2,5,6
+S2_AB,v4_main,q21_10,경제적 지원,B,age_overlap,31,13,18,31
+S2_AB,v4_main,q21_10,경제적 지원,B,tag_only,79,79,48,79
+S2_AB,v4_main,q21_10,경제적 지원,B,target_text_mention,1,1,1,1
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),A,age_band,2,0,2,2
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),A,name_text,108,10,108,108
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),B,age_overlap,38,9,38,38
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),B,tag_only,89,89,89,89
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),B,target_text_mention,5,5,5,5
+S2_AB,v4_main,q21_11,주거 (Q21에 대응 없음),B,text_mention,5,5,5,5
+S3_ABU,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,age_overlap,1,0,1,1
+S3_ABU,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,tag_only,1,1,1,1
+S3_ABU,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,B,target_text_mention,1,1,1,1
+S3_ABU,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,U,age_partial,1,1,1,1
+S3_ABU,v4_main,q21_01,눈치 보지 않고 들러서 머물 수 있는 공간,U,no_evidence,2,0,2,2
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,A,name_text,2,1,2,2
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,B,age_overlap,3,1,3,3
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,B,tag_only,1,1,1,1
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,U,age_partial,1,1,1,1
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,U,conflict,1,1,1,1
+S3_ABU,v4_main,q21_02,일상생활 회복 지원,U,tag_non_youth,2,0,2,2
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,A,name_text,8,0,8,8
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,age_overlap,41,8,41,41
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,tag_only,48,48,48,48
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,B,target_text_mention,1,1,1,1
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,U,age_partial,7,7,7,7
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,U,conflict,3,3,3,3
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,U,no_evidence,91,0,91,91
+S3_ABU,v4_main,q21_03,혼자 하는 취미·문화·체육활동 지원,U,tag_non_youth,92,0,92,92
+S3_ABU,v4_main,q21_04,같이 하는 취미·문화·체육활동 지원,B,tag_only,3,3,3,3
+S3_ABU,v4_main,q21_04,같이 하는 취미·문화·체육활동 지원,U,no_evidence,7,0,7,7
+S3_ABU,v4_main,q21_04,같이 하는 취미·문화·체육활동 지원,U,tag_non_youth,6,0,6,6
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,A,name_text,1,0,1,1
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,B,age_overlap,17,4,17,17
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,B,tag_only,18,18,18,18
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,B,target_text_mention,1,1,1,1
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,B,text_mention,1,1,1,1
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,U,age_partial,5,5,5,5
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,U,conflict,1,1,1,1
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,U,no_evidence,30,0,30,30
+S3_ABU,v4_main,q21_05,전문가에 의한 상담·치료,U,tag_non_youth,29,0,29,29
+S3_ABU,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",B,age_overlap,4,0,4,4
+S3_ABU,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",B,tag_only,2,2,2,2
+S3_ABU,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",U,age_partial,1,1,1,1
+S3_ABU,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",U,no_evidence,11,0,11,11
+S3_ABU,v4_main,q21_06,"또래, 멘토 등에 의한 상담·지지",U,tag_non_youth,7,0,7,7
+S3_ABU,v4_main,q21_07,교육·학습 지원,A,age_band,4,0,4,4
+S3_ABU,v4_main,q21_07,교육·학습 지원,A,name_text,51,0,51,51
+S3_ABU,v4_main,q21_07,교육·학습 지원,B,age_overlap,51,19,51,51
+S3_ABU,v4_main,q21_07,교육·학습 지원,B,tag_only,68,68,68,68
+S3_ABU,v4_main,q21_07,교육·학습 지원,B,target_text_mention,1,1,1,1
+S3_ABU,v4_main,q21_07,교육·학습 지원,B,text_mention,1,1,1,1
+S3_ABU,v4_main,q21_07,교육·학습 지원,U,age_partial,7,7,7,7
+S3_ABU,v4_main,q21_07,교육·학습 지원,U,conflict,3,3,3,3
+S3_ABU,v4_main,q21_07,교육·학습 지원,U,no_evidence,52,0,52,52
+S3_ABU,v4_main,q21_07,교육·학습 지원,U,tag_non_youth,266,0,266,266
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,A,age_band,6,0,6,6
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,A,name_text,134,7,134,134
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,B,age_overlap,68,16,68,68
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,B,tag_only,51,51,51,51
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,B,target_text_mention,4,4,4,4
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,U,age_partial,7,7,7,7
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,U,conflict,3,3,3,3
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,U,no_evidence,54,0,54,54
+S3_ABU,v4_main,q21_08,취업(정보)·일 경험 지원,U,tag_non_youth,22,0,22,22
+S3_ABU,v4_main,q21_09,공동생활(규칙적인 생활 등),U,tag_non_youth,1,0,1,1
+S3_ABU,v4_main,q21_10,경제적 지원,A,age_band,2,0,1,2
+S3_ABU,v4_main,q21_10,경제적 지원,A,name_text,6,2,5,6
+S3_ABU,v4_main,q21_10,경제적 지원,B,age_overlap,31,13,18,31
+S3_ABU,v4_main,q21_10,경제적 지원,B,tag_only,79,79,48,79
+S3_ABU,v4_main,q21_10,경제적 지원,B,target_text_mention,1,1,1,1
+S3_ABU,v4_main,q21_10,경제적 지원,U,age_partial,64,64,15,64
+S3_ABU,v4_main,q21_10,경제적 지원,U,conflict,16,16,5,16
+S3_ABU,v4_main,q21_10,경제적 지원,U,no_evidence,168,0,101,168
+S3_ABU,v4_main,q21_10,경제적 지원,U,tag_non_youth,59,0,34,59
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),A,age_band,2,0,2,2
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),A,name_text,108,10,108,108
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),B,age_overlap,38,9,38,38
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),B,tag_only,89,89,89,89
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),B,target_text_mention,5,5,5,5
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),B,text_mention,5,5,5,5
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),U,age_partial,16,16,16,16
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),U,conflict,2,2,2,2
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),U,no_evidence,187,0,187,187
+S3_ABU,v4_main,q21_11,주거 (Q21에 대응 없음),U,tag_non_youth,29,0,29,29

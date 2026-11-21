@@ -1,0 +1,3 @@
+﻿metric,estimate,ci_low,ci_high,n_double,n_both,status,interpretation_note
+kappa,,,,30,0,미완료,중복 30단위는 항목별 kappa 를 안정적으로 낼 만큼 많지 않아 항목별로는 건수만 기술한다. 전체 kappa 는 양쪽 판정 20건 이상일 때만 낸다. 범주가 한쪽으로 쏠리면 일치율이 높아도 kappa 가 낮을 수 있어 일치율을 함께 본다.
+pct_agree,,,,30,0,미완료,중복 30단위는 항목별 kappa 를 안정적으로 낼 만큼 많지 않아 항목별로는 건수만 기술한다. 전체 kappa 는 양쪽 판정 20건 이상일 때만 낸다. 범주가 한쪽으로 쏠리면 일치율이 높아도 kappa 가 낮을 수 있어 일치율을 함께 본다.

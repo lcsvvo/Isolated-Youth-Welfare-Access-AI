@@ -1,0 +1,11 @@
+﻿metric,n
+all_services,10942
+personal_services,9488
+youth_overlap_provisional,7824
+legacy_personal_channel_unknown,163
+v2_rule_personal_channel_unknown,161
+ai_reviewed_legacy_unknown,163
+ai_channel_candidates,38
+ai_channel_still_unspecified,125
+ai_new_boundary_review,16
+independent_human_judgments,0

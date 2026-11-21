@@ -1,0 +1,6 @@
+﻿tier,n_confirmed,n_same,n_same_before,n_post_review,acc,acc_ci_low,acc_ci_high,acc_before,method,note
+A,15,13,13,0,0.8666666666666667,0.6211801694601944,0.9626387412357151,0.8666666666666667,Wilson 95%,"acc_before = 검수 판정 그대로의 값(match_accuracy.csv, supp_weighted_accuracy_ci.csv). 사후 정정 = match_post_review.csv"
+B,15,10,11,1,0.6666666666666666,0.4171354755711991,0.8482367565633053,0.7333333333333333,Wilson 95%,"acc_before = 검수 판정 그대로의 값(match_accuracy.csv, supp_weighted_accuracy_ci.csv). 사후 정정 = match_post_review.csv"
+C,27,15,15,0,0.5555555555555556,0.373130243822858,0.724141419348023,0.5555555555555556,Wilson 95%,"acc_before = 검수 판정 그대로의 값(match_accuracy.csv, supp_weighted_accuracy_ci.csv). 사후 정정 = match_post_review.csv"
+U,15,1,1,0,0.06666666666666667,0.01186689536153232,0.2981653010887565,0.06666666666666667,Wilson 95%,"acc_before = 검수 판정 그대로의 값(match_accuracy.csv, supp_weighted_accuracy_ci.csv). 사후 정정 = match_post_review.csv"
+AB_weighted,30,23,24,1,0.8203801542786566,0.6374289661640367,0.9238812193242958,0.8317085796023003,"층 N_h 가중, 층별 Jeffreys 사후 MC 중앙값과 95% 구간","acc_before = 검수 판정 그대로의 값(match_accuracy.csv, supp_weighted_accuracy_ci.csv). 사후 정정 = match_post_review.csv"

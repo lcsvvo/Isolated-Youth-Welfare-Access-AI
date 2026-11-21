@@ -1,0 +1,158 @@
+﻿attribute,compared_with,before,after,n,changed,note
+apply_barrier,apply_barrier_v1,0,0,1342,False,개정(같은 개념)
+apply_barrier,apply_barrier_v1,0,1,2,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,0,2,18,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,0,3,2,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,1,1,467,False,개정(같은 개념)
+apply_barrier,apply_barrier_v1,1,2,18,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,1,N,30,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,2,0,1,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,2,1,51,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,2,2,2622,False,개정(같은 개념)
+apply_barrier,apply_barrier_v1,2,N,4,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,3,2,5,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,3,3,2,False,개정(같은 개념)
+apply_barrier,apply_barrier_v1,N,0,2,True,개정(같은 개념)
+apply_barrier,apply_barrier_v1,N,N,722,False,개정(같은 개념)
+remote_complete,remote_complete_v1,0,0,194,False,개정(같은 개념)
+remote_complete,remote_complete_v1,1,0,5,True,개정(같은 개념)
+remote_complete,remote_complete_v1,1,1,2226,False,개정(같은 개념)
+remote_complete,remote_complete_v1,1,2,1,True,개정(같은 개념)
+remote_complete,remote_complete_v1,1,N,6,True,개정(같은 개념)
+remote_complete,remote_complete_v1,2,1,46,True,개정(같은 개념)
+remote_complete,remote_complete_v1,2,2,1253,False,개정(같은 개념)
+remote_complete,remote_complete_v1,2,N,21,True,개정(같은 개념)
+remote_complete,remote_complete_v1,N,1,1,True,개정(같은 개념)
+remote_complete,remote_complete_v1,N,2,1,True,개정(같은 개념)
+remote_complete,remote_complete_v1,N,N,1534,False,개정(같은 개념)
+app_domain,app_domain_v1,N,N,1328,False,개정(같은 개념)
+app_domain,app_domain_v1,N,경제(생활비),2,True,개정(같은 개념)
+app_domain,app_domain_v1,건강,N,7,True,개정(같은 개념)
+app_domain,app_domain_v1,건강,건강,36,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|경제(생활비),건강,34,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|경제(생활비),건강|경제(생활비),2,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|관계 및 참여,건강|관계 및 참여,2,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|관계 및 참여|경제(생활비),건강|관계 및 참여,2,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련,건강|교육 및 훈련,7,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련|경제(생활비),건강|교육 및 훈련,4,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련|관계 및 참여,건강|교육 및 훈련|관계 및 참여,1,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련|미취업,건강|교육 및 훈련|미취업,1,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련|미취업|사회인식 및 미래설계|경제(생활비),건강|교육 및 훈련|미취업|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|교육 및 훈련|사회인식 및 미래설계,건강|교육 및 훈련,1,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|노동,경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,건강|미취업,건강|미취업,3,False,개정(같은 개념)
+app_domain,app_domain_v1,건강|미취업|경제(생활비),건강|미취업,2,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),N,2173,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),경제(생활비),355,False,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),교육 및 훈련,206,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),교육 및 훈련|경제(생활비),7,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),교육 및 훈련|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),미취업,11,True,개정(같은 개념)
+app_domain,app_domain_v1,경제(생활비),주거,2,True,개정(같은 개념)
+app_domain,app_domain_v1,관계 및 참여,N,2,True,개정(같은 개념)
+app_domain,app_domain_v1,관계 및 참여,관계 및 참여,12,False,개정(같은 개념)
+app_domain,app_domain_v1,관계 및 참여|경제(생활비),N,2,True,개정(같은 개념)
+app_domain,app_domain_v1,관계 및 참여|경제(생활비),관계 및 참여,17,True,개정(같은 개념)
+app_domain,app_domain_v1,관계 및 참여|경제(생활비),교육 및 훈련,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련,교육 및 훈련,67,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|경제(생활비),N,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|경제(생활비),교육 및 훈련,98,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|경제(생활비),교육 및 훈련|경제(생활비),9,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|경제(생활비),교육 및 훈련|미취업,3,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|관계 및 참여,교육 및 훈련|관계 및 참여,5,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|관계 및 참여|경제(생활비),교육 및 훈련|관계 및 참여,2,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|관계 및 참여|사회인식 및 미래설계,교육 및 훈련|관계 및 참여,2,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|노동,교육 및 훈련,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|노동|미취업,교육 및 훈련|미취업,4,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업,교육 및 훈련|미취업,3,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|경제(생활비),교육 및 훈련|미취업,37,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|경제(생활비),교육 및 훈련|미취업|경제(생활비),3,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|관계 및 참여,교육 및 훈련|미취업|관계 및 참여,2,False,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|관계 및 참여|경제(생활비),교육 및 훈련|미취업|관계 및 참여,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|관계 및 참여|사회인식 및 미래설계,교육 및 훈련|미취업|관계 및 참여,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|미취업|사회인식 및 미래설계,교육 및 훈련|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|사회인식 및 미래설계,교육 및 훈련,6,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|사회인식 및 미래설계|경제(생활비),교육 및 훈련,5,True,개정(같은 개념)
+app_domain,app_domain_v1,교육 및 훈련|사회인식 및 미래설계|경제(생활비),교육 및 훈련|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,노동,N,51,True,개정(같은 개념)
+app_domain,app_domain_v1,노동,경제(생활비),10,True,개정(같은 개념)
+app_domain,app_domain_v1,노동,미취업,2,True,개정(같은 개념)
+app_domain,app_domain_v1,노동|미취업,교육 및 훈련|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,노동|미취업,미취업,25,True,개정(같은 개념)
+app_domain,app_domain_v1,노동|미취업,미취업|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,미취업,미취업,56,False,개정(같은 개념)
+app_domain,app_domain_v1,미취업|경제(생활비),교육 및 훈련|미취업,40,True,개정(같은 개념)
+app_domain,app_domain_v1,미취업|경제(생활비),교육 및 훈련|미취업|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,미취업|경제(생활비),미취업,124,True,개정(같은 개념)
+app_domain,app_domain_v1,미취업|경제(생활비),미취업|경제(생활비),5,False,개정(같은 개념)
+app_domain,app_domain_v1,미취업|경제(생활비),주거|미취업,3,True,개정(같은 개념)
+app_domain,app_domain_v1,미취업|관계 및 참여,미취업|관계 및 참여,1,False,개정(같은 개념)
+app_domain,app_domain_v1,미취업|관계 및 참여|경제(생활비),미취업|관계 및 참여,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거,주거,104,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강,주거|건강,4,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|경제(생활비),주거|건강,2,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|관계 및 참여|경제(생활비),주거|건강|관계 및 참여,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|교육 및 훈련|경제(생활비),주거|건강|교육 및 훈련|경제(생활비),1,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|교육 및 훈련|미취업,주거|건강|교육 및 훈련|미취업,1,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|교육 및 훈련|미취업|관계 및 참여|경제(생활비),주거|건강|교육 및 훈련|미취업|관계 및 참여|경제(생활비),1,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|교육 및 훈련|사회인식 및 미래설계|경제(생활비),주거|건강|교육 및 훈련|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|건강|미취업,주거|건강|미취업,4,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),N,3,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),경제(생활비),2,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),주거,270,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),주거|경제(생활비),44,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),주거|교육 및 훈련,3,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),주거|교육 및 훈련|경제(생활비),5,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|경제(생활비),주거|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|관계 및 참여,주거|관계 및 참여,1,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|교육 및 훈련,주거|교육 및 훈련,3,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|교육 및 훈련|경제(생활비),교육 및 훈련,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|교육 및 훈련|경제(생활비),주거|교육 및 훈련|경제(생활비),4,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|교육 및 훈련|노동|미취업,주거|교육 및 훈련|미취업|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|교육 및 훈련|미취업|경제(생활비),주거|교육 및 훈련|미취업|경제(생활비),1,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|노동,N,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|노동,주거,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|노동|미취업,주거|미취업,4,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|노동|미취업,주거|미취업|경제(생활비),1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|미취업,주거|미취업,4,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|미취업|경제(생활비),주거|미취업,17,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|미취업|경제(생활비),주거|미취업|경제(생활비),4,False,개정(같은 개념)
+app_domain,app_domain_v1,주거|미취업|관계 및 참여,주거|미취업,1,True,개정(같은 개념)
+app_domain,app_domain_v1,주거|미취업|관계 및 참여|경제(생활비),주거|미취업,1,True,개정(같은 개념)
+use_outing,use_barrier,0,0,3097,False,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,0,1,590,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,0,2,4,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,0,N,2,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,1,0,20,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,1,1,1,False,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,1,2,4,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,1,N,10,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,2,0,38,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,2,1,10,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,2,2,141,False,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,2,N,195,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,3,0,5,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,3,1,2,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,3,2,17,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,3,3,1,False,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,3,N,40,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,N,0,94,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,N,1,20,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,N,2,58,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,N,3,1,True,"새 컬럼(다른 개념, 참고 비교)"
+use_outing,use_barrier,N,N,938,False,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,0,0,785,False,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,0,1,235,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,0,2,32,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,0,N,521,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,1,0,293,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,1,1,51,False,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,1,2,2070,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,1,3,1,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,1,N,546,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,2,0,11,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,2,1,9,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,2,2,160,False,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,2,3,1,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,2,N,274,True,"새 컬럼(다른 개념, 참고 비교)"
+outing_need,outing_burden,N,N,299,False,"새 컬럼(다른 개념, 참고 비교)"

@@ -1,0 +1,5 @@
+﻿candidate_type,n_services,ratio_of_age_N,in_review_csv
+연령 조건 누락 후보,57,0.016,True
+연령 제한 없음 후보,36,0.0101,True
+가족·자녀 연령 표현만 있음,113,0.0318,False
+원문 정보 부족,3347,0.942,False

@@ -1,0 +1,11 @@
+﻿side,scope,rule_id,n_units,n_gov_id_unique
+gov,text,gov_deadline_default,0,0
+gov,text,gov_deadline_contradicted,0,0
+gov,text,gov_docs_ambiguous,0,0
+gov,text,gov_docs_field_contradicted,0,0
+gov,text,gov_docs_na_consistent,0,0
+gov,all,gov_deadline_default,1193,1088
+gov,all,gov_deadline_contradicted,62,49
+gov,all,gov_docs_ambiguous,386,359
+gov,all,gov_docs_field_contradicted,49,45
+gov,all,gov_docs_na_consistent,199,192

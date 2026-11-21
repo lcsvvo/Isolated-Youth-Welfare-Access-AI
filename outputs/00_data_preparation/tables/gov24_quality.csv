@@ -1,0 +1,4 @@
+﻿file,rows,cols,id_unique,id_dup,ids_not_in_list,cells_missing_pct
+serviceList,10942,22,10942,0,0,8.32
+serviceDetail,10942,21,10942,0,0,24.59
+supportConditions,10942,50,10942,0,0,56.76

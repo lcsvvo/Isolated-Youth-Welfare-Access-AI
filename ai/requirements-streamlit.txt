@@ -1,0 +1,5 @@
+# Actual models plus the UI version verified in this handoff.
+-r requirements.txt
+streamlit==1.67.0
+transformers>=4.57,<5
+google-genai>=3.4

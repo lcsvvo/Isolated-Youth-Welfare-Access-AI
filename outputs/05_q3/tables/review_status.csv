@@ -1,0 +1,13 @@
+﻿stage,file,exists,n_rows,n_main_judgment_filled,status
+1 의도,q3_intent_review_sheet.csv,True,30.0,0.0,검수 전(판정 0건)
+1 의도,q3_intent_codebook.csv,True,5.0,,파일 있음
+1 의도,q3_intent_review_R1.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+1 의도,q3_intent_review_R2.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+1 의도,q3_intent_review_final.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+2 관련성,q3_relevance_sheet.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+2 관련성,q3_relevance_R1.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+2 관련성,q3_relevance_R2.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+2 관련성,q3_relevance_final.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+3 자격,q3_eligibility_sheet.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+2 관련성,q3_manual_additions.csv,False,,,없음(이전 단계 합의본 뒤 생성)
+3 자격,q3_eligibility_final.csv,False,,,없음(이전 단계 합의본 뒤 생성)

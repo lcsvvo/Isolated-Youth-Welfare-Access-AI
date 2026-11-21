@@ -1,0 +1,16 @@
+﻿review,servId,rule_tier,ai_tier,note
+ai_review_1_pre_fix,WLF00006564,main,candidate,예식비: '식비' 부분 일치
+ai_review_1_pre_fix,WLF00006295,candidate,excluded,마을변호사(법률 서비스)
+ai_review_1_pre_fix,WLF00004637,candidate,main,TV수신료 면제
+ai_review_1_pre_fix,WLF00005056,candidate,excluded,주거자금 대출이자(⑪)
+ai_review_1_pre_fix,WLF00006764,candidate,none,'급여 없음'
+ai_review_1_pre_fix,WLF00004828,candidate,excluded,경로우대업소 영업자 보상(org)
+ai_review_1_pre_fix,WLF00002193,excluded,candidate,참전명예수당 및 장제비
+ai_review_1_pre_fix,WLF00004983,excluded,main,공공실버주택 공동전기료
+ai_review_2_post_fix,WLF00003534,main,excluded,"휠체어 수리비(의료 용도), '생활안정' 목적 문구로 living"
+ai_review_2_post_fix,WLF00004039,main,candidate,지자체 다자녀장려금이 '자녀장려금'에 부분 일치
+ai_review_2_post_fix,WLF00003418,candidate,excluded,결혼예식장 이용 장려금(특정 서비스 용도)
+ai_review_2_post_fix,WLF00003296,candidate,excluded,자격증 취득비(⑦/⑧)
+ai_review_2_post_fix,WLF00003273,candidate,excluded,의료급여 본인부담 보상금(의료)
+ai_review_2_post_fix,WLF00004994,excluded,candidate,임신축하지원금(일시금)
+ai_review_2_post_fix,WLF00005779,excluded,main/excluded(경계),"찾아가는 보건복지 사업비: 생활지원비 명시, 사업비 성격"

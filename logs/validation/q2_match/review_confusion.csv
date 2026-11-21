@@ -1,0 +1,13 @@
+﻿table,tier,row,col,count
+confusion,전체,동일,동일,0
+confusion,전체,동일,다름,0
+confusion,전체,동일,판단불가,0
+confusion,전체,다름,동일,0
+confusion,전체,다름,다름,0
+confusion,전체,다름,판단불가,0
+confusion,전체,판단불가,동일,0
+confusion,전체,판단불가,다름,0
+confusion,전체,판단불가,판단불가,0
+disagreement_type,전체,동일↔다름,,0
+disagreement_type,전체,동일↔판단불가,,0
+disagreement_type,전체,다름↔판단불가,,0

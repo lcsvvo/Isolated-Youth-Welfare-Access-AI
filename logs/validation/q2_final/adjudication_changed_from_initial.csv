@@ -1,0 +1,8 @@
+﻿table,item_id,field,기존 판정,최종
+match,57,h_same,다름 / 동일,다름
+match,117,h_same,동일 / 판단불가,판단불가
+item,G-income-ssis-03,income_ssis,명시 / 부분,미명시
+item,G-residence-ssis-01,residence_ssis,미명시 / 명시,미명시
+item,G-channel-ssis-04,channel_ssis,판단불가 / 미명시,미명시
+item,G-channel-gov-03,channel_gov,미명시 / 명시,미명시
+item,G-contact-gov-04,contact_gov,미명시 / 부분,미명시

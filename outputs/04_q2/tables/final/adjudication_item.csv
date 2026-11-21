@@ -1,0 +1,129 @@
+﻿item_id,field,R1,R2,R3,R4,final,final_source,basis,status
+G-age-ssis-01,age_ssis,미명시,미명시,,,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-age-ssis-02,age_ssis,명시,,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-age-ssis-03,age_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-04,age_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-05,age_ssis,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-06,age_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-07,age_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-08,age_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-ssis-09,age_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-01,age_gov,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-02,age_gov,,,부분,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-03,age_gov,,,부분,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-04,age_gov,,부분,명시,,부분,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-age-gov-05,age_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-06,age_gov,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-07,age_gov,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-08,age_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-age-gov-09,age_gov,,명시,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-income-ssis-01,income_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-02,income_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-03,income_ssis,,,명시,부분,미명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-income-ssis-04,income_ssis,,명시,명시,,명시,일치,중복 검수 두 판정 일치,confirmed
+G-income-ssis-05,income_ssis,,부분,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-06,income_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-07,income_ssis,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-08,income_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-ssis-09,income_ssis,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-01,income_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-02,income_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-03,income_gov,명시,명시,,,명시,일치,중복 검수 두 판정 일치,confirmed
+G-income-gov-04,income_gov,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-05,income_gov,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-06,income_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-07,income_gov,명시,,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-income-gov-08,income_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-income-gov-09,income_gov,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-01,residence_ssis,,,명시,미명시,미명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-residence-ssis-02,residence_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-03,residence_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-04,residence_ssis,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-05,residence_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-06,residence_ssis,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-07,residence_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-08,residence_ssis,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-ssis-09,residence_ssis,명시,,명시,,명시,일치,중복 검수 두 판정 일치,confirmed
+G-residence-gov-01,residence_gov,명시,,명시,,명시,일치,중복 검수 두 판정 일치,confirmed
+G-residence-gov-02,residence_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-03,residence_gov,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-04,residence_gov,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-05,residence_gov,,,,부분,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-06,residence_gov,,,명시,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-07,residence_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-08,residence_gov,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-residence-gov-09,residence_gov,,미명시,,미명시,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-channel-ssis-01,channel_ssis,,,부분,명시,명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-channel-ssis-02,channel_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-03,channel_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-04,channel_ssis,미명시,,판단불가,,미명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-channel-ssis-05,channel_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-06,channel_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-07,channel_ssis,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-08,channel_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-ssis-09,channel_ssis,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-01,channel_gov,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-02,channel_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-03,channel_gov,미명시,명시,,,미명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-channel-gov-04,channel_gov,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-05,channel_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-06,channel_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-07,channel_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-channel-gov-08,channel_gov,,명시,,부분,명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-channel-gov-09,channel_gov,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-01,period_ssis,해당없음,,,,해당없음,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-02,period_ssis,명시,,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-period-ssis-03,period_ssis,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-04,period_ssis,,,미명시,미명시,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-period-ssis-05,period_ssis,명시,,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-06,period_ssis,해당없음,,,,해당없음,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-07,period_ssis,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-08,period_ssis,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-ssis-09,period_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-01,period_gov,,해당없음,,,해당없음,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-02,period_gov,미명시,미명시,,,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-period-gov-03,period_gov,,부분,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-04,period_gov,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-05,period_gov,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-06,period_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-07,period_gov,,,부분,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-period-gov-08,period_gov,,명시,미명시,,명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-period-gov-09,period_gov,미명시,,미명시,,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-documents-ssis-01,documents_ssis,,부분,,미명시,부분,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-documents-ssis-02,documents_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-03,documents_ssis,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-04,documents_ssis,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-05,documents_ssis,,,판단불가,,판단불가,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-06,documents_ssis,,미명시,,미명시,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-documents-ssis-07,documents_ssis,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-08,documents_ssis,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-09,documents_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-ssis-10,documents_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-01,documents_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-02,documents_gov,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-03,documents_gov,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-04,documents_gov,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-05,documents_gov,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-06,documents_gov,명시,,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-documents-gov-07,documents_gov,,미명시,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-08,documents_gov,,,,해당없음,해당없음,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-documents-gov-09,documents_gov,미명시,,미명시,,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-documents-gov-10,documents_gov,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-01,contact_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-02,contact_ssis,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-03,contact_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-04,contact_ssis,미명시,,,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-05,contact_ssis,,,미명시,,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-06,contact_ssis,,,미명시,미명시,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-contact-ssis-07,contact_ssis,,부분,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-ssis-08,contact_ssis,,부분,미명시,,부분,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-contact-ssis-09,contact_ssis,,,,명시,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-01,contact_gov,,,부분,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-02,contact_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-03,contact_gov,부분,,,,부분,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-04,contact_gov,미명시,부분,,,미명시,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+G-contact-gov-05,contact_gov,,미명시,미명시,,미명시,일치,중복 검수 두 판정 일치,confirmed
+G-contact-gov-06,contact_gov,명시,,,명시,명시,일치,중복 검수 두 판정 일치,confirmed
+G-contact-gov-07,contact_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-08,contact_gov,,,,미명시,미명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+G-contact-gov-09,contact_gov,,명시,,,명시,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed

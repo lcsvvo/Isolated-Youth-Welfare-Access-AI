@@ -1,0 +1,85 @@
+{
+  "stage": "00_gov24_preparation",
+  "rule_version": "2026-11-05.1",
+  "date": "2026-11-05",
+  "source_collected_at": "2026-10-31T12:51:14+00:00",
+  "python": "3.13.9",
+  "pandas": "2.3.3",
+  "baseline_commit": "0d86a1d",
+  "baseline_code_sha256": "483384083a67212725936711a63439813ebb08481c34f8191725993b9f692fee",
+  "code_sha256": {
+    "src/preprocess/gov24_preparation.py": "c7c16510335bd81f88cb4f8045f1b5fe30bdf2e749f6939d23ff7c25d1d9a268",
+    "src/preprocess/gov24_eligibility.py": "faee9fea53cab38aaff5e7bbf50c1c252aed4206de742ff85d2c68365926f4a7"
+  },
+  "protected_sha256": {
+    "data/raw/gov24/gov24_serviceDetail.csv": "7f0ac4fe0f34571309400231844ef4902404f8e3bdc246b9b902f7c5dde09629",
+    "data/raw/gov24/gov24_serviceList.csv": "10e323344eba8bfbf0127fe5e032711bb4e5ec87d6e287105b6dbb0c08ae50e5",
+    "data/raw/gov24/gov24_supportConditions.csv": "c9b974ce0399fba050cd41f896b6dfe1a5a890a04e7c82bd05fb7561e9043cb5",
+    "data/raw/gov24/README.md": "1f9aa6049a2163b312ddf74d6b162033861043e31d07f6662e723d17ef929c81",
+    "data/raw/gov24/_collection.json": "59062ea4097486489723457cf33acffda7a91309dda7cd8834015dd58e5e60e2",
+    "data/processed/gov24_merged.csv": "336ab6754f25581441eb8baf38c80de2e353ce067a7b0b499ee436bba9ee7283",
+    "data/processed/gov24_youth.csv": "28f7e4c70b52147d402e94d3f866cadb436c0224ee0af0a0cbd4967718370cbc",
+    "data/processed/gov24_eligibility.csv": "2fd71f082632328968f66f50cd2736f6917f67c6131e66f5dfd084628e29d8b9",
+    "data/processed/services_master.csv": "ac45cf083a9056038804c1bb1f05d9236fa1469e780a8d2c0e5804424947bd57",
+    "data/processed/services_master.meta.json": "e421b6eaa377c5a9b30a81f9011b252d0c859e843b954b9334946efcba100527"
+  },
+  "protected_unchanged": true,
+  "list_reconstruction_matches_collection_sha256": false,
+  "list_normalized_changed_cells": 0,
+  "legacy_merged_CR_bytes": 0,
+  "previous_reconstruction_record": "logs/validation/gov24_hash_check_2026-11-02.json; 당시 재구성 성공 기록이며 현재 LF 병합본으로 그 바이트 해시를 다시 재현하지 못함",
+  "historical_detail_fields_comparable": 7,
+  "historical_detail_fields_unverified": 13,
+  "ai_review_input_sha256": {
+    "logs/validation/gov24_ai_review_2026-11-05.json": "a431d7437e35baadde9b5726c514fb768375088dd2f68985e6c786e775a7f7b2",
+    "logs/validation/gov24_boundary_ai_review_2026-11-05.json": "54a9e56a308e00bff8a3a353927994555eb35016f52a2ebc467cb5abc07a93cd"
+  },
+  "counts": {
+    "all_services": 10942,
+    "personal_services": 9488,
+    "youth_overlap_provisional": 7824,
+    "legacy_personal_channel_unknown": 163,
+    "v2_rule_personal_channel_unknown": 161,
+    "ai_reviewed_legacy_unknown": 163,
+    "ai_channel_candidates": 38,
+    "ai_channel_still_unspecified": 125,
+    "ai_new_boundary_review": 16,
+    "independent_human_judgments": 0
+  },
+  "q2": {
+    "source_branch": "feature/q2-cross-platform-match",
+    "snapshot_meta_sha256": "97ad9cad10b482c65756c6d241a1215b4a77f3d3ba1f114b604cb9bf52659947",
+    "match_created_at": "2026-11-05T07:07:47+00:00",
+    "counts": {
+      "q2_match": 5288,
+      "q2_field_compare": 2215
+    },
+    "raw_input_hashes_match": {
+      "data/raw/gov24/gov24_serviceList.csv": true,
+      "data/raw/gov24/gov24_serviceDetail.csv": true
+    },
+    "ssis_columns": 128,
+    "candidate_key_membership": "미검증: 연결 CSV 대용량 파일은 connector에서 내용 미반환. 메타데이터로 입력 해시·건수만 확인."
+  },
+  "unresolved": [
+    "현재 기존 병합본도 셀 안 CRLF가 LF로 정규화되어 이전 목록 재구성 해시 일치 재현 불가. 목록 22열 정규화 값 차이는 0",
+    "수집 당시 상세 13개 필드의 원본 스냅샷 미보관: 완전 원본 일치 미검증",
+    "AI 판정은 사람 정답·독립 2인 검증이 아님. 정밀도·재현율 산출 보류",
+    "연령 다중 대상군·소득 구간과 예외의 단일 값 자동 자격 판정 금지"
+  ],
+  "outputs_sha256": {
+    "data/processed/gov24_preparation_v2/gov24_eligibility_v2.csv": "ff007a1094792230321fdc6adfdc01ace8721debe2b7d22e3f095e1b7ad351a4",
+    "data/processed/gov24_preparation_v2/gov24_merged_v2.csv": "7f8039800b5254c76f2851648938994dd24c38adbe472cda4cc4458c65085a79",
+    "outputs/00_gov24_preparation/tables/boundary_ai_review.csv": "e9c89f52bfc7cd42fda33bfe9357fd86884184c682404b58da87ebecbcc17d4f",
+    "outputs/00_gov24_preparation/tables/channel_human_review.csv": "8958a2995ab5bd3c4ea16916abdcf51dfaebb5803f07e4390e49f9a1828dc540",
+    "outputs/00_gov24_preparation/tables/code_csv_changed_cells.csv": "fd9636b68e1efa620e045a46b357d53fce16db55c4237a1cb37b1f14fbbe7ebe",
+    "outputs/00_gov24_preparation/tables/code_csv_difference_counts.csv": "633f7e5370396ba4ba5d126e6a19293871b8dd526a159f4b151a1f98ee09e6af",
+    "outputs/00_gov24_preparation/tables/detail_field_validation.csv": "09302a63f862eacdce8a6cf83c8c4509fddebda7feec7dc060b736e99f6abda1",
+    "outputs/00_gov24_preparation/tables/field_missingness.csv": "a654de411d21acfb3f97bb25a57e2aceb6eae920c5d06b4b08affe7dac0ff960",
+    "outputs/00_gov24_preparation/tables/preparation_counts.csv": "3da904a9d35a04e7fc759fb2f93cc0f9cf32cc7a05e52c9c8562fdc10059a858",
+    "outputs/00_gov24_preparation/tables/raw_integrity.csv": "7db25e8824eb786f0b6911a4be0484681461a1ffb09eb7d0179e519cd74bf043",
+    "outputs/00_gov24_preparation/tables/unknown_channel_ai_review.csv": "53c21a428bda31a4ec4d5b2c333344bd76fd4cf6fdd498050577f958119bf409",
+    "outputs/00_gov24_preparation/tables/visit_regex_regression.csv": "cf77687ffaefffd111e149d56e18563ce178f106708285d7f071c307dca9452a"
+  },
+  "overall_status": "부분 완료: 기계적 검증·AI 검토 완료, 역사 원본·사람 독립 검증 미완료"
+}

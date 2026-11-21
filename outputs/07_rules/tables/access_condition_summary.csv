@@ -1,0 +1,11 @@
+﻿column,value,n_services,share
+ai_apply_visit,불명,120,0.702
+ai_apply_visit,불필요,30,0.175
+ai_apply_visit,선택,21,0.123
+ai_apply_alt,불명,120,0.702
+ai_apply_alt,있음,51,0.298
+ai_use_visit,사용자 방문 필수,168,0.982
+ai_use_visit,불필요,2,0.012
+ai_use_visit,불명,1,0.006
+ai_use_alt,불명,170,0.994
+ai_use_alt,있음,1,0.006

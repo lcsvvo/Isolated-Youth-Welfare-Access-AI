@@ -1,0 +1,10 @@
+# Streamlit Community Cloud 배포용 (가짜 모델 모드, CPU만). torch·transformers·sentence-transformers는 넣지 않는다.
+# 로컬·Colab은 ai/requirements*.txt를 그대로 쓴다. 이 파일은 deploy/streamlit_app.py와 같은 폴더라 Cloud가 먼저 읽는다.
+streamlit==1.67.0
+pandas
+pyyaml
+numpy
+rank_bm25
+kiwipiepy==0.23.2
+kiwipiepy_model==0.23.0
+google-genai>=3.4

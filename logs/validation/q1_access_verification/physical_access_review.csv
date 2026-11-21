@@ -1,0 +1,104 @@
+﻿servId,previous_verdict,verdict,apply_method,support_delivery,eligibility_requirements,outing_required,review_evidence,review_source,review_reason,operation_status,operation_note,operation_source,reviewed_subtype,subtype_verdict,subtype_evidence,subtype_source_urls
+WLF00001032,home_confirmed,unclear,부산청년플랫폼 온라인 접수 후 선정자는 부산은행에 대출 서류 제출,부산은행 보증심사·대출 실행 및 부산시 이자 지원,"부산 거주 19~39세 무주택 세대주, 소득·임대차 조건",확인 불가,부산시 공식 안내는 은행 서류 제출·은행 방문 구비서류를 기재하나 온라인 대출 실행 경로는 미기재,https://young.busan.go.kr/index.nm?menuCd=0,추천 이후 대출 실행까지 비대면으로 가능한지 공식 공개 안내에서 미확인,round_closed,2026년 신규 정기 접수는 1~11월 매월 1~10일. 기존 대출 연장은 별도,https://young.busan.go.kr/index.nm?menuCd=0,,,,
+WLF00003682,unclear,home_confirmed,정부24 온라인 또는 읍·면사무소 방문 접수,통장 사본을 받아 생활지원금 30만원 지급. 신청 다음 달 말 전후 지급 안내,산청군 거주 6개월 이상 2자녀 가구의 만 30세 이하 미혼 대학 재학생,불필요,정부24 기관 원자료 545000000107(2026-10-28 수정) 상세의 온라인 신청·통장 사본 및 지급 시기,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001136&bnefType=all&svcId=545000000107,SSIS에 있던 인터넷 경로를 동일 기관·대상·금액의 정부24 상세에서 확인,rolling,정부24에 상시신청으로 안내,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1001136&bnefType=all&svcId=545000000107,,,,
+WLF00004021,home_confirmed,home_confirmed,보탬e 온라인 접수,"2026년 기준 월 임차료 지원, 지원금 수령 과정에 대면 의무 안내 없음","홍천군 (예비) 청년창업자, 19~47세, 공고의 거주·사업장 요건",불필요,홍천군 공고의 임차료 지원과 SSIS의 보탬e 접수 안내,https://www.hongcheon.go.kr/www/selectEminwonView.do?key=278&not_ancmt_mgt_no=53293,"2026년 임차료 지원 경로 기준, 창업 상태는 자격 요건",,,,,,,
+WLF00004858,home_confirmed,home_confirmed,안산인재육성재단 온라인 접수 가능(등기·방문 병행),등록금 본인부담금 일부 계좌 지급,"29세 이하 대학 재학생, 안산 거주 기간 및 지원대상 요건",불필요,재단 안내의 온라인 접수와 본인 또는 보호자 명의 통장 증빙,https://www.ansanfys.or.kr/sub03/sub03.php,"재학은 자격 요건, 온라인 접수 후 등록금 지원 가능",,,,,,,
+WLF00005229,home_confirmed,home_confirmed,수영구 청년포털 온라인 접수,"사업장 월 임차료 지원, 지원금 수령 과정에 대면 의무 안내 없음","18~39세, 수영구 거주, 부산 소재 실제 영업 사업장, 매출·임차료 기준",불필요,수영구 모집 안내의 온라인 접수 및 월 임차료 지원,https://www.bepa.kr/kor/view.do?idx=18836&no=1581&view=view,"영업 중인 사업장은 자격 요건, 별도 현장 활동 의무는 자료에 없음",,,,,,,
+WLF00005301,unclear,unclear,세종 청년희망내일센터 온라인 접수,"구직활동비 및 취업성공금. 확인한 이전 운영기관 공고에는 카드·포인트, 예비교육·교육·컨설팅 의무","세종 거주 19~39세 미취업 청년, 중위소득 150% 이하",확인 불가,2026년 복지로의 온라인 접수·지급과 2024년 공고의 지급 전 교육 확인. 등록 회차 교육의 대면 여부 자료 없음,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005301&wlfareInfoReldBztpCd=02,2024년 조건을 2026년에 그대로 적용하기 어려워 등록 회차의 대면 활동과 모집 상태는 미확정,,,,,,,
+WLF00006576,home_confirmed,extension_apply1_home,기장군 청년정책 대표 이메일로 서류 제출,월 사업장 임차료 지원,"기장군 거주 19~44세 청년 창업자, 사업장·임대차 요건",불필요,기장군 공고에서 신청 경로를 이메일로 지정,https://young.busan.go.kr/policySupport/view.nm?bizSid=SUP0000002777&menuCd=13,본문의 ‘온라인 신청’은 이메일 제출 경로이므로 확장에만 포함,,,,,,,
+WLF00006787,home_confirmed,mixed,"주소지 행정복지센터·공단 등 안내, 복지로 메타데이터에 인터넷·전화·우편·방문","가사지원·방문운동·방문목욕은 재가, 병원동행은 외출",노쇠·장애 등 일상생활 지원이 필요한 우선관리 대상,유형별 상이,2026년 10월 갱신 복지로 상세의 네 가지 지원 유형 및 접수기관 안내,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006787&wlfareInfoReldBztpCd=02,재가·병원동행 경로를 확인했으며 유형별 비방문 접수 완료 여부는 공개 자료에 없음,,,,가정 방문 가사지원,확장 경로 확인,"- 복지로 중구 상세에 우편 등 접수 방식, 보건복지부 통합돌봄 안내에 우편·팩스 신청 가능
+- 통합판정·개별계획을 거쳐 재가 가사지원 배정
+- 대구 중구 통합돌봄 우선관리대상자 중 가사 지원 필요자
+- 복지로 중구 등록 2026-10-09 수정
+- 중구의 가사지원 제공과 공식 우편 신청 경로 교차 확인
+- 중구의 본인 온라인 신청 완료 절차는 확인 불가. 병원동행은 외출 필요
+- 2026-11-12","https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006787
+https://www.mohw.go.kr/menu.es?mid=a60200000000"
+WLF00000078,missed_home,mixed,복지로 웹·앱 또는 주민센터 신청,"생활비의 현금 지원과 숙식 제공, 진찰·검사·입원 등의 의료 지원, 학업·상담 등","9~24세 위기·학교 밖·보호 공백·고립 청소년 등, 소득·중복지원 요건",유형별 상이,복지로와 지자체 안내에 생활·건강·학업 등 별도 지원 종류 명시,https://www.gwanak.go.kr/site/gwanak/04/10406010200002016051205.jsp,온라인 신청과 생활 현금 경로를 확인. 의료 등 유형별 외출 조건이 있어 사업 전체는 확인 불가,,,,생활지원 중 기초생계비 현금 지급,일부 단계 확인,"- 복지로 온라인 신청 가능. 미추홀구 2026년 추가 모집 공고도 온라인 접수 안내
+- 지자체 심의 후 생활비 등 지급. 2024년 여성가족부 지침은 가정이 있는 청소년에게 금전 지원 시 수급계좌 입금 경로 안내
+- 9~24세 위기 청소년. 미추홀구 확인 공고는 중위소득 100% 이하, 다른 제도 동일 항목과 중복 불가
+- 미추홀구 확인 회차는 2026-08-14 신청 마감, 9월부터 지원. 지역별 회차 상이
+- 2026년 미추홀구 공고와 종전 청소년사업 지침의 현금 지급 방식 대조
+- 2026년 해당 지자체의 현금 수령 단계에서 계좌 입금 여부와 추가 방문 요건을 명시한 공개 자료는 미확인
+- 2026-11-12","https://www.michuhol.go.kr/welfare/board/view.do?board_code=board_101&search=eyJib2FyZF9jb2RlIjoiYm9hcmRfMTAxIn0%3D&sq=310471
+https://clik.nanet.go.kr/clikr-collection/policyinfo/203/1018/2024/CLIKC1054058721305694_attach_3.pdf"
+WLF00000812,missed_home,not_home,"농어촌희망재단 누리집 신청, 대학 추천 및 보증보험","등록금·학업장려금 지급. 2026년 신규·계속 장학생은 원칙적으로 현장실습 16시간과 온라인 4시간, 졸업학기는 온라인 대체","대학 재학·학년·성적·연령 요건, 졸업 후 영농·농식품 분야 의무종사",필요(일반 수혜 경로),2026년 농식품부 선발안내 25쪽의 현장실습 의무,https://www.swwu.ac.kr/download/1779439213892/index.html,일반 수혜 경로에 현장실습이 필수임. 졸업학기 예외는 별도 확인,,,,,,,
+WLF00003197,missed_home,missed_home,한국장학재단 웹·앱 온라인 통합 신청,대학 등록금 우선감면 또는 대학을 통한 장학금 지급,"국내 대학 재학·입학 등 학적, Ⅰ유형은 소득·성적 기준, Ⅱ유형은 대학 자체 기준",불필요,교육부·재단의 2026학년도 국가장학금 통합 온라인 신청 안내,https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=105272&lev=0&m=0204,학적·소득·성적 요건과 신청·등록금 지원 경로를 별도 판단,,,,,,,
+WLF00003240,unclear,mixed,"지역별 평생교육이용권 온라인 신청, 카드 온라인 발급 가능",등록 기관에서 온라인 또는 오프라인 강좌 수강료 결제,지역별 소득·연령·등록 장애·이용권 유형 등 요건,유형별 상이,평생교육이용권 공식 사용처 목록은 온라인·오프라인 기관을 구분,https://www.lllcard.kr/main/guide/useVcOrgan.do,온라인으로 수강 가능한 사용처 확인. 지역·이용권 유형·강좌별 신청 및 이용 조건이 달라 사업 전체는 확인 불가,,,,전북 일반 이용권으로 등록 온라인 강좌 수강,엄격 경로 확인,"- 전북 평생교육이용권 누리집에서 본인인증 후 온라인 신청
+- 선정 뒤 NH농협 채움카드로 등록 온라인 교육기관 홈페이지에서 결제 후 온라인 수강. 기존 카드 충전 또는 카드 홈페이지 발급 경로
+- 전북 공고의 19세 이상 기초생활수급자·차상위계층 등 일반 이용권 기준 및 등록 사용기관
+- 2026년 전북 확인 1차 모집 3월 9~23일. 신청·사용기한은 회차별 안내
+- 전북 진흥원 이용안내의 온라인 교육기관 홈페이지 결제와 이용권 공식 카드 발급 안내
+- 집에서 수강할 온라인 강좌에 적용. 등록 기관의 오프라인 강좌는 방문 필요
+- 2026-11-12","https://www.jbiles.or.kr/content/sub10_01_01
+https://www.lllcard.kr/reg/seoul/guide/useVcMethod.do"
+WLF00003276,missed_home,missed_home,한국장학재단 누리집·앱에서 신청 후 승인 건 온라인 실행,"등록금은 교육기관 수납계좌, 생활비는 본인계좌 지급","국내 대학·대학원 재학·입학 예정 또는 지정 학점은행제 학습(예정), 세부 연령·성적 등",불필요,한국장학재단의 2026년 일반 상환 학자금대출 신청·실행 안내,https://www.kosaf.go.kr/ko/info.do?mode=view&pg=press01_02&seqNo=21477,재학·학습 요건이 있어도 대출 신청과 실행이 비대면,round_open,"한국장학재단 2026년 2학기 신청 11월 17일, 실행 11월 18일까지",https://www.kosaf.go.kr/ko/info.do?mode=view&pg=press01_02&seqNo=21477,,,,
+WLF00003277,missed_home,missed_home,한국장학재단 누리집·앱에서 신청 후 승인 건 온라인 실행,"등록금은 교육기관 수납계좌, 생활비는 본인계좌 지급, 소득 발생 뒤 상환","협약 국내 고등교육기관 학부·대학원 학적, 상품별 소득·연령 등",불필요,한국장학재단의 2026년 취업 후 상환 학자금대출 신청·실행 안내,https://www.kosaf.go.kr/ko/info.do?mode=view&pg=press01_02&seqNo=21477,"취업 후 상환은 상환 방식, 재학 요건과 대출 실행 경로는 별도",round_open,"한국장학재단 2026년 2학기 신청 11월 17일, 실행 11월 18일까지",https://www.kosaf.go.kr/ko/info.do?mode=view&pg=press01_02&seqNo=21477,,,,
+WLF00004658,unclear,missed_home,과학문화바우처 누리집 본인인증·온라인 신청,2026년 10만원 온라인 포인트로 전용몰의 교구·도서 주문,6세 이상 기초생활수급자·차상위계층·법정 한부모가족,불필요(2026년 교구·도서 주문),2026년 재단 공고의 온라인 신청과 전용몰 상품 주문,https://www.kosac.re.kr/menus/270/boards/386/posts/61259,SSIS 등록 내용과 같은 2026년 교구·도서 지원의 비대면 경로 확인. 해당 회차 사용기간은 10월 12일까지,round_closed,"2026년 신청 5월 6일~6월 2일, 선정자 사용기간 10월 12일 종료",https://www.kosac.re.kr/menus/270/boards/386/posts/61259,,,,
+WLF00006215,unclear,not_assessed,2024년부터 신규 지원 중단. 기존 가입자는 청년공제 청약 누리집에서 만기금 신청,"기존 가입자 만기 공제금 지급, 재직 증빙 첨부","기존 가입자 대상, 신규 지원 당시에는 15~34세 등 중소기업 정규직 취업 요건",미평가(신규 경로 없음),고용24에 2024년부터 신규 지원 중단과 기존 가입자 온라인 만기 지급 신청 안내,https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000118&systId=SI00000434,신규 신청 경로가 없어 신규 이용의 물리적 접근성은 미평가. 기존 가입자 만기 신청은 별도,new_support_discontinued,2024년부터 신규 지원 중단. 기존 가입자의 만기 지급 업무는 유지,https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systClId=SC00000118&systId=SI00000434,,,,
+WLF00006286,missed_home,missed_home,한국장학재단 홈페이지 신청·서류 심사,"등록금 우선감면 또는 후지급, 수혜 후 의무재직은 재직 상태 확인","국내 대학 재학, 최종학력·성적·재직 및 의무재직 인정 기준",불필요(장학 절차),한국장학재단 업무 안내의 온라인 신청과 의무재직 심사,https://global.inu.ac.kr/bbs/inu/249/380494/download.do,재직 유지에 대한 사후 심사는 확인되며 별도 대면 교육이나 지원기관 방문 의무는 확인되지 않음,,,,,,,
+WLF00002009,extension_apply1_home,extension_apply1_home,직권 신청 또는 직권·읍면동장 추천,대상자 개인 계좌에 매월 수당 입금,"천안 거주 조손세대, 손자녀 연령·재학, 수급·차상위 조건",불필요(직권 경로),복지로 본문의 직권·추천 및 개인계좌 입금 절차,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002009&wlfareInfoReldBztpCd=02,직권 신청은 기존 확장 기준 유지,,,,,,,
+WLF00006073,extension_apply1_home,extension_apply1_home,"청소년쉼터·청소년자립지원관 추천, 경기도 심의·지급 결정",자립정착금 1천만원 분할 지급,"경기도 거주, 18세 이후 시설 퇴소한 24세 이하 가정 밖 청소년, 보호기간·퇴소일 요건",불필요(시설 추천 경로),경기도 사업 안내의 시설 추천·정착금 지급과 SSIS의 심사 절차,https://web1.gg.go.kr/contents/contents.do?ciIdx=987312&menuId=1534159,"시설 추천으로 신청, 과거 시설 보호 이력은 자격 요건",,,,,,,
+WLF00000026,home_confirmed,not_home,복지로 온라인 신청 가능. 지자체 추천 통지 후 국민은행 지점 방문,국민은행 방문 후 대여 결정·실행,"19세 이상 등록 장애인, 중위소득 50% 초과~100% 이하 및 대여 목적·금융 요건",필요,보건복지부 공식 절차에 자금대여 추천 통지 후 국민은행 지점 방문 명시,https://www.mohw.go.kr/menu.es?mid=a10710030600,복지로 신청과 금융기관의 대여 절차를 구분해 지점 방문을 반영함. 사람 판정 원본 보존,,,,,,,
+WLF00005411,home_confirmed,mixed,복지로 온라인 또는 주민센터 접수,"재가돌봄·가사는 방문 제공, 특화는 병원 동행·심리지원·교류증진 등 시군구별 제공",돌봄 필요 청·중장년 13~64세 또는 가족돌봄청년 등,유형별 상이,보건복지부 기본 재가 서비스와 병원 동행 등 특화서비스 안내,https://www.mohw.go.kr/menu.es?mid=a10709020900,재가 기본서비스와 특화 경로 확인. 지역·선택 유형별 외출 필요성이 달라 사업 전체는 확인 불가,,,,기본 A형 재가돌봄·가사,엄격 경로 확인,"- 복지로 온라인 신청
+- 제공인력이 가정에 방문해 신체 돌봄·청소·식사 준비 등을 제공. 국민행복카드 사용, 지침에 카드 배송 절차 안내
+- 돌봄이 필요한 청·중장년 또는 가족돌봄청년 등. 지역별 기본 A형 제공 여부와 본인부담금 적용
+- 2026년 전국 사업 지침의 절차. 거주지별 접수·제공 상태는 개별 지자체 공고 기준
+- 2026년 사업안내의 복지로 신청, 기본 A형 가정방문, 국민행복카드 발급·배송 절차
+- 병원동행 등 특화서비스는 별도 유형
+- 2026-11-12","https://www.jejubokji.net/jcsw/board/rule-guide/76812/38997
+https://www.mohw.go.kr/menu.es?mid=a10709020900"
+WLF00005099,home_confirmed,not_home,전북청년 함께 두배적금 누리집 온라인 접수,저축 매칭 지원금 수령 전 대면 금융교육·컨설팅 1회 필수,"전북 거주 근로 청년, 연령·소득·중복가입 조건",필요,사업 누리집의 2026년 대면 교육·컨설팅 필수와 불참 시 지원금 미지급 안내,https://double.jb2030.or.kr/reser/educonsulting.html,가입자의 근로 요건과 별개로 사업 자체가 대면 교육을 요구함,,,,,,,
+WLF00005591,home_confirmed,extension_apply1_home,기업이 청년의 서류를 취합해 광주청년통합플랫폼에 제출,청년·기업·광주시 적립 뒤 만기공제금 지급,광주 소재 중소기업 정규직 재직 청년 19~39세,불필요(기업 대리 경로),복지로 본문의 ‘신청주체: 기업’과 온라인 일괄 접수,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005591&wlfareInfoReldBztpCd=02,"재직은 자격 요건, 기업을 통한 신청 경로는 기존 대리·추천과 같은 확장 기준",,,,,,,
+WLF00003204,not_home,missed_home,누리집 회원가입·로그인 후 채팅상담실 이용,1:1 실시간 채팅·게시판 상담,상담이 필요한 청소년 등 서비스 대상,불필요,운영기관 채팅상담실 이용 절차 확인,https://www.1388.go.kr/cco/YTOSP_SC_CCH_01,공식 경로에서 온라인 접수·이용 확인. 기존 사람 판정은 보존,,,,,,,
+WLF00000054,not_home,extension_apply1_home,재학 학교 소재지 관할 보훈(지)청 방문 또는 우편 접수,선발 후 대학원·특수학교·대학 장학금 지원,국가유공자 본인·배우자·자녀 등 유형별 보훈 및 학적·성적 요건,불필요(우편 신청 경로),정부24 국가보훈부 원자료 183000000006 상세에 방문·우편 접수 병기,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2148020&bnefType=all&svcId=183000000006,우편 접수와 장학금 지급 경로 확인. 기존 사람 판정 원본 보존,round_closed,공개 자료상 매년 4월·9월 접수. 2026년 2학기 확인 공고는 9월 30일 마감,https://hit.ac.kr/life_scholarship_information/view/id/47969,,,,
+WLF00001139,not_home,mixed,온라인 상담·신고 접수 및 지역 지원센터 또는 유관기관 연계,온라인 상담과 구조·보호·의료·법률·자립 프로그램,성착취·성매매 피해 아동·청소년 등 등록 서비스 대상,유형별 상이,주무부처의 온라인 상담 및 구조·치료·회복 연계 안내,https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?bbtSn=712048&mid=mda700,온라인 접점 확인. 보호·치료 등 복합 서비스의 실제 이용 방식은 지원 유형에 따라 달라 확인 불가,,,,디포유스 일대일 온라인 채팅상담,엄격 경로 확인,"- 카카오톡 등 공식 SNS 상담 채널에서 메시지로 접수
+- 상담자와 온라인 대화로 상담 제공
+- 성착취 피해 또는 위험에 노출된 아동·청소년 등
+- 성평등가족부 2026-07-31 자료에 SNS 채널 운영 명시
+- 성평등가족부와 한국여성인권진흥원의 디포유스 운영 공개 자료
+- 보호시설·의료·치료 연계는 별도 서비스 단계
+- 2026-11-12","https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=711240&mid=news405
+https://www.mogef.go.kr/nw/enw/nw_enw_s001d.do?bbtSn=712048&mid=mda700"
+WLF00003940,not_home,extension_apply1_home,정읍시 방문 또는 이메일로 신청서 제출,한국장학재단 분할상환약정 초입금 또는 성실상환자 조기상환금 지원,"정읍 거주 18~45세 학자금대출 장기연체 청년, 약정 또는 조기상환 조건",불필요(이메일·채무상환 지원 경로),정부24 정읍시 원자료 469000000120 상세에 이메일 접수 명시. 지원은 재단 채무에 반영,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005620&bnefType=all&svcId=469000000120,기존 신청 N에서 이메일을 확인해 확장 판정. 사람 판정 원본 보존,rolling,정부24에 상시신청으로 안내. 접수기관 공고의 회차별 종료일과 예산 확인 필요,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1005620&bnefType=all&svcId=469000000120,,,,
+WLF00006518,not_home,extension_apply1_home,영등포구 이메일 또는 구청 방문 신청,납부한 산재보험료 일부 지원,영등포구 사업의 플랫폼 배달노동자 및 산재보험료 납부 조건,불필요(이메일 경로),복지로 본문의 이메일 서류 제출과 납부 보험료 지원,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006518&wlfareInfoReldBztpCd=02,"보험료 지원에서 노동자 지위는 자격 요건, 이메일 신청은 확장 기준",,,,,,,
+WLF00001020,unclear,not_home,거주지 관할 하나센터 방문 신청,"선정 후 하나은행 방문 개설, 재단 적립금·지원금 입금","보호결정 북한이탈주민, 가입 시 경제활동·소득 등 요건",필요,정부24 통일부 원자료 125000000004에 하나센터 신청과 하나은행 방문 계좌 개설 명시,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999201&bnefType=all&svcId=125000000004,소득 활동은 자격 요건. 하나센터와 은행 방문은 가입 절차,rolling,정부24에 상시신청으로 안내,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999201&bnefType=all&svcId=125000000004,,,,
+WLF00003200,unclear,extension_apply1_home,"지역 청소년상담복지센터 전화 접수 가능, 방문·온라인 상담 경로는 지역별 확인",전문가가 청소년의 가정 등 생활 현장에 찾아가 상담,9~24세 위기 청소년,불필요(전화 접수·가정 방문 경로),"정부24 원자료 WII000000760 상세에 전화·방문·온라인 상담, 청소년1388 전국 안내에 센터 직접 전화·방문",https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=999189&bnefType=all&svcId=WII000000760,전화 접수와 가정 방문 상담을 확인. 전국 동일한 본인 온라인 신청 완료 경로는 미확인,,,,,,,
+WLF00003216,unclear,missed_home,등록된 교육지원대상자는 학습보조비 별도 신청 불필요. 관할 보훈지청 유선 확인 안내,대상자에게 학기별 현금 학습보조비 지급,"보훈 관계 법령상 교육지원대상자, 학교급·학적·보훈 유형별 요건",불필요,"정부24 국가보훈부 원자료 183000000005 목록은 신청불필요, 상세는 유선 확인·제출 서류 없음",https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2148019&bnefType=all&svcId=183000000005,유선 확인은 지급 확인 경로. 이미 교육지원대상자인 사람의 보조비 별도 신청이나 방문은 요구하지 않음,rolling,등록된 교육지원대상자에게 학기별 지급,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2148019&bnefType=all&svcId=183000000005,,,,
+WLF00005631,unclear,missed_home,우체국보험 웹·앱 온라인 가입 가능,진단보험금을 우체국보험 앱에서 청구 가능. 수익자와 피보험자가 다르면 동의 절차 적용,"주계약은 태아, 특약은 17~45세 임신부 등 가입조건. 보험금은 진단 요건",불필요(온라인 가입·모바일 청구 경로),복지로 임신·출산 공식 안내의 온라인 가입과 우체국보험 사고보험금 모바일 접수·동의 절차,https://epostlife.go.kr/PYIMIM0001.do,보험 가입·보험금 청구와 지급을 기준으로 판정. 보험금 지급 사유인 질환 진단은 자격·사고 요건,,,,,,,
+WLF00006301,unclear,mixed,보건복지부 청년ON 자가진단·상담 온라인 신청. 충북 공고에서 초기 상담 대면·비대면 병행,"가족돌봄 자기돌봄비와 고립·은둔 청년의 심리·집단상담, 회복 프로그램","가족돌봄 청소년·청년 또는 지역별 고립·은둔 청년, 세부 연령·소득 요건",유형별·센터별 상이,국회예산정책처 평가의 청년ON 온라인 전담창구와 충북청년미래센터 2026년 초기 상담·맞춤 프로그램 공고,https://www.nabo.go.kr/board/file/down.do?fid=33318728,온라인 초기 접수 확인. 이용 프로그램과 자격은 지원 유형·센터별로 다름,,,,충북 가족돌봄청년 자기돌봄비,일부 단계 확인,"- 청년ON에서 온라인 신청
+- 초기상담과 맞춤 지원계획 수립 뒤 우리카드 포인트 지급
+- 충북 거주 가족돌봄 청소년·청년 중 자기돌봄비는 13~34세·중위소득 100% 이하 등
+- 충북청년미래센터 2026년 운영 공고 기준
+- 충북청년미래센터 공고 제2026-31호의 신청·상담·지원계획·카드 포인트 절차
+- 필수 초기상담 및 카드 발급·수령을 전부 비대면으로 마치는 조건은 미확인. 현금 입금으로 분류하지 않음
+- 2026-11-12","https://www.cbwoman.or.kr/lime_lib/view_file.php?filename=%EB%B6%99%EC%9E%841_2026+%EC%9C%84%EA%B8%B0%EC%B2%AD%28%EC%86%8C%29%EB%85%84%28%EA%B0%80%EC%A1%B1%EB%8F%8C%EB%B4%84%29+%EC%A0%84%EB%8B%B4%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85+%EC%B0%B8%EC%97%AC%EC%9E%90+%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0%EB%AC%B8.pdf&rType=orign&rfile=b5518b761ba7cd470b5bac1916248541
+https://moelyouth.work24.go.kr/"
+WLF00000668,unclear,missed_home,개인 신청 없음. 국민건강보험공단이 대상 명단 통보·청구,보험료를 공단에 대납,수성구 주민 중 최저보험료 기준과 연령·장애·가구 등 조례 요건,불필요,정부24 수성구 원자료 346000000112 상세에 개인 신청 없음 및 공단 청구에 따른 지급 명시,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004235&bnefType=all&svcId=346000000112,별도 직권 신청 절차 없이 명단과 공단 청구로 지원 처리,rolling,정부24에 상시 지원 및 개인 신청 없음으로 안내,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1004235&bnefType=all&svcId=346000000112,,,,
+WLF00001412,unclear,unclear,복지로에서 아산시 장애인복지과 처리 확인. 본인 신청 여부는 공개 원문에서 미확인,기존 장애수당 대상 재가 경증장애인에게 월 2만원 지급,아산시 18세 이상 저소득 경증장애인 중 기초생활수급자·차상위계층,확인 불가,아산시 복지로 등록의 대상·지급 내용은 확인. 정부24 재게시본의 직권지급을 공식 원문에서 교차 확인하지 못함,https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001412&wlfareInfoReldBztpCd=02,현금 지원 확인. 별도 신청 없이 지급한다는 공개 2차 정보는 판정 근거로 채택하지 않음,,,,,,,
+WLF00001983,unclear,mixed,기쁨카드 홈페이지 온라인 신청,복지포인트 연 2회 지급. 부산시 계획에 온라인 복지몰과 오프라인 가맹점 병기,"부산 거주 18~39세, 부산 소재 중소기업 3개월 이상 재직 등",사용처별 상이,부산시 2026년 시행계획에 복지몰과 오프라인 사용처. 카드 수령·온라인 사용 범위는 일부 확인,https://clik.nanet.go.kr/clikr-collection/policyinfo/212/1051/2026/CLIKC1071711589640568_attach_1.pdf,온라인 사용 가능 항목을 확인했으나 카드 수령 및 온라인으로 이용 가능한 범위는 미확정,round_closed,2026년 확인 모집 4월 6~24일. 선정자 포인트 사용기한은 11월 30일,https://busanjob.net/view.do?bbsId=BRD0016&no=1077&pgMode=show&pstSn=24288&siteId=SITE003,복지포인트 온라인 복지몰 결제,일부 단계 확인,"- 기쁨카드 사업 누리집 온라인 접수
+- 선정 시 복지포인트 연 2회 지급. 부산시 시행계획에 온라인 복지몰 구매 항목 안내
+- 부산 거주 18~39세, 부산 소재 중소기업 3개월 이상 재직 등 2026년 공고 요건
+- 2026년 확인 모집 4월 6~24일, 선정자 사용기한 11월 30일
+- 부산경제진흥원 모집 공고와 부산시 2026년 시행계획의 온라인 복지몰 항목
+- 2026년 전용카드 발급·수령의 비방문 경로는 미확인. 이전 연도 은행 방문 안내를 2026년에 적용하지 않음
+- 2026-11-12","https://busanjob.net/view.do?bbsId=BRD0016&no=1077&pgMode=show&pstSn=24288&siteId=SITE003
+https://clik.nanet.go.kr/clikr-collection/policyinfo/212/1051/2026/CLIKC1071711589640568_attach_1.pdf"
+WLF00002649,unclear,missed_home,"정부24 목록은 방문, 상세는 개인 신청 없음 및 공단의 지원 가능 세대 통보·검토",대상자의 건강보험료를 공단 계좌에 지급,대구 중구 공단 지역가입자 중 저소득 장애인·한부모 등 조례 요건,불필요,"정부24 중구 원자료 341000000108 상세의 공단 통보와 개인 신청 없음, SSIS의 공단계좌 지급",https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003198&bnefType=all&svcId=341000000108,간단 목록 태그보다 동일 기관의 상세 절차를 적용해 신청 불필요로 판정,rolling,"정부24 상세에 공단 통보를 통한 지원, 신청기한 상시로 안내",https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003198&bnefType=all&svcId=341000000108,,,,
+WLF00003634,unclear,mixed,가정위탁세대 격려금은 신청 불필요. 시설 입소 아동 견학비의 접수 방식 미확인,어린이날 격려금 지급과 시설아동 선진지 견학 비용 지원,순천시 가정위탁세대 및 아동복지시설 입소 아동,유형별 상이,정부24 순천시 원자료 482000000114에 위탁세대 격려금 신청 불필요. SSIS 동일 사업의 시설 견학비는 외출 연계,https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003354&bnefType=all&svcId=482000000114,가정위탁세대 격려금의 비방문 절차만 확인. 견학비까지 포함한 전체 사업은 확인 불가,,,,가정위탁세대 어린이날 격려금,일부 단계 확인,"- 별도 신청 없음. 순천시가 4월 가정위탁세대 현황 조사
+- 세대당 현금 10만원 지급. 계좌·방문 등 수령 방식은 상세 원자료에 미기재
+- 순천시 가정위탁세대
+- 정부24 순천시 등록 자료 2025-11-27 수정본의 정기 지급 안내. 2026년 실제 지급 여부는 미확인
+- 저장소 내 정부24 원자료 gov24_serviceDetail.csv의 서비스 482000000114
+- 시설아동 견학비와는 지급 조건이 다름. 공개 원자료에 확인된 지급 유형까지만 기록
+- 2026-11-12",https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=1003354&bnefType=all&svcId=482000000114
+WLF00004938,unclear,mixed,부산청년플랫폼에서 일대일 또는 집단 상담 온라인 접수,"일대일 상담은 기관 선택 뒤 5회기, 집단 상담은 지정 센터에서 진행",부산에 거주 또는 생활하는 18~39세로 마음건강 상담이 필요한 청년,유형별 상이,"부산청년플랫폼 일대일 상담과 집단 상담 운영 안내, 집단 상담에 센터 장소 명시",https://young.busan.go.kr/index.nm?menuCd=207,집단 상담은 방문. 일대일의 비대면 완료 가능 여부는 공개 안내에 없음,round_closed,확인한 2026년 일대일·집단 상담 회차의 신청기간 경과,https://young.busan.go.kr/index.nm?menuCd=207,부산 일대일 심리상담 5회기,일부 단계 확인,"- 부산청년플랫폼에서 온라인 신청하며 상담기관 선택
+- 선정 후 상담사와 일정을 잡아 일대일 상담 5회기 이용
+- 부산에 거주하거나 생활하는 상담 필요 18~39세 청년
+- 부산청년플랫폼 확인 2026년 모집 회차 마감
+- 부산청년플랫폼 일대일 이용 안내 및 부산경제진흥원 2026년 심리상담 과업지시서
+- 상담기관 주소와 일정 조율은 확인. 전화·화상으로 5회기를 완료할 수 있다는 명시 근거는 미확인
+- 2026-11-12","https://young.busan.go.kr/index.nm?menuCd=165
+https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01413589&bidPbancOrd=000&fileSeq=3&fileType=&prcmBsneSeCd=03"
+WLF00006550,unclear,unclear,"창원·김해 등 시군별 온라인 창구, 지역별 방문·전화 등 병행",온라인 초기 상담 창구와 사례관리·유형별 회복 프로그램,"경남 고립·은둔 청년, 시군별 연령 요건",프로그램·시군별 상이,복지로의 시군별 접수와 경상남도사회서비스원의 창원 온라인 마음상담소 안내,https://gn.pass.or.kr/sub07/sub03_01.php?bbsData=bm89Mjk2%7C%7C&mode=view,창원 온라인 상담 확인. 다른 시군과 후속 프로그램의 외출 필요 여부는 통일해 판정할 근거 없음,,,,,,,
+WLF00006619,unclear,missed_home,성남청년다해 온라인 신청,성남시 상반기 안내의 1:1 취업컨설팅 3회는 Zoom·전화·대면 경로 제공,성남시 거주 19~39세 미취업 청년,불필요(공개된 상반기 비대면 경로),성남시 공식 시정소식에서 2026년 온라인 신청과 Zoom·전화 컨설팅 확인,https://snvision.seongnam.go.kr/22357,비대면 이용 경로가 확인된 2026년 회차에 근거한 등록 서비스 판정,round_closed,"공식 하반기 모집 8월 31일~9월 15일, 미달 추가 접수 9월 22일 마감(성남청년다해 공고 260·271)",https://dept.seongnam.go.kr/youth/apply/business/detail/260,,,,

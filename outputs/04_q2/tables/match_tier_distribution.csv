@@ -1,0 +1,7 @@
+﻿row_type,tier,n,share_of_5288,in_pairs,n_gov_shared
+tier,A,1094,0.20688350983358547,True,68
+tier,B,245,0.046331316187594555,True,19
+tier,C,876,0.16565809379727686,True,248
+tier,U,3073,0.5811270801815431,False,0
+subtotal,A+B+C,2215,0.41887291981845687,True,335
+total,A+B+C+U,5288,1.0,False,335

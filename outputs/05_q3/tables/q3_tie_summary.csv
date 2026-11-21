@@ -1,0 +1,9 @@
+﻿cond_id,n_queries,n_changed,mean_replaced,max_replaced
+short_t0_or,60,49,3.6,10
+full_t0_or,60,47,1.15,5
+short_t1_or,60,50,3.1666666666666665,10
+full_t1_or,60,28,0.6333333333333333,4
+short_t0_and,60,4,0.23333333333333334,9
+full_t0_and,60,7,0.13333333333333333,2
+short_t0_or_nodf,60,46,3.0166666666666666,10
+full_t0_or_nodf,60,36,0.9,5

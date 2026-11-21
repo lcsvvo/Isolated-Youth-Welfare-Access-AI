@@ -1,0 +1,282 @@
+{
+  "schema": "halfstep-activities-v1",
+  "version": "2026-11-16-draft-1",
+  "review_status": "team_draft",
+  "source": "사용자가 전달한 지홍의 2026-11-11 활동 목록 초안. Q21 대응은 제안이며 임상 효과·안전성 검증을 뜻하지 않음. effort 1~3은 이번 UI 시연을 위해 작성한 잠정 부담 라벨이며 팀 검수 필요. contact 0~1 항목은 상한 1로 보수적으로 처리.",
+  "activities": [
+    {
+      "id": "a01",
+      "title": "커튼 열고 창밖 1분 보기",
+      "range": "방 안",
+      "q21": [
+        "②"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 1
+    },
+    {
+      "id": "a02",
+      "title": "일어난 시간 한 줄 기록하기",
+      "range": "방 안",
+      "q21": [
+        "②",
+        "⑨"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 1
+    },
+    {
+      "id": "a03",
+      "title": "좋아하는 노래 한 곡 끝까지 듣기",
+      "range": "방 안",
+      "q21": [
+        "③"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 1
+    },
+    {
+      "id": "a04",
+      "title": "스트레칭 영상 하나 따라 하기 (5분 이내)",
+      "range": "방 안",
+      "q21": [
+        "③"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a05",
+      "title": "관심 있는 주제 글 하나 읽기",
+      "range": "방 안",
+      "q21": [
+        "⑦"
+      ],
+      "domains": [
+        "교육훈련"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 1
+    },
+    {
+      "id": "a06",
+      "title": "물 한 잔 마시고 식사 한 끼 챙기기",
+      "range": "집 안",
+      "q21": [
+        "②",
+        "⑨"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a07",
+      "title": "방 한 구역(책상 위 등) 정리하기",
+      "range": "집 안",
+      "q21": [
+        "②"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a08",
+      "title": "간단한 요리 하나 해보기",
+      "range": "집 안",
+      "q21": [
+        "②",
+        "③"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 3
+    },
+    {
+      "id": "a09",
+      "title": "무료 온라인 강의 한 강 듣기",
+      "range": "집 안",
+      "q21": [
+        "⑦"
+      ],
+      "domains": [
+        "교육훈련"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 3
+    },
+    {
+      "id": "a10",
+      "title": "관심 있는 직무 공고 하나 읽어보기",
+      "range": "집 안",
+      "q21": [
+        "⑧"
+      ],
+      "domains": [
+        "미취업(구직)"
+      ],
+      "outing": 0,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a11",
+      "title": "익명 온라인 커뮤니티 글 하나 읽기 (쓰기는 선택)",
+      "range": "집 안",
+      "q21": [
+        "⑥"
+      ],
+      "domains": [
+        "관계참여"
+      ],
+      "outing": 0,
+      "contact_max": 1,
+      "effort": 2
+    },
+    {
+      "id": "a12",
+      "title": "아는 사람에게 이모티콘 하나 보내기",
+      "range": "집 안",
+      "q21": [
+        "④",
+        "⑥"
+      ],
+      "domains": [
+        "관계참여"
+      ],
+      "outing": 0,
+      "contact_max": 1,
+      "effort": 2
+    },
+    {
+      "id": "a13",
+      "title": "현관문 앞이나 건물 앞까지 나갔다 오기",
+      "range": "집 근처",
+      "q21": [
+        "②"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 1,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a14",
+      "title": "사람 적은 시간에 편의점 다녀오기",
+      "range": "집 근처",
+      "q21": [
+        "②"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 1,
+      "contact_max": 1,
+      "effort": 3
+    },
+    {
+      "id": "a15",
+      "title": "동네 한 블록 걷기",
+      "range": "집 근처",
+      "q21": [
+        "②",
+        "③"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 1,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a16",
+      "title": "공원 벤치에 10분 앉아 있기",
+      "range": "집 근처",
+      "q21": [
+        "③"
+      ],
+      "domains": [
+        "일상·여가"
+      ],
+      "outing": 1,
+      "contact_max": 0,
+      "effort": 2
+    },
+    {
+      "id": "a17",
+      "title": "도서관 가서 책 한 권 빌리기",
+      "range": "외출",
+      "q21": [
+        "③",
+        "⑦"
+      ],
+      "domains": [
+        "일상·여가",
+        "교육훈련"
+      ],
+      "outing": 2,
+      "contact_max": 1,
+      "effort": 3
+    },
+    {
+      "id": "a18",
+      "title": "청년공간 위치만 확인하고 앞까지 가보기",
+      "range": "외출",
+      "q21": [
+        "①"
+      ],
+      "domains": [
+        "관계참여"
+      ],
+      "outing": 2,
+      "contact_max": 0,
+      "effort": 3
+    },
+    {
+      "id": "a19",
+      "title": "청년공간 프로그램 하나 구경만 하기",
+      "range": "외출",
+      "q21": [
+        "①",
+        "④"
+      ],
+      "domains": [
+        "관계참여"
+      ],
+      "outing": 2,
+      "contact_max": 1,
+      "effort": 3
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+﻿rule_id,change,reason,source,example_sample_ids
+age_birth_category,출산 자격 문구(경계 없음)는 연령 부분. 신생아·영아는 v3 age_category 로 이미 부분,코드북 3.1 (a): 경계 없이 단어만으로 명시로 보지 않는다,codebook_v3.1,V-age-gov-014;V-age-gov-017;age-ssis-05;age-gov-03
+age_birth_elapsed,출생·출산·생후 뒤 N일/개월/년 이내 같은 출생 후 기간은 연령 명시. 신청·지급 기한 절은 제외,코드북 3.1 (a): 출생일·출생 후 기간 경계가 있을 때만 명시,codebook_v3.1,
+age_legal,미성년은 자격 대상의 연령일 때만 명시. 동반·보호자·법정대리인·동의 절은 제외,코드북 3.1 (b),codebook_v3.1,
+ACT(예약),예약은 예약 필수·사전예약 후 신청/방문일 때만 신청 행위. 선택적 예약은 제외,코드북 3.1 (c),codebook_v3.1,P-channel-gov-065
+channel_method_only,신청 행위어 없이 방법 어휘만 있는 줄(방문 및 전화)은 명시. 문의 줄은 제외,코드북 3.1 (d),codebook_v3.1,
+income_priority,우선 선발·우선 지원·차등지원 문구가 붙은 소득 표현은 자격 근거에서 제외,코드북 3.1 (e),codebook_v3.1,V-income-ssis-019;V-income-ssis-025
+period_label_content,신청시기 라벨 뒤 내용이 자격 기준일(출생아 이후 등)이면 신청 기간 근거에서 제외,코드북 3.1 (f): 내용 우선,codebook_v3.1,V-period-gov-091
+period_pay_deadline,N일 이내 지급·처리·입금·송금·결정·통보·통지·발급 같은 지급·처리 기한은 신청 기간 근거에서 제외,코드북 3.1 (f),codebook_v3.1,
+age_birth_dot,"마침표 날짜('2025.9.30. 이전 출생', '2025. 1. 1. 이후 출생아')를 출생일 경계로 인정해 연령 명시",v3 검증 표본에서 연령 경계가 있는데 부분으로 판정됨,v3_validation_open_issue,V-age-gov-010;V-age-gov-016
+age_deceased_infant,영아·신생아·출생과 사망·장례가 같은 절에 있으면(사망 영아 정의) 그 절을 연령 판정에서 제외,v3 파일럿: 사망 영아의 정의가 자격 연령으로 판정됨. 보수적으로 절 단위 제외,v3_validation_open_issue,P-age-ssis-002;P-age-ssis-004;P-age-ssis-005;P-age-ssis-008;P-age-gov-011;P-age-gov-014
+res_token(주소득자),거주 토큰 '주소'가 '주소득자'에서 걸리지 않게 함,v3 검증 표본 거주 오탐,v3_validation_open_issue,V-residence-ssis-037
+res_bad_left(주거 형태),비닐간이공작물·비주택·주택·건물·그룹홈 거주는 주거 형태로 보고 거주 요건에서 제외,v3 검증 표본 거주 오탐,v3_validation_open_issue,P-residence-gov-054;V-residence-ssis-037
+res_bad_right(거주하는 주택),'거주하는 주택·건물'은 거주 요건이 아니라 주거 형태로 제외,v3 검증 표본 거주 오탐(긴급복지 화재 문구),v3_validation_open_issue,V-residence-ssis-037
+res_generic(주소 표기 줄),"'주소 : ○○' 표기 줄, 신청기업·임차주택·동일 주소는 거주 요건에서 제외",v3 res_generic 증거 점검: 주소 표기 줄 오탐,v3_validation_open_issue,P-residence-gov-054
+res_kwan_bare,'관내' 뒤에 대상자 명사(재가노인 등)가 이어지고 거주 표현이 없으면 거주 부분,v3 검증 표본: 관내 재가노인 대상자를 놓침,v3_validation_open_issue,V-residence-gov-047
+channel_not_needed(신청을 통한 지원 아님),"'신청을 통한 지원 아님'을 신청 불필요로 인정(신청 경로 명시, 기간·서류 해당없음)",v3 검증 표본 V-channel-gov-070,v3_validation_open_issue,V-channel-gov-070
+channel_route_tail,'서류 지참하여 … 보건소 방문' 처럼 50자를 넘는 줄도 끝이 방문 장소이면 명시,v3 channel_bare_route 길이 제한(50자) 누락: V-channel-gov-068,v3_validation_open_issue,V-channel-gov-068

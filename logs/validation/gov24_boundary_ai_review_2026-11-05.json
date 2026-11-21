@@ -1,0 +1,184 @@
+{
+  "seed": 20261105,
+  "sampling": "개인 대상 중 2026-10-31 검토 ID 전체를 제외한 연령 차이 8건·소득 경계/불일치 8건. 위험 기반 표본이며 모집단 오류율 추정용이 아님.",
+  "reviewer": "Codex",
+  "human_reviewers": 0,
+  "judgments": [
+    {
+      "서비스ID": "GMW000000210",
+      "서비스명": "고혈압·당뇨병 등록관리서비스",
+      "item": "age",
+      "ai_issue_type": "multiple_benefit_groups",
+      "evidence": "필수 대상 : 만 65세 이상",
+      "additional_evidence": "권고 대상 : 만 30세-64세",
+      "ai_judgment": "의료비 지원과 교육·알림상담 대상 연령이 다름. JA 65세 이상만으로 30~64세 교육·상담을 배제하지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "542000000117",
+      "서비스명": "고령 영세농업인 벼 육묘 지원",
+      "item": "age",
+      "ai_issue_type": "ja_text_difference",
+      "evidence": "만 65세 이상 농업인",
+      "additional_evidence": "",
+      "ai_judgment": "JA 시작 70과 본문 시작 65가 다름. 수집시점 원문상 65~69세가 JA에서 빠짐. 현재 정책 확정은 별도 공식 확인.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "999000000036",
+      "서비스명": "장애인 스포츠강좌이용권 지원",
+      "item": "age",
+      "ai_issue_type": "multiple_priority_groups",
+      "evidence": "5∼69세 장애인",
+      "additional_evidence": "만 19세 이상",
+      "ai_judgment": "전체 연령 5~69와 우선순위별 5~18/19세 이상을 구분. 텍스트 첫 매칭 19를 전체 하한으로 쓰지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "999000000021",
+      "서비스명": "기존주택 매입임대주택 지원사업",
+      "item": "age",
+      "ai_issue_type": "multiple_programs",
+      "evidence": "무주택자 청년(19세~39세)",
+      "additional_evidence": "6세 이하 자녀",
+      "ai_judgment": "일반·청년·신혼부부 여러 유형을 하나의 연령 구간으로 판정하지 않음. 자녀 나이도 별도 조건.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "453000000204",
+      "서비스명": "저소득 세대 건강 지원",
+      "item": "age",
+      "ai_issue_type": "household_member_age",
+      "evidence": "만 18세 미만 손자녀",
+      "additional_evidence": "등록장애인 세대",
+      "ai_judgment": "손자녀 연령이 신청자 전체 상한이 아님. 노인·장애인·한부모 등 세대 조건을 분리.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "460000000162",
+      "서비스명": "지역사랑상품권(홍성사랑상품권)",
+      "item": "age",
+      "ai_issue_type": "different_steps",
+      "evidence": "상품권 구매 : 만19세이상",
+      "additional_evidence": "앱설치 및 카드발급 : 만14세이상",
+      "ai_judgment": "구매와 설치·발급 단계별 하한이 다름. JA 14세 이상을 할인구매 자격으로 쓰지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "O00005600002",
+      "서비스명": "체육시설 사용 이용료 감면",
+      "item": "age",
+      "ai_issue_type": "disjoint_groups_and_exclusive_bound",
+      "evidence": "만 19세 미만",
+      "additional_evidence": "만 65세 이상",
+      "ai_judgment": "노인·청소년·아동·다른 대상군의 합집합. 텍스트 min65/max19를 연속구간으로 쓰지 않으며 미만 경계를 보존.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "O00027200002",
+      "서비스명": "체육시설 이용요금 감면(송도체육센터)",
+      "item": "age",
+      "ai_issue_type": "child_age_and_multiple_groups",
+      "evidence": "막내가 만 15세 이하",
+      "additional_evidence": "13세 이상 55세 이하의 여성",
+      "ai_judgment": "막내 자녀 15세 조건은 신청자 상한이 아님. 수영장 여성 등 다른 혜택 조건도 분리.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "B27000100042",
+      "서비스명": "무료 소송대리 서비스(농업인·어업인)",
+      "item": "income",
+      "ai_issue_type": "ja_band_not_exact_cap",
+      "evidence": "기준중위소득 150% 이하",
+      "additional_evidence": "",
+      "ai_judgment": "JA 상한 100과 본문 150. JA 구간 경계 표시는 실제 100% 상한을 확정하지 못함. 본문 150을 근거로 병기.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "B27000100016",
+      "서비스명": "무료 소송대리 서비스(저소득 재해근로자)",
+      "item": "income",
+      "ai_issue_type": "ja_band_not_exact_cap",
+      "evidence": "기준중위소득 125% 이하",
+      "additional_evidence": "",
+      "ai_judgment": "JA 상한 100과 본문 125. JA만으로 100~125% 대상자를 배제하지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "611000000170",
+      "서비스명": "청년 부동산 중개보수 및 이사비 지원",
+      "item": "income",
+      "ai_issue_type": "ja_band_not_exact_cap",
+      "evidence": "가구당 기준 중위소득 150% 이하",
+      "additional_evidence": "",
+      "ai_judgment": "JA 상한 100과 본문 가구 상한 150. 거주·재산·주택 조건도 함께 적용되므로 소득 하나로 자격 확정 불가.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "O00083800001",
+      "서비스명": "강북구 꿈나무장학재단 재능장학생 장학금 지원",
+      "item": "income",
+      "ai_issue_type": "exception_subquota",
+      "evidence": "기준중위소득 100% 이하",
+      "additional_evidence": "선발인원의 10%는 기준중위소득 120% 이하",
+      "ai_judgment": "기본 100%와 10% 한정 예외 120%를 분리. 최댓값 120 하나로 전체 대상의 상한을 표현하면 부정확.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "628000000162",
+      "서비스명": "저소득 한부모가족 지원",
+      "item": "income",
+      "ai_issue_type": "ja_band_not_exact_cap",
+      "evidence": "기준 중위소득 65%이하 한부모 및 조손가족",
+      "additional_evidence": "",
+      "ai_judgment": "JA 50% 구간과 본문 65% 상한의 차이. 50%를 정확한 상한으로 사용하지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "B27000100032",
+      "서비스명": "무료 소송대리 서비스(북한이탈주민)",
+      "item": "income",
+      "ai_issue_type": "ja_band_not_exact_cap",
+      "evidence": "기준중위소득 125% 이하",
+      "additional_evidence": "",
+      "ai_judgment": "JA 상한 100과 본문 125. 북한이탈주민 조건과 소득 조건을 함께 보존.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "486000000136",
+      "서비스명": "저소득층 가사.간병 서비스 지원",
+      "item": "income",
+      "ai_issue_type": "ja_band_and_exclusive_age",
+      "evidence": "만 65세 미만의 기준중위소득 70% 이하",
+      "additional_evidence": "",
+      "ai_judgment": "JA 소득 50 대 본문 70. 연령 65는 미만이므로 65세를 포함하는 상한으로 바꾸지 않음. 일부 자녀·손자녀 대상군도 분리.",
+      "review_status": "ai_only",
+      "human_verified": false
+    },
+    {
+      "서비스ID": "738000000010",
+      "서비스명": "초·중·고 학생 교육비 지원",
+      "item": "income",
+      "ai_issue_type": "multiple_programs",
+      "evidence": "소득인정액이 기준중위소득 80%이하",
+      "additional_evidence": "교육정보화(PC, 인터넷통신비)",
+      "ai_judgment": "80%는 방과후자유수강권 조건이며 PC·인터넷통신비 조건과 구분. 최대 80 하나로 모든 유형을 판정하지 않음.",
+      "review_status": "ai_only",
+      "human_verified": false
+    }
+  ]
+}

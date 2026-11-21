@@ -1,0 +1,10 @@
+{
+  "data/raw/ssis/central_list.csv": "8830f713b4c6664100eedf1d5234cb863ec117eb594dd1d19da43a7f1376ef18",
+  "data/raw/ssis/central_detail_full.csv": "9235475da0ca01b8e0f690764d8ebcb2560fe38c5a008a9e9ace55e968b6f05d",
+  "data/raw/ssis/local_list.csv": "f9e5e9cbc065e838c8e682d2f335ebe2a621c4bf2530866e7ca47476714a0939",
+  "data/raw/ssis/local_detail_full.csv": "ba2dc90db51d6cb5be4488c42adadd0141c1bdd00c72c26fb9173576d6f4ef62",
+  "data/raw/gov24/gov24_serviceList.csv": "10e323344eba8bfbf0127fe5e032711bb4e5ec87d6e287105b6dbb0c08ae50e5",
+  "data/raw/gov24/gov24_serviceDetail.csv": "7f0ac4fe0f34571309400231844ef4902404f8e3bdc246b9b902f7c5dde09629",
+  "data/raw/gov24/gov24_supportConditions.csv": "c9b974ce0399fba050cd41f896b6dfe1a5a890a04e7c82bd05fb7561e9043cb5",
+  "data/raw/isolated_youth_survey_2023/보건복지부_고립_은둔 청년 실태 조사_20230904.xlsx": "2c28ea6702702cb81bd864d619090fd0bb378bc04f3ee4e98056762829f67453"
+}

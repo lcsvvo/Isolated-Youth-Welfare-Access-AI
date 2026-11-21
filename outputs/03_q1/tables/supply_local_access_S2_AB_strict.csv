@@ -1,0 +1,13 @@
+﻿area,scenario,count,mean,std,min,10%,25%,50%,75%,90%,max,n_regions_zero,label_status,main_spec_status
+n_total,S2_AB_strict,252.0,98.36507936507937,5.833825222505713,87.0,90.0,95.0,99.0,103.0,106.0,111.0,0,provisional_rule_candidate,provisional
+q21_01,S2_AB_strict,252.0,0.07936507936507936,0.2708456464372606,0.0,0.0,0.0,0.0,0.0,0.0,1.0,232,provisional_rule_candidate,provisional
+q21_02,S2_AB_strict,252.0,2.0873015873015874,0.2828382407591262,2.0,2.0,2.0,2.0,2.0,2.0,3.0,0,provisional_rule_candidate,provisional
+q21_03,S2_AB_strict,252.0,8.404761904761905,1.5392789300057688,7.0,7.0,7.0,8.0,9.0,10.0,13.0,0,provisional_rule_candidate,provisional
+q21_04,S2_AB_strict,252.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,252,provisional_rule_candidate,provisional
+q21_05,S2_AB_strict,252.0,10.095238095238095,0.2941276907455157,10.0,10.0,10.0,10.0,10.0,10.0,11.0,0,provisional_rule_candidate,provisional
+q21_06,S2_AB_strict,252.0,1.1150793650793651,0.31975275815137544,1.0,1.0,1.0,1.0,1.0,2.0,2.0,0,provisional_rule_candidate,provisional
+q21_07,S2_AB_strict,252.0,23.694444444444443,1.179965936138455,22.0,22.0,23.0,24.0,25.0,25.0,27.0,0,provisional_rule_candidate,provisional
+q21_08,S2_AB_strict,252.0,29.607142857142858,2.6780107552077785,26.0,26.0,28.0,29.0,31.0,35.0,37.0,0,provisional_rule_candidate,provisional
+q21_09,S2_AB_strict,252.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,252,provisional_rule_candidate,provisional
+q21_10,S2_AB_strict,252.0,7.626984126984127,0.6825558597939626,7.0,7.0,7.0,8.0,8.0,9.0,9.0,0,provisional_rule_candidate,provisional
+q21_11,S2_AB_strict,252.0,13.531746031746032,1.5184732736052726,11.0,11.100000000000001,13.0,13.0,15.0,15.0,20.0,0,provisional_rule_candidate,provisional

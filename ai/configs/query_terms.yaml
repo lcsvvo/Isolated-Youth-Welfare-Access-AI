@@ -1,0 +1,785 @@
+# 2단계 검색 쿼리 사전 v0.2 (사람 검수 반영, 2026-11-14)
+# - v0.2 변경: 검수 81행 판정 반영. 영역 핵심어는 주거 [주거], 교육훈련 [학습], 미취업(구직) [취업, 일자리, 구직], 미래설계 [진로]만 남기고
+#   나머지 핵심어는 조건부 확장어로 옮김(건강, 경제, 관계참여, 노동(일하는 중), 일상·여가의 core는 빈 목록).
+# - core가 비어 있는 영역은 쿼리 빌더의 label_plain 대체 토큰(BM25 fallback)을 쓴다.
+# - 조건부 확장은 영역이 확정되고 일상어 패턴이 일치할 때만 적용한다. 패턴은 부분문자열, block_if는 패턴 뒤 12자 안에서만 확인한다.
+# - 병합: T035+T071(근로자), T037+T072(임금), T021+T061(자조모임), T025+T064(수강), T014+T069+T017(체육, 스포츠), T048+T050(임차료, 임대료).
+# - 제외: 미래설계 핵심어 자립, 자산, 저축, 목돈과 미래설계 확장 진로, 자립. 아래 removed에 사유를 남김(쿼리 빌더는 읽지 않음).
+# - 노동(일하는 중): 근로자, 임금, 산재는 명시적 표현에서만 적용. 회사, 직장, 재직, 사장, 야근 언급만으로는 적용하지 않음. 재직은 보류 후보.
+# - T056 긴급은 긴급생계비로 구체화. T060 심리상담은 Dense 전용 확장(bm25_allowed: false). 상담 hold 정책(T081)은 그대로.
+# - T076 acc_online_use 패턴에서 소통 방식 표현(문자로, 메시지로, 채팅, 카톡, 앱으로)과 재택을 뺌.
+# - 후보는 ai/eval/build_query_terms_candidates.py로 뽑았다. 자료는 dev_corpus label evidence와 services_master뿐. Q3 질의 쌍과 평가 페르소나 카드는 쓰지 않았다.
+# - evidence_level: 개발 근거 있음 / 근거 약함 / 개발 근거 없음(마스터 근거) / 검증 불가(노동 라벨 없음).
+#   dev_hits는 dev_corpus 300건에서 패턴이 (block_if 적용 후) 걸린 기록 수, dev_hits_target은 그중 해당 영역 라벨이 있는 기록 수.
+# - master_count: 서비스명 + 요약 + 지원내용 부분문자열 출현 서비스 수(--check-yaml 결과). apply_text_count: 신청방법 칸.
+# - 사전 토큰에서 banned_terms, hold_terms는 쿼리 빌더가 뺀다.
+# - candidates: 검토했지만 add_terms에 넣지 않은 후보와 판단 사유. 쿼리에 쓰지 않는다.
+# - 확장은 이미 확정된 영역 안에서만 쓴다. 확장으로 새 영역을 만들지 않는다.
+# - 상한(main_core 등)은 config.yaml stage2.query.caps. 근거 없는 초기값. 확장어 상한은 단어 수 기준이라 같은 트리거가 겹치면 앞 항목이 먼저 채워진다.
+version: "0.2"
+status: 검수 반영
+
+domains:
+  주거:
+    core: [주거]
+    label_plain: 집과 집세 문제
+    source: services_master app_domain 집중도
+    review: 검수 반영(2026-11-14)
+  건강:
+    core: []
+    label_plain: 몸과 마음의 건강
+    source: services_master app_domain 집중도
+    note: 대표 핵심어 없음(검수 결정). 조건부 확장 또는 label_plain 대체 토큰 사용
+    review: 검수 반영(2026-11-14)
+  일상·여가:
+    core: []
+    label_plain: 취미와 운동, 문화생활
+    source: services_master app_domain 집중도
+    note: 대표 핵심어 없음(검수 결정). 조건부 확장 또는 label_plain 대체 토큰 사용
+    review: 검수 반영(2026-11-14)
+  관계참여:
+    core: []
+    label_plain: 사람을 만나고 어울리는 일
+    source: services_master app_domain 집중도
+    note: 대표 핵심어 없음(검수 결정). 조건부 확장 또는 label_plain 대체 토큰 사용
+    review: 검수 반영(2026-11-14)
+  교육훈련:
+    core: [학습]
+    label_plain: 배우기와 자격증 공부
+    source: services_master app_domain 집중도
+    review: 검수 반영(2026-11-14)
+  미취업(구직):
+    core: [취업, 일자리, 구직]
+    label_plain: 일자리 찾기와 취업 준비
+    source: services_master app_domain 집중도
+    review: 검수 반영(2026-11-14)
+  노동(일하는 중):
+    core: []
+    label_plain: 일하면서 겪는 어려움
+    source: services_master 문구 출현
+    limitation: 마스터 app_domain 해당 서비스 0건, dev_corpus label 0건. 영역 라벨 기반 검증 불가(문구 출현 수만 확인)
+    note: 대표 핵심어 없음(검수 결정). 근로자, 임금, 산재는 명시적 표현에서만 조건부 적용
+    review: 검수 반영(2026-11-14)
+  미래설계:
+    core: [진로]
+    label_plain: 앞으로의 진로와 계획
+    source: services_master 문구 출현 + dev_corpus label evidence (미래설계 27건, 진로 9건)
+    limitation: 마스터 app_domain 해당 서비스 0건. 영역 라벨 기반 검증 불가. 진로 탐색과 방향 설정 중심이며 자산, 저축, 목돈, 자립은 제외(검수)
+    review: 검수 반영(2026-11-14)
+  경제:
+    core: []
+    label_plain: 생활비와 돈 문제
+    source: services_master app_domain 집중도
+    note: 대표 핵심어 없음(검수 결정). 조건부 확장 또는 label_plain 대체 토큰 사용
+    review: 검수 반영(2026-11-14)
+
+# 검수에서 제외된 항목. 쿼리 빌더는 읽지 않는다(이력 보존용).
+removed:
+  - {term: 자립, row_id: T040, from: "core:미래설계", reason: "범위가 넓고(주거안정, 경제적 자립 등) 진로 탐색을 직접 의미하지 않음"}
+  - {term: 자산, row_id: T041, from: "core:미래설계", reason: "자격 기준, 자산형성 표현으로 미래설계에 부적절. 경제 조건부 확장 후보로 별도 관리(Q1 팀 합의 전 미사용)"}
+  - {term: 저축, row_id: T042, from: "core:미래설계", reason: "경제적 자산형성 관련. 미래설계에서 제외, 경제 조건부 확장 후보로 별도 관리(Q1 팀 합의 전 미사용)"}
+  - {term: 목돈, row_id: T043, from: "core:미래설계", reason: "금융, 자산형성 목적이며 진로설계와 다름. 경제 조건부 확장 후보로 별도 관리(Q1 팀 합의 전 미사용)"}
+  - {term: 진로, row_id: T067, from: "expansion:exp_future_path", reason: "T039 핵심어 진로와 중복 확장이라 확장 규칙만 제외(핵심어 진로는 유지). 막막, 앞으로 단독을 진로 욕구로 단정하지 않음"}
+  - {term: 자립, row_id: T068, from: "expansion:exp_future_path", reason: "경제, 주거, 돌봄 등 지원 목적이 넓어 진로 탐색과 일치하지 않음(T040과 일관)"}
+
+# patterns: 확정 영역 evidence, 질문 답, 접근 의도 문장에서 찾는 일상어(부분문자열)
+# block_if: 패턴 바로 뒤(같은 문장 12자 안)에 나오면 적용하지 않는 표현. 12자 창은 잠정 휴리스틱(근거 없는 초기값)
+expansions:
+  - id: exp_housing_cost
+    domain: 주거
+    source_rows: ["T001"]
+    patterns: ["주거비", "월세", "집세", "방세", "월세 부담", "보증금 부담"]
+    add_terms: ["주거비"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "걱정은 없", "필요 없", "괜찮"]
+    evidence: {master_count: {"주거비": 139}, dev_hits: 17, dev_hits_target: 15}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 집수리, 거처 탐색에는 쓰지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_rent
+    domain: 주거
+    source_rows: ["T002"]
+    patterns: ["월세", "집세", "방세", "월세가 밀", "집세가 밀"]
+    add_terms: ["월세"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "걱정은 없", "필요 없", "괜찮"]
+    evidence: {master_count: {"월세": 73}, dev_hits: 16, dev_hits_target: 14}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. T001과 월세, 집세 트리거 공유"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_rent_fee
+    domain: 주거
+    source_rows: ["T048", "T050"]
+    patterns: ["월세", "집세", "방세", "임차료", "임대료", "월세 연체", "집세 연체"]
+    add_terms: ["임차료", "임대료"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "걱정은 없", "필요 없", "괜찮"]
+    evidence: {master_count: {"임차료": 22, "임대료": 32}, dev_hits: 16, dev_hits_target: 14}
+    evidence_level: 개발 근거 있음
+    note: "T048+T050 병합(트리거 동일, 중복 가중 방지). 밀렸/밀리 단독 패턴 삭제"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_allowance
+    domain: 주거
+    source_rows: ["T049"]
+    patterns: ["주거비", "월세 지원", "집세 지원", "월세 부담", "집세 부담", "월세 낼 돈", "임차료"]
+    add_terms: ["주거급여"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "걱정은 없", "필요 없", "괜찮"]
+    evidence: {master_count: {"주거급여": 23}, dev_hits: 2, dev_hits_target: 2}
+    evidence_level: 개발 근거 있음
+    note: "밀렸/밀리 단독 패턴 삭제. 수급 자격을 단정하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_deposit
+    domain: 주거
+    source_rows: ["T004"]
+    patterns: ["보증금", "보증금 마련", "보증금 반환", "보증금이"]
+    add_terms: ["보증금"]
+    apply_when: domain_confirmed
+    block_if: ["필요 없", "괜찮"]
+    evidence: {master_count: {"보증금": 83}, dev_hits: 2, dev_hits_target: 1}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_jeonse
+    domain: 주거
+    source_rows: ["T006"]
+    patterns: ["전세", "전세자금", "전세금", "전세 보증금"]
+    add_terms: ["전세"]
+    apply_when: domain_confirmed
+    block_if: ["전세계", "필요 없", "괜찮"]
+    evidence: {master_count: {"전세": 87}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "전세계 오탐은 block_if로 거름"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_lease
+    domain: 주거
+    source_rows: ["T005"]
+    patterns: ["임대주택", "공공임대", "임대아파트", "임대 아파트", "임대 주택", "LH"]
+    add_terms: ["임대"]
+    apply_when: domain_confirmed
+    block_if: ["필요 없", "괜찮"]
+    evidence: {master_count: {"임대": 104}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_lessee
+    domain: 주거
+    source_rows: ["T007"]
+    patterns: ["임차", "세입자", "세 들어", "월세로 살", "전세로 살"]
+    add_terms: ["임차"]
+    apply_when: domain_confirmed
+    block_if: ["필요 없", "괜찮"]
+    evidence: {master_count: {"임차": 68}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. 임대와 중복 확장 주의"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_lease_deposit
+    domain: 주거
+    source_rows: ["T051"]
+    patterns: ["전세", "전월세", "월세 보증금", "전세 보증금", "보증금 전세", "보증금 월세", "거처", "집 구하", "방 구하", "살 곳"]
+    add_terms: ["전월세"]
+    apply_when: domain_confirmed
+    block_if: ["필요 없", "괜찮"]
+    evidence: {master_count: {"전월세": 23}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "동시출현 패턴은 부분문자열로 풀어 씀. 단순 이사 요청만으로는 적용하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_housing_move
+    domain: 주거
+    source_rows: ["T052"]
+    patterns: ["이사비", "이사 비용", "이삿짐", "이사할 돈", "이사 갈 돈"]
+    add_terms: ["이사비"]
+    apply_when: domain_confirmed
+    block_if: ["필요 없", "괜찮"]
+    evidence: {master_count: {"이사비": 35}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "비용 부담이 드러난 이사만. 보증금, 전세만 언급하면 적용하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_psych
+    domain: 건강
+    source_rows: ["T008"]
+    patterns: ["심리", "마음이 힘", "마음이 무너", "마음이 아프", "마음의 병", "마음 건강"]
+    add_terms: ["심리"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮"]
+    evidence: {master_count: {"심리": 88}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. 신체질환, 치과, 의료비 패턴은 넣지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_emotion
+    domain: 건강
+    source_rows: ["T009"]
+    patterns: ["정서", "정서적", "감정 조절", "감정이 힘", "마음이 불안"]
+    add_terms: ["정서"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮"]
+    evidence: {master_count: {"정서": 82}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_depress
+    domain: 건강
+    source_rows: ["T010"]
+    patterns: ["우울증", "우울해", "우울하", "우울감", "우울"]
+    add_terms: ["우울증"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮"]
+    evidence: {master_count: {"우울증": 9}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. 무기력 단독은 제외"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_treat
+    domain: 건강
+    source_rows: ["T011"]
+    patterns: ["치료", "치료받", "재활", "진료"]
+    add_terms: ["치료"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮", "필요 없"]
+    evidence: {master_count: {"치료": 275}, dev_hits: 9, dev_hits_target: 3}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 병원 언급은 외출 사유로 쓰여 제외"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_recover
+    domain: 건강
+    source_rows: ["T012"]
+    patterns: ["마음 회복", "몸 회복", "건강 회복", "건강을 되찾", "낫고 싶", "나아지고 싶", "재활"]
+    add_terms: ["회복"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮"]
+    evidence: {master_count: {"회복": 277}, dev_hits: 5, dev_hits_target: 1}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 신용회복, 일상생활 회복은 위 패턴에 걸리지 않아 별도 block 불필요"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_mind
+    domain: 건강
+    source_rows: ["T059"]
+    patterns: ["정신건강", "우울", "불안", "공황", "마음이 무너", "마음이 힘", "마음이 아프"]
+    add_terms: ["정신건강"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮"]
+    evidence: {master_count: {"정신건강": 15}, dev_hits: 3, dev_hits_target: 0}
+    evidence_level: 근거 약함
+    note: "숨이, 잠이 안, 무기력 단독 패턴 삭제(신체질환, 단순 상태 가능). 불안은 경제 불안 문장에도 나와 건강 확정 영역 안에서만 적용"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_health_counseling
+    domain: 건강
+    source_rows: ["T060"]
+    patterns: ["상담 받고 싶", "상담 받아보고", "상담받고 싶", "상담받아보고", "상담을 받고", "상담 받을 수", "상담하고 싶", "심리상담", "심리 상담", "마음 상담", "정신건강 상담", "정신과 상담", "전문적인 상담", "전문 상담"]
+    add_terms: ["심리상담"]
+    apply_when: domain_confirmed
+    block_if: ["못", "싫", "무서", "부담", "불가능", "말고", "어려"]
+    bm25_allowed: false
+    dense_phrase: "마음이 힘들어서 심리 상담을 받을 수 있는 서비스를 원합니다."
+    evidence: {master_count: {"심리상담": 18}, dev_hits: 6, dev_hits_target: 1}
+    evidence_level: 근거 약함
+    note: "Dense 전용(BM25 미사용). 심리상담은 상담 hold 제거 후 토큰 심리만 남아 심리와 구분되지 않음. 건강 확정 영역에서 상담 요청 표현이 있을 때만 Dense 문장 추가. 상담을 못 가는 회피 서술은 block_if로 거름(12자 창 한계 있음)"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_leisure_culture
+    domain: 일상·여가
+    source_rows: ["T013"]
+    patterns: ["문화생활", "문화 활동", "영화", "전시", "관람", "박물관", "미술관"]
+    add_terms: ["문화"]
+    apply_when: domain_confirmed
+    block_if: ["싫", "필요 없"]
+    evidence: {master_count: {"문화": 335}, dev_hits: 3, dev_hits_target: 0}
+    evidence_level: 근거 약함
+    note: "핵심어에서 조건부 확장어로 전환. 생활 리듬 회복에는 추가하지 않음"
+    candidates:
+      - {"term": "이용권", "master_count": 47, "decision": "보류", "reason": "통합문화이용권 등 바우처 의미는 적절하나 토큰 '이용'만 남아 뜻이 사라짐, app_domain N 31건. 검수에서 보류 유지(T070)"}
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_leisure_sport
+    domain: 일상·여가
+    source_rows: ["T014", "T069", "T017"]
+    patterns: ["운동", "체육", "헬스", "수영", "등산", "체육활동", "스포츠", "배드민턴", "축구", "농구", "야구", "탁구", "볼링"]
+    add_terms: ["체육", "스포츠"]
+    apply_when: domain_confirmed
+    block_if: ["체육복", "교복", "싫"]
+    evidence: {master_count: {"체육": 52, "스포츠": 14}, dev_hits: 8, dev_hits_target: 0}
+    evidence_level: 근거 약함
+    note: "T014+T069+T017 병합(운동 트리거 공유, 중복 가중 방지). 그림, 심심, 산책만으로 체육을 추가하지 않음. 체육복, 교복 문맥은 block_if로 거름"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_leisure_free
+    domain: 일상·여가
+    source_rows: ["T015"]
+    patterns: ["여가", "취미", "심심", "할 게 없", "시간을 보낼"]
+    add_terms: ["여가"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"여가": 46}, dev_hits: 3, dev_hits_target: 1}
+    evidence_level: 근거 약함
+    note: "핵심어에서 조건부 확장어로 전환. 생활 리듬, 식사 등 일상 회복에는 추가하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_leisure_perform
+    domain: 일상·여가
+    source_rows: ["T016"]
+    patterns: ["공연", "연극", "콘서트", "뮤지컬", "공연 보", "공연 관람"]
+    add_terms: ["공연"]
+    apply_when: domain_confirmed
+    block_if: ["싫", "필요 없"]
+    evidence: {master_count: {"공연": 15}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_leisure_art
+    domain: 일상·여가
+    source_rows: ["T018"]
+    patterns: ["그림", "예술", "창작", "미술", "사진", "도자기", "공예"]
+    add_terms: ["예술"]
+    apply_when: domain_confirmed
+    block_if: ["예술인", "싫"]
+    evidence: {master_count: {"예술": 21}, dev_hits: 6, dev_hits_target: 1}
+    evidence_level: 근거 약함
+    note: "핵심어에서 조건부 확장어로 전환. 그림, 사진은 교육훈련과 겹침, 예술인 자격 문맥은 block"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_relation_mentor
+    domain: 관계참여
+    source_rows: ["T019"]
+    patterns: ["멘토", "멘토링", "또래", "들어줄 사람", "들어줬으면", "대화 상대", "얘기 들어"]
+    add_terms: ["멘토링"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"멘토링": 17}, dev_hits: 3, dev_hits_target: 2}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 진로, 직무, 교육 멘토링은 해당 영역 규칙으로"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_relation_meet
+    domain: 관계참여
+    source_rows: ["T020"]
+    patterns: ["모임", "소모임", "동호회", "사람 만나", "사람을 만나", "사람들 만나", "만날 수 있", "어울릴", "같이 할 사람"]
+    add_terms: ["모임"]
+    apply_when: domain_confirmed
+    block_if: ["싫", "혼자 있", "조용히", "혼자만"]
+    evidence: {master_count: {"모임": 10}, dev_hits: 24, dev_hits_target: 11}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 모임은 이미 다니는 모임 서술로도 쓰임"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_relation_self
+    domain: 관계참여
+    source_rows: ["T021", "T061"]
+    patterns: ["비슷한 경험", "비슷한 사람", "비슷한 처지", "같은 경험", "같은 처지", "자조", "자조모임"]
+    add_terms: ["자조모임"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"자조모임": 8}, dev_hits: 2, dev_hits_target: 2}
+    evidence_level: 개발 근거 있음
+    note: "T021+T061 병합. 단순 외로움, 친구 언급만으로 적용하지 않음(친구, 외로, 얘기 패턴 삭제)"
+    candidates:
+      - {"term": "사회참여", "master_count": 91, "decision": "보류", "reason": "노인·장애인 일자리의 목적 문구('사회참여 확대') 위주, app_domain N 55건. 토큰 사회·참여도 넓음. 검수에서 보류 유지(T062)"}
+      - {"term": "교류", "master_count": 14, "decision": "보류", "reason": "국제교류·문화교류·교류활동비 위주로 '사람 만나기'와 의미 범위가 다름. 검수에서 보류 유지(T063)"}
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_relation_experience
+    domain: 관계참여
+    source_rows: ["T022"]
+    patterns: ["같이 체험", "함께 체험", "체험 활동", "체험하", "교류 활동"]
+    add_terms: ["체험"]
+    apply_when: domain_confirmed
+    block_if: ["싫", "직업체험", "보조기기"]
+    evidence: {master_count: {"체험": 85}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. 직업체험, 교육체험, 보조기기 체험과 구분"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_edu_cert
+    domain: 교육훈련
+    source_rows: ["T024"]
+    patterns: ["자격증", "자격시험", "시험 준비", "시험 응시", "토익"]
+    add_terms: ["자격증"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"자격증": 57}, dev_hits: 4, dev_hits_target: 1}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 이미 땄다는 서술도 있음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_edu_course
+    domain: 교육훈련
+    source_rows: ["T025", "T064"]
+    patterns: ["수업", "강의", "강좌", "수강", "교육과정", "수업을 듣", "강의를 듣"]
+    add_terms: ["수강"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"수강": 54}, dev_hits: 6, dev_hits_target: 2}
+    evidence_level: 개발 근거 있음
+    note: "T025+T064 병합. 공부, 배우기, 자격증 단독으로는 적용하지 않음. 수업은 취미 수업 문맥에도 나옴"
+    candidates:
+      - {"term": "강좌", "master_count": 8, "decision": "제외", "reason": "스포츠강좌이용권·평생교육강좌 위주로 여가 쪽 의미. 직업훈련 대체로 부적절. 검수에서 제외 유지(T066)"}
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_edu_lang
+    domain: 교육훈련
+    source_rows: ["T026"]
+    patterns: ["영어", "외국어", "어학", "일본어", "중국어", "회화"]
+    add_terms: ["어학"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"어학": 28}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_edu_school
+    domain: 교육훈련
+    source_rows: ["T027"]
+    patterns: ["학업", "복학", "검정고시", "다시 공부", "공부를 다시", "학교로 돌아", "학교에 다시"]
+    add_terms: ["학업"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"학업": 58}, dev_hits: 5, dev_hits_target: 4}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 직업훈련, 자격증과 구분"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_edu_vocational
+    domain: 교육훈련
+    source_rows: ["T065"]
+    patterns: ["직업훈련", "기술을 배", "기술 배", "기술 같", "취업 교육", "직업 교육", "일 배우"]
+    add_terms: ["직업훈련"]
+    apply_when: domain_confirmed
+    block_if: ["싫"]
+    evidence: {master_count: {"직업훈련": 20}, dev_hits: 4, dev_hits_target: 4}
+    evidence_level: 개발 근거 있음
+    note: "배우, 공부, 자격증, 기술 단독 패턴 삭제. 어학, 취미 학습, 일반 공부에는 추가하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_job_search
+    domain: 미취업(구직)
+    source_rows: ["T057", "T058"]
+    patterns: ["서류", "이력서", "취업이 안", "일 구하", "일자리", "알바"]
+    add_terms: ["구직자", "구인"]
+    apply_when: domain_confirmed
+    block_if: ["생각 없", "필요 없"]
+    evidence: {master_count: {"구직자": 17, "구인": 13}, dev_hits: 15, dev_hits_target: 5}
+    evidence_level: 개발 근거 있음
+    note: "검수 유지(T057, T058). 구직 영역 확정과 구직 표현 조건 유지"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_job_hire
+    domain: 미취업(구직)
+    source_rows: ["T031"]
+    patterns: ["채용", "공고", "입사", "취직", "붙을 때", "취업하고 싶"]
+    add_terms: ["채용"]
+    apply_when: domain_confirmed
+    block_if: ["생각 없", "필요 없"]
+    evidence: {master_count: {"채용": 23}, dev_hits: 4, dev_hits_target: 1}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 기업 대상 채용 보조금, 단기 일경험과 구분"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_job_interview
+    domain: 미취업(구직)
+    source_rows: ["T032"]
+    patterns: ["면접 준비", "모의면접", "면접 연습", "면접 비용", "면접 도움", "면접 보는 법"]
+    add_terms: ["면접"]
+    apply_when: domain_confirmed
+    block_if: ["생각 없", "필요 없"]
+    evidence: {master_count: {"면접": 34}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. dev의 면접은 떨어졌다는 경험 서술이 대부분이라 요청 표현만 패턴으로 씀"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_job_duty
+    domain: 미취업(구직)
+    source_rows: ["T033"]
+    patterns: ["직무", "어떤 일", "맞는 일", "할 수 있는 일", "일해 보고 싶", "일 해보고 싶"]
+    add_terms: ["직무"]
+    apply_when: domain_confirmed
+    block_if: ["생각 없", "필요 없"]
+    evidence: {master_count: {"직무": 21}, dev_hits: 4, dev_hits_target: 3}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 단순 취업, 임금 문제에는 붙이지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_job_intern
+    domain: 미취업(구직)
+    source_rows: ["T034"]
+    patterns: ["인턴", "일경험", "일 경험", "경력 쌓", "경험 쌓"]
+    add_terms: ["인턴"]
+    apply_when: domain_confirmed
+    block_if: ["생각 없", "필요 없"]
+    evidence: {master_count: {"인턴": 11}, dev_hits: 1, dev_hits_target: 1}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_labor_worker
+    domain: 노동(일하는 중)
+    source_rows: ["T035", "T071"]
+    patterns: ["근로조건", "근로 조건", "근무 조건", "근무환경", "근로계약", "부당", "해고", "노동청"]
+    add_terms: ["근로자"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮", "문제 없", "걱정 없"]
+    evidence: {master_count: {"근로자": 89}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 검증 불가(노동 라벨 없음)
+    note: "T035+T071 병합. 회사, 직장, 다니, 재직, 사장, 야근 언급만으로 적용하지 않음(패턴에서 삭제). 노동 라벨이 없어 지원내용 근거 추가 확인 필요"
+    candidates:
+      - {"term": "재직", "master_count": 17, "decision": "보류", "reason": "재직자 지원이 명시될 때만 검토. 재직기간, 대상 조건은 노동권익 욕구가 아니며 근로조건, 권익 지원 근거 확인 전 자동 사용하지 않음(T036)"}
+    built_from: services_master
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_labor_wage
+    domain: 노동(일하는 중)
+    source_rows: ["T037", "T072"]
+    patterns: ["월급이", "월급을", "월급 체불", "임금", "체불", "최저임금", "급여가 밀", "급여를 못", "급여가 안", "급여가 적"]
+    add_terms: ["임금"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮", "문제 없", "걱정 없", "많아", "충분"]
+    evidence: {master_count: {"임금": 55}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 검증 불가(노동 라벨 없음)
+    note: "T037+T072 병합. 월급, 급여 문제를 해결하려는 표현만 사용. 급여 단독은 실업급여와 겹쳐 제외, 야근, 회사, 직장 언급만으로 적용하지 않음"
+    built_from: services_master
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_labor_accident
+    domain: 노동(일하는 중)
+    source_rows: ["T038"]
+    patterns: ["산재", "산업재해", "업무상", "일하다 다쳐", "일하다 다쳤", "일하다가 다쳐", "일하다가 다쳤", "회사에서 다쳐", "회사에서 다쳤", "작업 중 사고"]
+    add_terms: ["산재"]
+    apply_when: domain_confirmed
+    block_if: ["괜찮", "문제 없", "걱정 없"]
+    evidence: {master_count: {"산재": 21}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 검증 불가(노동 라벨 없음)
+    note: "업무상 사고, 산업재해, 산재 보상 요청 시에만 적용. 일반 근로조건, 권익에는 쓰지 않음"
+    built_from: services_master
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_living
+    domain: 경제
+    source_rows: ["T044"]
+    patterns: ["생활비", "돈이 없", "돈이 하나도", "돈이 모자", "돈이 부족", "돈이 빠듯", "수입이 없", "한푼도", "한 푼도", "모자라"]
+    add_terms: ["생활비"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮", "빚", "채무", "저축"]
+    evidence: {master_count: {"생활비": 30}, dev_hits: 13, dev_hits_target: 12}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 채무, 자산형성 요청에는 붙이지 않음. T056과 트리거 일부 공유(돈이 하나도, 수입이 없, 한푼도, 한 푼도)이며 동시 적용 시 생활비와 긴급생계비가 함께 추가됨"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_heating
+    domain: 경제
+    source_rows: ["T045"]
+    patterns: ["난방", "보일러", "연탄", "난방비"]
+    add_terms: ["난방비"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"난방비": 41}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "핵심어에서 조건부 확장어로 전환. 난방 부담이 명시된 경우만"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_fuel
+    domain: 경제
+    source_rows: ["T046"]
+    patterns: ["연료비", "가스비", "가스요금", "가스 요금", "도시가스", "기름값"]
+    add_terms: ["연료비"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"연료비": 19}, dev_hits: 3, dev_hits_target: 3}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 전기료만 요청한 경우 제외"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_bill
+    domain: 경제
+    source_rows: ["T047"]
+    patterns: ["공과금", "전기요금", "전기세", "가스비", "수도요금", "수도세", "핸드폰 요금", "통신비"]
+    add_terms: ["요금"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮", "카드값", "대출"]
+    evidence: {master_count: {"요금": 136}, dev_hits: 9, dev_hits_target: 9}
+    evidence_level: 개발 근거 있음
+    note: "핵심어에서 조건부 확장어로 전환. 카드값, 대출 연체에는 추가하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_electric
+    domain: 경제
+    source_rows: ["T053"]
+    patterns: ["전기료", "전기세", "전기요금", "전기 요금", "전기가 끊", "전기도 끊"]
+    add_terms: ["전기료"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"전기료": 10}, dev_hits: 3, dev_hits_target: 3}
+    evidence_level: 개발 근거 있음
+    note: "가스, 관리비, 끊긴 단독 패턴 삭제"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_water
+    domain: 경제
+    source_rows: ["T054"]
+    patterns: ["수도요금", "수도세", "수도 요금", "상하수도", "수도가 끊", "물이 끊"]
+    add_terms: ["상수도"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"상수도": 23}, dev_hits: 0, dev_hits_target: 0}
+    evidence_level: 개발 근거 없음(마스터 근거)
+    note: "가스, 전기 부담에는 추가하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_energy
+    domain: 경제
+    source_rows: ["T055"]
+    patterns: ["전기세", "전기요금", "가스비", "가스요금", "난방비", "전기가 끊", "가스가 끊", "가스도 끊", "전기도 끊"]
+    add_terms: ["에너지"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"에너지": 19}, dev_hits: 5, dev_hits_target: 5}
+    evidence_level: 개발 근거 있음
+    note: "관리비, 끊긴 단독 패턴 삭제. 에너지 비용 부담이나 공급 중단이 명시된 경우만"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+  - id: exp_econ_urgent
+    domain: 경제
+    source_rows: ["T056"]
+    patterns: ["갑자기 수입", "갑자기 소득", "갑자기 월급", "갑자기 일이", "갑자기 일을", "갑자기 일자리", "갑자기 계약", "갑자기 돈", "일이 끊", "일 끊긴", "수입이 끊", "월급이 끊", "소득이 끊", "수입이 없", "돈이 하나도", "돈이 다 떨어", "한푼도", "한 푼도", "통장에 만원도", "끼니", "하루 한끼", "하루 한 끼", "밥값"]
+    add_terms: ["긴급생계비"]
+    apply_when: domain_confirmed
+    block_if: ["걱정 없", "괜찮"]
+    evidence: {master_count: {"긴급생계비": 4}, dev_hits: 10, dev_hits_target: 9}
+    evidence_level: 개발 근거 있음
+    note: "긴급 단독 대신 긴급생계비(마스터 4건, Kiwi 긴급+생계비). 갑작스러운 소득 상실, 당장 생계 곤란 표현만 적용. 급해 단독 제외. 긴급지원 자격은 단정하지 않음"
+    built_from: dev_corpus
+    review: 검수 반영(2026-11-14)
+
+# 접근 의도(want): 사용자가 원한다고 쓴 방식. patterns + want_markers가 같은 문장에 있고 block_if가 없을 때만.
+# block_if는 같은 절에서 12자 안에 시작하는 표현을 확인함. '싫지 않아요'처럼 취소된 단서는 제외함.
+# bm25_allowed: false면 Dense 문장에만 쓴다(Kiwi가 '방문'·'대면' 토큰을 만드는 표현).
+# main_path: C면 쿼리보다 규칙 전달(access 필드)이 주 경로. 신청 방법 표현은 검색 칸에 따라 BM25 효과가 작을 수 있음.
+want_markers: [싶, 좋겠, 있나, 있을까, 있는지, 가능, 방법, 원해, 원합, 해주, 해 주, 받을 수, 할 수, 할수, 되나, 될까, 주세요]
+access_terms:
+  - id: acc_video
+    polarity: want
+    scope: 이용
+    patterns: [화상, 영상통화, 영상으로]
+    positive_terms: [화상]
+    bm25_allowed: true
+    dense_phrase: 화상으로 이용할 수 있는 서비스를 원합니다.
+    block_if: [싫, 부담, 무서, 말고, 못]
+    main_path: query
+    evidence: {master_count: {화상: 14}, example_servIds: [WLF00000086, WLF00003236, WLF00006295]}
+    source_rows: [T073]
+    review: 검수 반영(2026-11-14)
+  - id: acc_outreach
+    polarity: want
+    scope: 이용
+    patterns: [집으로 와, 집에 와, 찾아와, 찾아오, 와 주, 와주]
+    positive_terms: [찾아가는]
+    bm25_allowed: true
+    dense_phrase: 집으로 찾아오는 서비스를 원합니다.
+    block_if: [싫, 부담, 무서, 말고]
+    main_path: query
+    evidence: {master_count: {찾아가는: 30}, example_servIds: [WLF00000071, WLF00001141, WLF00003200]}
+    source_rows: [T074]
+    review: 검수 반영(2026-11-14)
+  - id: acc_home_visit
+    polarity: want
+    scope: 이용
+    patterns: [가정방문, 집으로 와, 찾아와]
+    positive_terms: [가정방문]
+    bm25_allowed: false
+    dense_phrase: 가정방문으로 받을 수 있는 서비스를 원합니다.
+    block_if: [싫, 부담, 무서, 말고]
+    main_path: query
+    evidence: {master_count: {가정방문: 21}, example_servIds: [WLF00000807, WLF00003283, WLF00006287]}
+    source_rows: [T075]
+    review: 검수 반영(2026-11-14)
+  - id: acc_online_use
+    polarity: want
+    scope: 이용
+    patterns: [온라인으로, 인터넷으로, 비대면]
+    positive_terms: [온라인]
+    bm25_allowed: true
+    dense_phrase: 온라인으로 이용할 수 있는 서비스를 원합니다.
+    block_if: [싫, 부담, 무서, 말고, 못]
+    main_path: query
+    evidence: {master_count: {온라인: 25}, apply_text_count: {온라인: 395}, example_servIds: [WLF00000086, WLF00000781, WLF00001083]}
+    note: 소통 방식 요청(문자, 메시지, 채팅, 카톡, 앱으로)과 상태 서술(재택)은 온라인 이용 요청이 아니어서 패턴에서 뺌(T076). 소통 방식은 별도 접근 신호로 검토
+    source_rows: [T076]
+    review: 검수 반영(2026-11-14)
+  - id: acc_apply_online
+    polarity: want
+    scope: 신청
+    patterns: [집에서 신청, 온라인으로 신청, 온라인 신청, 인터넷으로 신청, 인터넷 신청, 비대면 신청, 가지 않고 신청, 안 가고 신청]
+    positive_terms: [온라인]
+    bm25_allowed: true
+    dense_phrase: 온라인으로 신청할 수 있는 서비스를 원합니다.
+    block_if: [싫, 어렵, 못]
+    main_path: C
+    evidence: {master_count: {온라인: 25}, apply_text_count: {온라인: 395}, example_servIds: [WLF00000086, WLF00000781, WLF00001083]}
+    source_rows: [T077]
+    review: 검수 반영(2026-11-14)
+
+# B2(실험용): 회피 제약 채널에서 추론하는 접근 id. 운영 기본값 아님.
+# 사용자가 요청한 접근이 아니므로 쿼리 결과의 access_inferred에 따로 두고 access에는 넣지 않는다.
+avoid_derived:
+  방문: [acc_apply_online, acc_outreach]
+  전화: [acc_online_use]
+
+banned_terms: [재가, 지원]
+hold_terms: [생계, 상담]

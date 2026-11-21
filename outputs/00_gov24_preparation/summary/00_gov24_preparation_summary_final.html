@@ -1,0 +1,208 @@
+<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>보조금24 전처리 재검증</title><style>
+:root{--navy:#0f172a;--blue:#2563eb;--bg:#f8fafc;--line:#e2e8f0;--ink:#1e293b;--muted:#475569;
+--warn-bg:#fff7ed;--warn:#9a3412;--good-bg:#f0fdf4;--good:#166534}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.hero{background:var(--navy);color:#f8fafc;padding:40px 24px}
+.hero .in{max-width:1180px;margin:0 auto}
+.hero h1{margin:0 0 8px;font-size:28px;line-height:1.3}
+.hero .lead{font-size:19px;font-weight:600;color:#bfdbfe;margin:0 0 12px}
+.hero p{max-width:900px;margin:0 0 12px;color:#e2e8f0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.meta li{background:#1e293b;border:1px solid #334155;border-radius:6px;padding:4px 10px;font-size:13px}
+.shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;padding:24px}
+nav.toc{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow:auto;font-size:14px}
+nav.toc ol{list-style:none;margin:0;padding:0}
+nav.toc a{display:block;padding:6px 10px;border-left:3px solid var(--line);color:var(--muted);text-decoration:none}
+nav.toc a:hover,nav.toc a:focus{border-left-color:var(--blue);color:var(--navy);outline:none;background:#eef2ff}
+main{min-width:0}
+section{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:24px}
+section h2{margin:0 0 12px;font-size:22px;color:var(--navy)}
+.result-box,.box{border-radius:8px;padding:14px 16px;margin:12px 0}
+.result-box{background:#eff6ff;border-left:4px solid var(--blue)}
+.warning{background:var(--warn-bg);border-left:4px solid var(--warn);color:#431407}
+.good{background:var(--good-bg);border-left:4px solid var(--good);color:#052e16}
+.dark{background:var(--navy);color:#f1f5f9}
+.tablewrap{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:8px}
+.tablewrap:focus{outline:2px solid var(--blue)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f5f9;color:var(--navy);position:sticky;top:0}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.cap{font-size:13px;color:var(--muted);margin:4px 0 16px}
+figure{margin:16px 0}
+figure img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+footer{max-width:1180px;margin:0 auto;padding:16px 24px 48px;color:var(--muted);font-size:13px}
+@media (max-width:900px){.shell{grid-template-columns:1fr;padding:16px}
+nav.toc{position:static;max-height:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px}}
+@media print{nav.toc{display:none}.shell{display:block}section{break-inside:avoid-page;border:none}
+.tablewrap{overflow:visible}table{font-size:11px}.dark{background:#fff;color:#000;border:1px solid #000}
+.hero{background:#fff;color:#000}.hero .lead,.hero p{color:#000}.meta li{background:#fff;color:#000}}
+</style></head><body><header class='hero'><div class='in'><h1>보조금24 전처리 재검증</h1><p class='lead'>전체 10,942건 보존 · 미확인 163건 AI 검토 · 추가 경로 후보 38건</p><p>수집 시점 2026-10-31. 현재 상세정보 20개 비키 필드를 빠짐없이 보존한 v2를 별도 저장했다. 기존 원본·파생 데이터·SSIS·Q2 파일은 변경하지 않았다. AI 후보는 잠정 판정이며 사람 검수 정확도와 구별한다.</p><ul class='meta'><li>2026-11-05 실행</li><li>규칙 2026-11-05.1</li><li>서비스 1행 · 비가중 건수</li><li>부분 완료 · 사람 독립 검증 대기</li></ul></div></header><div class='shell'><nav class='toc' aria-label='목차'><ol><li><a href='#results'>핵심 결과와 범위</a></li><li><a href='#integrity'>원자료와 상세 필드 보존</a></li><li><a href='#rules'>코드와 기존 CSV · 방문 3건</a></li><li><a href='#ai'>AI 원문 검토 · 한계</a></li><li><a href='#next'>Q2 연결과 남은 검증</a></li></ol></nav><main><section id='results' aria-labelledby='results-h'><h2 id='results-h'>핵심 결과와 범위</h2><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 1. 처리 범위와 검토 건수</caption><thead><tr><th scope='col'>metric</th><th scope='col'>n</th></tr></thead><tbody><tr><td>all_services</td><td class='num'>10,942</td></tr><tr><td>personal_services</td><td class='num'>9,488</td></tr><tr><td>youth_overlap_provisional</td><td class='num'>7,824</td></tr><tr><td>legacy_personal_channel_unknown</td><td class='num'>163</td></tr><tr><td>v2_rule_personal_channel_unknown</td><td class='num'>161</td></tr><tr><td>ai_reviewed_legacy_unknown</td><td class='num'>163</td></tr><tr><td>ai_channel_candidates</td><td class='num'>38</td></tr><tr><td>ai_channel_still_unspecified</td><td class='num'>125</td></tr><tr><td>ai_new_boundary_review</td><td class='num'>16</td></tr><tr><td>independent_human_judgments</td><td class='num'>0</td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/preparation_counts.csv</code>.</p><p>관찰: 기존 미확인 163건 중 38건에 신청경로 후보를 제시했고 125건은 미확인을 유지했다. 원문 문의처만으로 전화 신청을 추정하지 않았다. AI 후보는 apply_channel_ai_candidate에 따로 보존하며 규칙 값을 덮어쓰지 않는다.</p></section><section id='integrity' aria-labelledby='integrity-h'><h2 id='integrity-h'>원자료와 상세 필드 보존</h2><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 2. 수집 기록 해시와 현재 파일</caption><thead><tr><th scope='col'>file</th><th scope='col'>rows</th><th scope='col'>columns</th><th scope='col'>bytes</th><th scope='col'>sha256</th><th scope='col'>collection_sha256</th><th scope='col'>collection_hash_match</th><th scope='col'>collection_bytes</th><th scope='col'>CR_bytes</th></tr></thead><tbody><tr><td>gov24_serviceList.csv</td><td class='num'>10,942</td><td class='num'>22</td><td class='num'>12,563,633</td><td>10e323344eba8bfbf0127fe5e032711bb4e5ec87d6e287105b6dbb0c08ae50e5</td><td>0f4961d48cb7e4829c33b34f5490e4e38f81fb48158bdcdd67c49f809f267778</td><td>False</td><td class='num'>12,633,115</td><td class='num'>0</td></tr><tr><td>gov24_serviceDetail.csv</td><td class='num'>10,942</td><td class='num'>21</td><td class='num'>14,450,191</td><td>7f0ac4fe0f34571309400231844ef4902404f8e3bdc246b9b902f7c5dde09629</td><td>5f020d6dd4a772422fa6e9d16e1ca11db9f50a47b65a3f82b3e3afcb136f627c</td><td>False</td><td class='num'>14,559,830</td><td class='num'>0</td></tr><tr><td>gov24_supportConditions.csv</td><td class='num'>10,942</td><td class='num'>50</td><td class='num'>1,385,863</td><td>c9b974ce0399fba050cd41f896b6dfe1a5a890a04e7c82bd05fb7561e9043cb5</td><td>c9b974ce0399fba050cd41f896b6dfe1a5a890a04e7c82bd05fb7561e9043cb5</td><td>True</td><td class='num'>1,385,863</td><td class='num'>0</td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/raw_integrity.csv</code>.</p><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 3. 상세 전체 20개 비키 필드 검증 범위</caption><thead><tr><th scope='col'>field</th><th scope='col'>current_raw_to_v2_changed_cells</th><th scope='col'>historical_reference</th><th scope='col'>historical_normalized_changed_cells</th><th scope='col'>missing_rows</th></tr></thead><tbody><tr><td>공무원확인구비서류</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>구비서류</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>0</td></tr><tr><td>문의처</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>0</td></tr><tr><td>법령</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>5,702</td></tr><tr><td>본인확인필요구비서류</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>서비스명</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>서비스목적</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>5,349</td></tr><tr><td>선정기준</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>9,896</td></tr><tr><td>소관기관명</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>수정일시</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>신청기한</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>신청기한유형</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>신청방법</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>온라인신청사이트URL</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>8,943</td></tr><tr><td>자치법규</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>5,660</td></tr><tr><td>접수기관명</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>10,134</td></tr><tr><td>지원내용</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>지원대상</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>지원유형</td><td class='num'>0</td><td>원수집 스냅샷 미보관</td><td></td><td class='num'>0</td></tr><tr><td>행정규칙</td><td class='num'>0</td><td>legacy merged</td><td>0.0</td><td class='num'>10,810</td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/detail_field_validation.csv</code>.</p><div class='box warning'>현재 병합본을 사용한 수집 당시 목록 재구성 해시 일치: False. 11월 2일 성공 기록은 보존했지만 현재 남은 병합본도 내부 CRLF가 LF로 정규화돼 원 바이트 해시를 재현하지 못한다. 목록 22열의 줄바꿈 정규화 값 차이는 0개다. 상세는 기존 병합본의 7개 항목만 정규화 후 대조 가능하며, 나머지 13개 항목의 수집 당시 원본 완전 일치는 미검증이다. 현재 원본→v2 전체 상세 필드 저장 일치와 구분한다.</div></section><section id='rules' aria-labelledby='rules-h'><h2 id='rules-h'>코드와 기존 CSV · 방문 3건</h2><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 4. 웹사이트 다음 줄 실제 방문 안내 회귀 검증</caption><thead><tr><th scope='col'>서비스ID</th><th scope='col'>서비스명</th><th scope='col'>method_raw</th><th scope='col'>baseline_visit_text</th><th scope='col'>fixed_visit_text</th><th scope='col'>stored_visit_text</th><th scope='col'>final_channel_changed</th></tr></thead><tbody><tr><td>138300000066</td><td>양육비 이행 지원 서비스</td><td>온라인신청 : https://www.childsupport.or.kr
+방문신청 : 서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어) 24층, 양육비이행관리원
+문의 : 1644-6621</td><td>False</td><td>True</td><td>True</td><td>False</td></tr><tr><td>314000000272</td><td>양천형 밤샘 긴급돌봄 어린이집 운영</td><td>온라인: 양천구청 홈페이지
+방문: 어린이집
+유선전화 : 양천구청 당직실(2620-3000), 응답소(120)</td><td>False</td><td>True</td><td>True</td><td>False</td></tr><tr><td>O00105200003</td><td>팔복예술공장 대관 감면</td><td>온라인신청 (https://palbokart.kr/main/inner.php?sMenu=main)
+방문접수(전라북도 전주시 덕진구 구렛들1길 46, 팔복예술공장 a동 1층 팔복기획운영팀)</td><td>False</td><td>True</td><td>True</td><td>False</td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/visit_regex_regression.csv</code>.</p><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 5. 차이가 있는 열: 기존 파일·기준 코드·수정 코드</caption><thead><tr><th scope='col'>comparison</th><th scope='col'>column</th><th scope='col'>changed_rows</th></tr></thead><tbody><tr><td>stored_vs_baseline_code</td><td>elig_age_evidence</td><td class='num'>6</td></tr><tr><td>stored_vs_baseline_code</td><td>apply_visit_text</td><td class='num'>3</td></tr><tr><td>stored_vs_baseline_code</td><td>apply_evidence</td><td class='num'>4,526</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>apply_visit_text</td><td class='num'>3</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>apply_not_needed</td><td class='num'>5</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>apply_channel</td><td class='num'>5</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>apply_channel_src</td><td class='num'>35</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>apply_evidence</td><td class='num'>814</td></tr><tr><td>baseline_vs_fixed_same_inputs</td><td>info_known_count</td><td class='num'>3</td></tr><tr><td>stored_vs_v2_current_raw</td><td>elig_age_evidence</td><td class='num'>6</td></tr><tr><td>stored_vs_v2_current_raw</td><td>apply_not_needed</td><td class='num'>5</td></tr><tr><td>stored_vs_v2_current_raw</td><td>apply_channel</td><td class='num'>5</td></tr><tr><td>stored_vs_v2_current_raw</td><td>apply_channel_src</td><td class='num'>35</td></tr><tr><td>stored_vs_v2_current_raw</td><td>apply_evidence</td><td class='num'>5,284</td></tr><tr><td>stored_vs_v2_current_raw</td><td>info_known_count</td><td class='num'>3</td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/code_csv_difference_counts.csv</code>.</p><p>웹사이트 뒤의 공백 매칭이 줄바꿈을 넘어 다음 방문 단어까지 제거하던 오류를 수정했다. 별도 신청이라는 문구만으로 신청 불필요로 판정하던 규칙도 명시적 부정 표현이 있을 때로 제한했다. 최종 채널 변경과 근거·중간 플래그 변경을 분리해 셀 단위 표에 저장했다.</p></section><section id='ai' aria-labelledby='ai-h'><h2 id='ai-h'>AI 원문 검토 · 한계</h2><div class='tablewrap' tabindex='0'><table><caption class='cap' style='caption-side:top;text-align:left;padding:8px 10px'>표 6. 기존 검토와 겹치지 않는 경계 16건 AI 재검토</caption><thead><tr><th scope='col'>서비스ID</th><th scope='col'>서비스명</th><th scope='col'>item</th><th scope='col'>ai_issue_type</th><th scope='col'>evidence</th><th scope='col'>additional_evidence</th><th scope='col'>ai_judgment</th><th scope='col'>review_status</th><th scope='col'>human_verified</th><th scope='col'>target_raw</th><th scope='col'>criteria_raw</th></tr></thead><tbody><tr><td>GMW000000210</td><td>고혈압·당뇨병 등록관리서비스</td><td>age</td><td>multiple_benefit_groups</td><td>필수 대상 : 만 65세 이상</td><td>권고 대상 : 만 30세-64세</td><td>의료비 지원과 교육·알림상담 대상 연령이 다름. JA 65세 이상만으로 30~64세 교육·상담을 배제하지 않음.</td><td>ai_only</td><td>False</td><td>○ 필수 대상 : 만 65세 이상 일차의료기관을 이용하는 고혈압·당뇨병 환자에게 의료비 지원, 교육 및 알림 상담 서비스 제공
+   - 단, 외국인일 경우 건강보험가입자만 해당
+
+○ 권고 대상 : 만 30세-64세 고혈압·당뇨병 환자 (교육 및 알림 상담 서비스 제공)
+
+ * 사업지역(19개 시군구) 
+: 서울 성동구, 광주 광산구, 울산 중구, 세종시, 경기 광명시, 남양주시, 안산시(단원구, 상록구), 부천시(원미구, 소사구, 오정구), 하남시, 
+  강원 동해시, 강원 홍천군, 전북 진안군, 전남 목포시, 전남 여수시, 전남 장성군, 경북 경주시, 경북 포항시(남구,북구), 경남 사천시, 제주(제주시, 서부, 동부)</td><td>○ 사업지역(서울 성동구 등 19개 시군구) 거주 만 30세 이상 일차의료기관을 이용하는 고혈압, 당뇨병 환자</td></tr><tr><td>542000000117</td><td>고령 영세농업인 벼 육묘 지원</td><td>age</td><td>ja_text_difference</td><td>만 65세 이상 농업인</td><td></td><td>JA 시작 70과 본문 시작 65가 다름. 수집시점 원문상 65~69세가 JA에서 빠짐. 현재 정책 확정은 별도 공식 확인.</td><td>ai_only</td><td>False</td><td>○ 고성군 고령 영세농업인 지원 조례에 따라 신청년도 1월 1일 기준 고성군에 5년 이상 주민등록을 두고, 농업경영체로 등록되어있는 만 65세 이상 농업인</td><td></td></tr><tr><td>999000000036</td><td>장애인 스포츠강좌이용권 지원</td><td>age</td><td>multiple_priority_groups</td><td>5∼69세 장애인</td><td>만 19세 이상</td><td>전체 연령 5~69와 우선순위별 5~18/19세 이상을 구분. 텍스트 첫 매칭 19를 전체 하한으로 쓰지 않음.</td><td>ai_only</td><td>False</td><td>○ 5∼69세 장애인(출생연도 1957∼2021년)</td><td>○ 1순위: 만 5~18세 기초생활수급자(생계·의료·주거·교육), 차상위 계층, 법정 한부모 가족 
+○ 2순위: 만 19세 이상 기초생활수급자(생계·의료·주거·교육)
+○ 3순위: 만 19세 이상 차상위 계층, 법정 한부모 가족
+○ 4순위: 만 5~18세 비 저소득층
+○ 5순위: 만 19세 이상 비 저소득층</td></tr><tr><td>999000000021</td><td>기존주택 매입임대주택 지원사업</td><td>age</td><td>multiple_programs</td><td>무주택자 청년(19세~39세)</td><td>6세 이하 자녀</td><td>일반·청년·신혼부부 여러 유형을 하나의 연령 구간으로 판정하지 않음. 자녀 나이도 별도 조건.</td><td>ai_only</td><td>False</td><td>사업유형별 지원대상(순위별) *우선순위는 별도확인 필요
+
+1. 일반 매입임대주택
+○ 입주대상 : 입주자 선정기준일에 해당 사업대상지역에 주민등록이 등재된 무주택세대구성원
+ - 1순위 : 생계·의료급여 수급자, 보호대상 한부모가족, 수급권자 및 차상위계층 중 최저주거기준에 미달하거나 소득 대비 임차료 비율이 30%이상인 자, 국민기초생활보장법 제2조제1호 또는 제10호에 해당하는 65세 이상인 자, 장애인등록증이 교부된 자 중 ‘해당세대의 월평균소득이 전년도 도시근로자 가구당 월평균소득’(이하 월평균소득 이라 한다)의 70% 이하(영구임대주택 자산기준 이하)인 자
+ - 2순위 : 월평균소득 50% 이하(영구임대주택 자산 기준 이하)인 자, 장애인등록증이 교부된 자 중 월평균소득 100% 이하(영구임대주택 자산 기준 이하)인 자
+ - 3순위 : 월평균소득 70% 이하인 자로서 시장 등이 선정하는 자(5인이상 가구 및 다자녀가구 또는 시장등이 해당물량의 30% 이내에서 입주자를 별도로 선정한 경우에만 해당)
+
+2. 청년 매입임대주택
+○ 입주대상 : 무주택자 청년(19세~39세)
+ - 1순위 : 생계,주거,의료급여 수급자, 한부모가족, 국민기초생활보장법 제2조제10호에 해당하는 가구의 청년
+ - 2순위 : 본인과 부모 합산 월평균소득의 100% 이하(국민임대주택 자산기준 이하)
+ - 3순위 :  본인이 월평균소득의 100% 이하(행복주택(청년) 자산기준 이하)
+
+3. 신혼부부 매입임대주택Ⅰ
+○ 입주대상 : 무주택세대구성원으로서 해당 세대의 월평균 소득이 전년도 도시근로자 가구당 월평균 소득의 70%(배우자가 소득이 있는 경우에는 90%) 이하이고 규칙 제13조제2항에 따라 국토교통부장관이 정하는 국민임대주택의 자산기준을 충족하는 신혼부부, 예비 신혼부부 및 6세 이하 자녀가 있는 한보모가족, 6세 이하 자녀가 있는 혼인가구
+ - 제1순위 : 임신 중(임신진단서 등으로 확인한다. 이하 같다)이거나 출산(자녀의 기본증명서상 출생신고일 기준으로 확인한다. 이하 같다)·입양(입양신고일 기준으로 확인한다. 이하 같다)하여 자녀(태아를 포함하며 「민법」상 미성년자로 한정한다. 이하 같다)가 있는 경우
+ - 제2순위 : 자녀가 없는 신혼부부, 예비신혼부부
+ - 제3순위 : 1,2순위에 해당하지 아니하는 사람 중 6세 이하 자녀가 있는 혼인가구
+
+4. 신혼부부 매입임대주택Ⅱ
+○ 입주대상 : 무주택세대구성원으로서 해당 세대의 월평균 소득이 전년도 도시근로자 가구당 월평균 소득의 100%(배우자가 소득이 있는 경우에는 120%) 이하이고 규칙 제13조제2항에 따라 국토교통부장관이 정하는 행복주택(신혼부부)의 자산기준을 충족하는 신혼부부, 예비 신혼부부 및 6세 이하 자녀가 있는 한보모가족, 6세 이하 자녀가 있는 혼인가구
+ - 제1순위 : 임신 중이거나 출산·입양하여 자녀가 있는 경우
+ - 제2순위 : 자녀가 없는 신혼부부, 예비신혼부부
+ - 제3순위 : 1,2순위에 해당하지 아니하는 사람 중 6세 이하 자녀가 있는 혼인가구
+
+* 보다 자세한 지원내용은 &quot;기존주택등 매입임대주택 업무처리지침(국토부 훈령 제1915호)&quot;에서 확인 가능</td><td>&lt;소득 및 자산 기준&gt;
+
+○ 소득기준 : 무주택세대구성원의 전년도 도시근로자 가구당 월평균 소득 기준(통계청 자료)
+ - 소득 100% 기준:  1인 3,813,363원, 2인 5,866,270원, 3인 8,168,429원, 4인 8,802,202원, 5인 9,326,985원 (6인 이상은 5인가구 소득에 1인당 평균금액을 합산)
+
+
+○ 자산기준 
+ - 총자산 :  24,500만원(소득2분위_영구임대), 34,500만원(소득3분위_국민임대, 행복주택 신혼부부), 25,100만원(30~39세가구_행복주택 청년), 10,800만원(30세미만 가구_행복주택 대학생)
+
+ - 자동차 가액 : 4,542만원
+
+○ 부동산 기준 
+ - 부동산 가액 : 21,550만원(분양전환)</td></tr><tr><td>453000000204</td><td>저소득 세대 건강 지원</td><td>age</td><td>household_member_age</td><td>만 18세 미만 손자녀</td><td>등록장애인 세대</td><td>손자녀 연령이 신청자 전체 상한이 아님. 노인·장애인·한부모 등 세대 조건을 분리.</td><td>ai_only</td><td>False</td><td>○ 저소득 세대 건강보험료 지원
+ - 지원 대상 : 서산시에 주소를 두고 거주하며 건강보험료가 최저보험료 이하인 세대
+ - 지원 조건 : 
+  ∙ 65세 이상 노인 세대 및 만 18세 미만 손자녀와 동거하는 노인 세대
+  ∙ 등록장애인 세대
+  ∙ 한부모 가족 세대
+  ∙ 중증질환등록 세대 중</td><td></td></tr><tr><td>460000000162</td><td>지역사랑상품권(홍성사랑상품권)</td><td>age</td><td>different_steps</td><td>상품권 구매 : 만19세이상</td><td>앱설치 및 카드발급 : 만14세이상</td><td>구매와 설치·발급 단계별 하한이 다름. JA 14세 이상을 할인구매 자격으로 쓰지 않음.</td><td>ai_only</td><td>False</td><td>○ 상품권 구매 : 만19세이상 개인, 법인 등 (가맹점주 할인구매 불가)
+○ 앱설치 및 카드발급 : 만14세이상</td><td></td></tr><tr><td>O00005600002</td><td>체육시설 사용 이용료 감면</td><td>age</td><td>disjoint_groups_and_exclusive_bound</td><td>만 19세 미만</td><td>만 65세 이상</td><td>노인·청소년·아동·다른 대상군의 합집합. 텍스트 min65/max19를 연속구간으로 쓰지 않으며 미만 경계를 보존.</td><td>ai_only</td><td>False</td><td>○ 국가보훈대상자
+
+○ 노인(만 65세 이상)
+
+○ 장애인
+
+○ 국민기초생활수급자
+
+○ 청소년(중고생 포함 만 13세 이상 만 19세 미만)
+
+○ 어린이(만 3세 이상 만 13세 미만)
+
+○ 다자녀 가정
+
+○ 한부모가정
+
+○ 병역명문가 가정
+
+○ 의사상자, 의상자가정
+
+○ 등록포로, 억류지출신 포로가족
+
+○ 장기복무 제대군인
+
+○ 장기등 및 인체조직기증자
+
+○ 그린카드 소지자</td><td></td></tr><tr><td>O00027200002</td><td>체육시설 이용요금 감면(송도체육센터)</td><td>age</td><td>child_age_and_multiple_groups</td><td>막내가 만 15세 이하</td><td>13세 이상 55세 이하의 여성</td><td>막내 자녀 15세 조건은 신청자 상한이 아님. 수영장 여성 등 다른 혜택 조건도 분리.</td><td>ai_only</td><td>False</td><td>○ 「국가유공자 등 예우 및 지원에 관한 법률」 따른 국가유공자와 그 유족 또는 가족
+
+○ 「독립유공자예우에 관한 법률」 독립유공자와 그 유족 또는 가족
+
+○ 「5·18민주유공자예우에 관한 법률」 5·18민주유공자와 그 유족 또는 가족
+
+○ 「장애인복지법」에 따른 등록장애인
+
+○ 「국민기초생활 보장법」에 따른 수급자 및 차상위계층
+
+○ 「의사상자 등 예우 및 지원에 관한 법률」 따른 의상자와 그 가족 또는 의사자 유족
+
+○ 「노인복지법」 제26조에 따른 65세 이상인 사람
+
+○ 「참전유공자 예우 및 단체 설립에 관한 법률」에 해당하는 참전유공자 본인
+
+○ 「고엽제후유의증 등 환자지원 및 단체설립에 관한 법률」제8조의3 각 호의 어느 하나에 해당하는 사람
+
+○ 「특수임무유공자 예우 및 단체설립에 관한 법률」에 따른 특수임무유공자와 그 유족 또는 가족
+
+○ 「국군포로의 송환 및 대우 등에 관한 법률」에 따른 등록포로 및 억류지 출신 포로가족
+
+○ 그 밖에 구청장이 필요하다고 인정할 때
+
+○ 인천 아이모아 카드를 소지한 부모와 자녀. 다만, 자녀가 두 명 이상이고 그 중 막내가 만 15세 이하인 가정에만 적용
+
+○ 「인천광역시 연수구 병역명문가 예우 및 지원에 관한 조례」에 따른 예우대상자 및 가족
+ - 다만, 병역명문가증과 주소가 기입된 신분증을 제시하는 경우에만 적용
+
+○ 같은 시설에서 운영하는 프로그램을 2개 이상 월 단위로 등록하는 경우
+
+○ 월 단위 프로그램 등록 시 선납으로 3개월을 등록하는 경우
+
+○ 연수구민
+
+○ 「탄소포인트제 운영에 관한 규정」 따른 본인 명의의 그린카드 소지자
+
+○ 수영장 이용자 중 13세 이상 55세 이하의 여성</td><td></td></tr><tr><td>B27000100042</td><td>무료 소송대리 서비스(농업인·어업인)</td><td>income</td><td>ja_band_not_exact_cap</td><td>기준중위소득 150% 이하</td><td></td><td>JA 상한 100과 본문 150. JA 구간 경계 표시는 실제 100% 상한을 확정하지 못함. 본문 150을 근거로 병기.</td><td>ai_only</td><td>False</td><td>○ 농업인·어업인
+ - 건강보험료 본인부담금 합산액이 기준중위소득 150% 이하인 자
+ - 농업인·어업인을 증명하는 서류(농업협동조합 발행 회원증명 등) 발급 가능한 자</td><td></td></tr><tr><td>B27000100016</td><td>무료 소송대리 서비스(저소득 재해근로자)</td><td>income</td><td>ja_band_not_exact_cap</td><td>기준중위소득 125% 이하</td><td></td><td>JA 상한 100과 본문 125. JA만으로 100~125% 대상자를 배제하지 않음.</td><td>ai_only</td><td>False</td><td>○ 저소득 재해근로자(경남소재 사업장에 소속된 저소득 산업재해 피해 근로자 및 위 근로자가 업무상 재해로 사망한 경우 그 유족)
+ - 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자</td><td></td></tr><tr><td>611000000170</td><td>청년 부동산 중개보수 및 이사비 지원</td><td>income</td><td>ja_band_not_exact_cap</td><td>가구당 기준 중위소득 150% 이하</td><td></td><td>JA 상한 100과 본문 가구 상한 150. 거주·재산·주택 조건도 함께 적용되므로 소득 하나로 자격 확정 불가.</td><td>ai_only</td><td>False</td><td>○ (연령) 2026년 기준 만 19~39세 이하인 1986년생~2007년생 청년
+
+○ (주소) 2024년 1월 1일 이후 서울시로 전입 또는 서울시 내에서 이사 후 신청 마감일까지 전입신고 완료한 청년 가구
+   - 주민등록등본상 ‘함께 거주하는 동거인(부모 등)’이 있는 경우에도 신청 가능
+   - 주민등록등본의 세대주 및 임대차계약서의 임차인은 신청자 청년 본인이어야 하며, 임차건물 소재지에 주민등록이 등재되어 있어야 함
+
+○ (소득) 가구당 기준 중위소득 150% 이하
+
+○ (재산) 신청자 본인 무주택자
+
+○ (주택) 거래금액 2억원 이하 전·월세 거주
+    ※ 거래금액 = 임차보증금 + (월세액 × 100)</td><td></td></tr><tr><td>O00083800001</td><td>강북구 꿈나무장학재단 재능장학생 장학금 지원</td><td>income</td><td>exception_subquota</td><td>기준중위소득 100% 이하</td><td>선발인원의 10%는 기준중위소득 120% 이하</td><td>기본 100%와 10% 한정 예외 120%를 분리. 최댓값 120 하나로 전체 대상의 상한을 표현하면 부정확.</td><td>ai_only</td><td>False</td><td>○ 아래 소득요건을 충족하는 강북구에 거주하거나 강북구 소재  학교에 재학중인 학생 중  장학생 선발심사(1차 서류심사, 2차 현장평가)를 거쳐 선발된 자에게 장학금 지원
+
+○ 소득요건 : 국민기초생활수급자, 법정차상위계층, 기준중위소득 100% 이하 건강보험료 납부가정
+    (단, 선발인원의 10%는 기준중위소득 120% 이하  건강보험료 납부 가정)</td><td></td></tr><tr><td>628000000162</td><td>저소득 한부모가족 지원</td><td>income</td><td>ja_band_not_exact_cap</td><td>기준 중위소득 65%이하 한부모 및 조손가족</td><td></td><td>JA 50% 구간과 본문 65% 상한의 차이. 50%를 정확한 상한으로 사용하지 않음.</td><td>ai_only</td><td>False</td><td>‘한부모가족’ 소득인정액 기준은 ‘기준 중위소득 65%이하 한부모 및 조손가족’ 입니다.</td><td></td></tr><tr><td>B27000100032</td><td>무료 소송대리 서비스(북한이탈주민)</td><td>income</td><td>ja_band_not_exact_cap</td><td>기준중위소득 125% 이하</td><td></td><td>JA 상한 100과 본문 125. 북한이탈주민 조건과 소득 조건을 함께 보존.</td><td>ai_only</td><td>False</td><td>○ 북한이탈주민
+ - 건강보험료 본인부담금 합산액이 기준중위소득 125% 이하인 자</td><td></td></tr><tr><td>486000000136</td><td>저소득층 가사.간병 서비스 지원</td><td>income</td><td>ja_band_and_exclusive_age</td><td>만 65세 미만의 기준중위소득 70% 이하</td><td></td><td>JA 소득 50 대 본문 70. 연령 65는 미만이므로 65세를 포함하는 상한으로 바꾸지 않음. 일부 자녀·손자녀 대상군도 분리.</td><td>ai_only</td><td>False</td><td>만 65세 미만의 기준중위소득 70% 이하 계층 중 아래에 해당하는 사람으로 가사 간병 서비스가 필요한 자
+ ○ 장애정도가 심한 장애인
+ 
+ ○ 6개월 이상 치료를 요하는 중증질환자(보건복지부장관이 고시한 중증질환 상병 해당자로, 최근 3개월 이내 발행된 진단서 또는 소견서 첨부)
+ 
+ ○ 희귀난치성 질환자(보건복지부장관이 고시한 희귀난치성 질환 상병 해당자로, 진단서 또는 소견서 첨부, 단, &quot;행복e음&quot;을 통해 산정특례 등록여부 확인이 가능한 
+     경우에는 관련 자료로 대체 가능)
+ 
+ ○ 소년소녀가정, 조손가정, 한부모가정(법정보호세대)
+   - 이 경우 서비스 대상자는 자녀·손자녀가 됨
+ 
+ ○ 만 65세미만의 의료급여수급자 중 장기입원 사례관리 퇴원자
+
+ ○ 기타 시·군·구청장이 예산의 범위 내에서 장애 정도가 심하지 않은 장애인, 부상으로 인한 장기 치료자 등 가사·간병 서비스가 필요하다고 인정하는 자</td><td></td></tr><tr><td>738000000010</td><td>초·중·고 학생 교육비 지원</td><td>income</td><td>multiple_programs</td><td>소득인정액이 기준중위소득 80%이하</td><td>교육정보화(PC, 인터넷통신비)</td><td>80%는 방과후자유수강권 조건이며 PC·인터넷통신비 조건과 구분. 최대 80 하나로 모든 유형을 판정하지 않음.</td><td>ai_only</td><td>False</td><td>○ 방과후자유수강권
+ -「국민기초생활 보장법」에 의한 생계급여,의료급여,주거급여,교육급여, 차상위계층
+ -「한부모가족지원법」에 의한 보호대상자
+ -  소득인정액이 기준중위소득 80%이하
+ -  학교장추천
+
+○ 교육정보화(PC, 인터넷통신비)
+ - PC : 초등학생,「국민기초생활 보장법」에 의한 생계급여, 의료급여 수급자
+ - 인터넷통신비
+  - 「국민기초생활 보장법」에 의한 생계급여, 의료급여, 주거급여, 교육급여, 차상위계층
+  - 「한부모가족지원법」에 의한 보호대상자
+  -  학교장추천</td><td></td></tr></tbody></table></div><p class='cap'>원본: <code>outputs/00_gov24_preparation/tables/boundary_ai_review.csv</code>.</p><p>신청경로 미확인 전수 AI 검토는 unknown_channel_ai_review.csv에 원문·판정·사유를 기록했다. 눈가림 사람용 channel_human_review.csv는 AI 답안을 포함하지 않는다. 연령 표본은 자녀 연령·복수 사업·구매/발급 단계를, 소득 표본은 구간 경계·일부 선발인원 예외·사업별 조건을 구분했다.</p><div class='box warning'>사람 정답이 없으므로 정밀도·재현율·일치도를 산출하지 않는다. 위험 기반 신규 표본 16건은 모집단 오류율 추정용이 아니다. AI가 2인 독립 사람 검수를 대체한 것으로 표시하지 않는다.</div></section><section id='next' aria-labelledby='next-h'><h2 id='next-h'>Q2 연결과 남은 검증</h2><p>Q2 메타데이터에서 연결 후보 2,215건, SSIS 128열 입력과 보조금24 원자료 해시 일치를 확인했다. 후보 CSV의 ID별 포함 관계는 커넥터의 대용량 내용 미반환으로 미검증이다. 수집 시점과 Q2 생성 시점은 검증 JSON에 각각 기록했다. 후보는 확정 동일사업이 아니다.</p><p>남은 작업: 상세 13개 항목의 수집 당시 원본 확보, 사람 2인 독립 판정 및 합의, 검수 정답 기반 성능 평가. 새 API 응답으로 과거 원본을 대체하지 않는다. 기존 Q2 매칭·골드셋과 128열 입력을 재생성하지 않았다.</p><div class='box warning'>보고서 브라우저 렌더링·오프라인 화면·좁은 화면·인쇄 미리보기는 미검증이다. 컴퓨터 사용 도구가 현재 브라우저 URL을 확인하지 못해 화면 검증을 중단했다. HTML 구조·자원·앵커의 정적 검증과 구별한다.</div></section></main></div><footer>근거: notebooks/00_gov24_preparation.ipynb · outputs/00_gov24_preparation/tables/*.csv · logs/validation/gov24_preparation_2026-11-05.json. 그림 해당 없음: 필드·버전·사례 검증은 표로 보고. 미검증 항목을 완료로 처리하지 않음.</footer></body></html>

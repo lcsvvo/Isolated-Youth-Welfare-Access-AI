@@ -1,0 +1,46 @@
+# 위기 중지 안내. 정적 설정이며 LLM이 만들지 않는다. 번호는 공식 출처 확인분만 둔다 (safety/guidance.py가 로드 시 검증).
+# 확인일 verified_at = 2026-11-15. 번호를 바꿀 때는 source_url과 verified_at도 함께 갱신한다.
+# 2026-11-15 재확인: 109 24시간·문자·마들랜(복지로 안내), 1577-0199 24시간(서울시 정신건강 위기상담 전화 안내, 수정일 2026-04-27),
+#   1388 운영 부처 여성가족부 → 성평등가족부(국가지표체계 담당부서 표기)
+source_version: "2026-11-15"
+message: >-
+  지금 많이 힘드신 것 같아 복지 서비스 추천은 잠시 멈췄어요.
+  지금은 전문 상담자와 먼저 이야기하는 것이 가장 중요해요.
+  혼자 견디지 않으셔도 괜찮아요. 아래 번호로 지금 연락해 보세요.
+emergency:
+  message: 지금 위험하면 112·119
+  numbers:
+    - name: 경찰 긴급신고
+      number: "112"
+      hours: 24시간
+      description: 범죄나 신변 위협 등으로 경찰의 긴급한 도움이 필요할 때
+      source_url: https://ecrm.police.go.kr/minwon/main
+      verified_at: "2026-11-15"
+    - name: 소방 긴급신고
+      number: "119"
+      # 종합상황실 24시간 운영 근거는 소방기본법 시행규칙 제2조제3항.
+      # https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=114899
+      hours: 24시간
+      description: 화재가 발생하거나 구조·구급이 필요할 때
+      source_url: https://www.119.go.kr/Center119/mobile/intro01.do
+      verified_at: "2026-11-15"
+contacts:
+  - name: 자살예방 상담전화
+    number: "109"
+    hours: 24시간
+    description: 보건복지부 운영. 2024년 1월부터 기존 자살예방 상담번호를 통합한 번호. 전화가 어려우면 문자(109)·카카오톡 '마들랜'(SNS 상담)도 24시간
+    source_url: https://m.korea.kr/news/reporterView.do?newsId=148927242
+    verified_at: "2026-11-15"
+  - name: 정신건강 위기상담전화
+    number: "1577-0199"
+    hours: 24시간
+    description: 보건복지부 안내 정신건강 위기상담. 지역 정신건강복지센터로 연결됨
+    source_url: https://www.mohw.go.kr/menu.es?mid=a10706040100
+    verified_at: "2026-11-15"
+  - name: 청소년상담 1388
+    number: "1388"
+    hours: 24시간·365일
+    description: 성평등가족부 운영. 9~24세 청소년과 보호자 대상 전화·문자·카카오톡 상담 (25세 이상은 109 이용)
+    source_url: https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/promotion/1307645_1118.html
+    verified_at: "2026-11-15"
+disclaimer: 이 안내는 진단이나 치료가 아니며, 상담 연결을 돕기 위한 정보예요.

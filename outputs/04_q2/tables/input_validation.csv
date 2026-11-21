@@ -1,0 +1,26 @@
+﻿check,expected,observed,status,note
+services_master 행 수,5288,5288,pass,
+services_master servId 유일,중복 0,0,pass,
+q2_match 행 수,5288,5288,pass,
+q2_match servId = 마스터 servId,집합 일치,0건 차이,pass,
+q2_match servId 유일,중복 0,0,pass,
+등급 A·B·C 합(쌍 수),2215,2215,pass,A 1094 + B 245 + C 876. U 3073건은 후보 없음이라 쌍에 들어 있지 않다
+쌍의 gov_id 비어 있지 않음,빈 값 0,0,pass,
+q2_items_v3_1 행 수,62020,62020,pass,
+행 수 = 쌍 × 28(side 2 × scope 2 × 항목 7),62020,62020,pass,
+items 쌍 집합 = q2_match 쌍 집합,일치,0쌍 차이,pass,
+items 단위 키 중복,0,0,pass,
+match_confirmed 참인 단위,0,0,pass,사람이 같은 서비스로 확인한 쌍이 아직 없다
+judgeable 행 수 = 쌍 × 4(side × scope),8860,8860,pass,
+q2_gov24_internal 행 수 = 쌍 수,2215,2215,pass,
+q2_match.meta rows,5288,5288,pass,
+q2_items_v3_1.meta rows,62020,62020,pass,
+q2_match.meta 입력 해시: data/processed/services_master.csv,06bb164bdef5…,347875f29728…,mismatch,메타 기록과 현재 파일이 다르다(생성 이후 파일이 바뀜). 값은 맞추지 않고 그대로 표시한다
+q2_match.meta 입력 해시: data/raw/gov24/gov24_serviceList.csv,10e323344eba…,10e323344eba…,pass,
+q2_match.meta 입력 해시: data/raw/gov24/gov24_serviceDetail.csv,7f0ac4fe0f34…,7f0ac4fe0f34…,pass,
+q2_items_v3_1.meta 입력 해시: data/processed/q2_items_v3.csv,52e1afc4ee33…,52e1afc4ee33…,pass,
+q2_items_v3_1.meta 입력 해시: data/processed/q2_match.csv,5b2ffd34fb9e…,5b2ffd34fb9e…,pass,
+data/raw/gov24/gov24_serviceList.csv 존재,있음,있음,pass,
+data/raw/gov24/gov24_serviceDetail.csv 존재,있음,있음,pass,
+data/raw/gov24/gov24_supportConditions.csv 존재,있음,있음,pass,
+fields_absent가 비어 있지 않은 단위(scope=text),참고,0,note,"scope=all에서는 4,763단위(SSIS 구비서류·신청기한·신청방식 분류 필드 없음)"

@@ -1,0 +1,13 @@
+﻿tier,side,n_units,n_unique_pairs
+A,ssis,68,68
+A,gov,70,70
+A,합계,138,98
+B,ssis,13,13
+B,gov,13,13
+B,합계,26,21
+C,ssis,35,35
+C,gov,33,33
+C,합계,68,51
+전체,ssis,116,116
+전체,gov,116,116
+전체,합계,232,170

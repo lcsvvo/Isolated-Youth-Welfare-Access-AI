@@ -1,0 +1,6 @@
+﻿field,branch,n,share_of_field
+구비서류 해당없음/없음,ambiguous,3102,0.7116
+구비서류 해당없음/없음,consistent,734,0.1684
+구비서류 해당없음/없음,contradicted,523,0.12
+신청기한 상시신청,contradicted,259,0.0402
+신청기한 상시신청,default,6186,0.9598

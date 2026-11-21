@@ -1,0 +1,3 @@
+﻿label,n,result,note
+youth_scope,"178 (층화, 사용 사례 제외)","A|name_text 15/15 A, C|age_excludes 24/25 C, B|tag_only 25 중 22건 원문 근거로는 U, U|no_evidence 30 중 5건 원문상 B, A|age_band 3 중 2건 B(혼합 대상) → 수정","블라인드 AI 판정, 사람 검수 아님"
+need_area_q21 (⑩ 제외),"80 (다중 60, 단일 20)",규칙 영역 150개 중 AI 일치 85 → 수정 후 121 중 82. 다중 라벨 60건 중 AI도 다중 21 → 수정 후 39건 중 19,같은 표본으로 규칙을 고쳤으므로 수정 후 수치는 개발 표본 기준(낙관적)

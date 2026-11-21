@@ -1,0 +1,13 @@
+﻿youth_scope,youth_scope_basis,central,local,total,review_true
+A,age_band,0,17,17,1
+A,name_text,9,265,274,18
+B,age_overlap,77,318,395,119
+B,tag_only,83,746,829,829
+B,target_text_mention,6,9,15,15
+B,text_mention,1,7,8,8
+C,age_excludes,10,275,285,46
+U,age_may_refer_to_dependent,32,273,305,305
+U,age_partial,22,406,428,428
+U,conflict,10,46,56,56
+U,no_evidence,140,1250,1390,0
+U,tag_non_youth,71,1215,1286,0

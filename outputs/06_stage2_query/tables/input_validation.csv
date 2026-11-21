@@ -1,0 +1,10 @@
+﻿input,path,exists,sha256_12,rows,note
+q3_pairs,data\raw\q3_query_pairs\q3_query_pairs_v2.csv,True,23ce2a59f437,,
+q3_intent,outputs\05_q3\review\q3_intent_review_final.csv,True,a409391de608,,
+corpus,ai\data\dev_corpus.jsonl,True,dbfcfc219259,,
+services,data\processed\services_master.csv,True,269005564d84,,
+config,ai\configs\config.yaml,True,d0a0aa0d19ca,,
+terms,ai\configs\query_terms.yaml,True,e234722bddf0,,
+dev_cases,,True,,110.0,
+q3_reviewed_cases,outputs\06_stage2_query\review\q3_need_review.xlsx,True,c6eb7f36fca8,30.0,
+terms_reviewed_rows,outputs\06_stage2_query\review\query_terms_review.xlsx,True,38ca94cc3245,81.0,

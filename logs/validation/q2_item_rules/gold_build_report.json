@@ -1,0 +1,75 @@
+{
+  "pairs_excluded_all_sources": 389,
+  "pairs_excluded_by_file": {
+    "v3_pilot_sample": 123,
+    "v3_validation_sample": 122,
+    "item_rule_sample": 181
+  },
+  "pop_pairs_before": 1252,
+  "pop_pairs_excluded": 389,
+  "pop_pairs_after": 863,
+  "pop_units_before": 17528,
+  "pop_units_after": 12082,
+  "seed_gold": 20261108,
+  "units": 128,
+  "units_by_item_side": {
+    "age|gov": 9,
+    "age|ssis": 9,
+    "channel|gov": 9,
+    "channel|ssis": 9,
+    "contact|gov": 9,
+    "contact|ssis": 9,
+    "documents|gov": 10,
+    "documents|ssis": 10,
+    "income|gov": 9,
+    "income|ssis": 9,
+    "period|gov": 9,
+    "period|ssis": 9,
+    "residence|gov": 9,
+    "residence|ssis": 9
+  },
+  "primary_by_reviewer": {
+    "R1": 32,
+    "R2": 32,
+    "R3": 32,
+    "R4": 32
+  },
+  "second_by_reviewer": {
+    "R1": 8,
+    "R2": 7,
+    "R3": 7,
+    "R4": 8
+  },
+  "doubles": 30,
+  "doubles_by_item": {
+    "age": 4,
+    "channel": 4,
+    "contact": 5,
+    "documents": 4,
+    "income": 4,
+    "period": 5,
+    "residence": 4
+  },
+  "doubles_by_pair": {
+    "R1-R2": 5,
+    "R1-R4": 5,
+    "R2-R3": 5,
+    "R2-R4": 5,
+    "R3-R4": 5,
+    "R1-R3": 5
+  },
+  "file_rows": {
+    "R1": 40,
+    "R2": 39,
+    "R3": 39,
+    "R4": 40
+  },
+  "pilot_vs_validation": {
+    "units_pilot": 130,
+    "units_validation": 130,
+    "unit_overlap": 0,
+    "pairs_pilot": 123,
+    "pairs_validation": 122,
+    "pairs_in_both": 8
+  }
+}

@@ -1,0 +1,9 @@
+﻿file,bytes_now,sha256_now,bytes_logged,sha256_logged,match_collection_log
+data/raw/ssis/central_list.csv,219849,8830f713b4c66641,,,
+data/raw/ssis/central_detail_full.csv,1760276,9235475da0ca01b8,,,
+data/raw/ssis/local_list.csv,2408850,f9e5e9cbc065e838,,,
+data/raw/ssis/local_detail_full.csv,7360214,ba2dc90db51d6cb5,,,
+data/raw/gov24/gov24_serviceList.csv,12563633,10e323344eba8bfb,12633115.0,0f4961d48cb7e482,False
+data/raw/gov24/gov24_serviceDetail.csv,14450191,7f0ac4fe0f345713,14559830.0,5f020d6dd4a77242,False
+data/raw/gov24/gov24_supportConditions.csv,1385863,c9b974ce0399fba0,1385863.0,c9b974ce0399fba0,True
+data/raw/isolated_youth_survey_2023/보건복지부_고립_은둔 청년 실태 조사_20230904.xlsx,7678458,2c28ea6702702cb8,,,

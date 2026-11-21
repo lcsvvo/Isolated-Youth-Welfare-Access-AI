@@ -1,0 +1,9 @@
+﻿population,label,n_pairs
+AB_nonshared,자동 후보 A·B 비공유(주),1252
+A_nonshared,자동 후보 A 비공유(민감도),1026
+ABC_all,자동 후보 A·B·C 전체(참고),2215
+human_same,사람 확정 동일(A·B·C),38
+human_same_AB,사람 확정 동일(A·B 비공유),22
+youth_S2_AB,청년 엄격 S2 ∩ A·B 비공유,184
+youth_S2_A,청년 엄격 S2 ∩ A 비공유,148
+nonyouth_AB,엄격 S2 밖 ∩ A·B 비공유,1068

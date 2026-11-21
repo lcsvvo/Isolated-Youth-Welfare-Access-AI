@@ -1,0 +1,17 @@
+﻿pair_set,scope,side,kind,n_units,n_true,n_false,n_blank,share_true_excl_blank
+ABC_all,text,ssis,eligibility,2215,469,1746,0,0.21173814898419865
+ABC_all,text,ssis,application,2215,308,1907,0,0.13905191873589165
+ABC_all,text,gov,eligibility,2215,395,1820,0,0.17832957110609482
+ABC_all,text,gov,application,2215,362,1853,0,0.16343115124153498
+ABC_all,all,ssis,eligibility,2215,469,1746,0,0.21173814898419865
+ABC_all,all,ssis,application,2215,340,1875,0,0.15349887133182843
+ABC_all,all,gov,eligibility,2215,395,1820,0,0.17832957110609482
+ABC_all,all,gov,application,2215,2076,139,0,0.9372460496613996
+AB_nonshared,text,ssis,eligibility,1252,278,974,0,0.2220447284345048
+AB_nonshared,text,ssis,application,1252,168,1084,0,0.134185303514377
+AB_nonshared,text,gov,eligibility,1252,238,1014,0,0.1900958466453674
+AB_nonshared,text,gov,application,1252,193,1059,0,0.15415335463258786
+AB_nonshared,all,ssis,eligibility,1252,278,974,0,0.2220447284345048
+AB_nonshared,all,ssis,application,1252,187,1065,0,0.14936102236421725
+AB_nonshared,all,gov,eligibility,1252,238,1014,0,0.1900958466453674
+AB_nonshared,all,gov,application,1252,1168,84,0,0.9329073482428115

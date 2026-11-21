@@ -1,0 +1,73 @@
+﻿item_id,field,R1,R2,R3,R4,final,final_source,basis,status
+2,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+4,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+8,h_same,,동일,,동일,동일,일치,중복 검수 두 판정 일치,confirmed
+9,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+10,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+11,h_same,다름,,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+13,h_same,동일,동일,,,동일,일치,중복 검수 두 판정 일치,confirmed
+16,h_same,,동일,,동일,동일,일치,중복 검수 두 판정 일치,confirmed
+19,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+20,h_same,,,다름,다름,다름,일치,중복 검수 두 판정 일치,confirmed
+21,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+23,h_same,다름,,동일,,다름,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+25,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+28,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+33,h_same,동일,,동일,,동일,일치,중복 검수 두 판정 일치,confirmed
+36,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+44,h_same,다름,,,동일,다름,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+45,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+49,h_same,동일,,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+50,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+52,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+55,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+57,h_same,다름,,,동일,다름,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+58,h_same,,,,다름,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+62,h_same,동일,,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+65,h_same,,,동일,동일,동일,일치,중복 검수 두 판정 일치,confirmed
+68,h_same,동일,,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+72,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+73,h_same,,다름,다름,,다름,일치,중복 검수 두 판정 일치,confirmed
+74,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+76,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+77,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+78,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+79,h_same,다름,,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+81,h_same,다름,,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+83,h_same,판단불가,,,동일,다름,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+85,h_same,,동일,,동일,동일,일치,중복 검수 두 판정 일치,confirmed
+87,h_same,판단불가,동일,,,동일,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+88,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+90,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+92,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+94,h_same,,동일,동일,,동일,일치,중복 검수 두 판정 일치,confirmed
+95,h_same,동일,,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+96,h_same,판단불가,,,,판단불가,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+97,h_same,,다름,,다름,다름,일치,중복 검수 두 판정 일치,confirmed
+98,h_same,동일,,동일,,동일,일치,중복 검수 두 판정 일치,confirmed
+105,h_same,동일,,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+108,h_same,동일,동일,,,동일,일치,중복 검수 두 판정 일치,confirmed
+112,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+113,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+114,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+115,h_same,판단불가,,,,판단불가,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+117,h_same,판단불가,,,동일,판단불가,조정,"중복 검수 불일치, 제3자 또는 합의 판정(final_method, final_by) 채택",confirmed
+119,h_same,,,다름,다름,다름,일치,중복 검수 두 판정 일치,confirmed
+122,h_same,동일,,동일,,동일,일치,중복 검수 두 판정 일치,confirmed
+123,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+125,h_same,,다름,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+126,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+127,h_same,,,,동일,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+128,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+130,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+143,h_same,,다름,다름,,다름,일치,중복 검수 두 판정 일치,confirmed
+144,h_same,,,,다름,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+145,h_same,다름,,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+146,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+150,h_same,,,동일,동일,동일,일치,중복 검수 두 판정 일치,confirmed
+152,h_same,동일,동일,,,동일,일치,중복 검수 두 판정 일치,confirmed
+160,h_same,,,다름,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+165,h_same,,동일,,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+166,h_same,,다름,다름,,다름,일치,중복 검수 두 판정 일치,confirmed
+169,h_same,,,동일,,동일,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed
+170,h_same,다름,,,,다름,단독,단독 검수 1차 판정 채택(q2_review final_source 규칙),confirmed

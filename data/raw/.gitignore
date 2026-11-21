@@ -1,0 +1,14 @@
+# MDIS 마이크로데이터 (재배포 금지)
+data/external/
+*청년삶실태조사*
+*지역별고용조사*
+*.sav
+*.sas7bdat
+*.dta
+
+# 환경·캐시
+.env
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+~$*

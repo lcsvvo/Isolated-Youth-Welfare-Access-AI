@@ -1,0 +1,9 @@
+﻿서비스ID,서비스명,method_raw,baseline_visit_text,fixed_visit_text,stored_visit_text,final_channel_changed
+138300000066,양육비 이행 지원 서비스,"온라인신청 : https://www.childsupport.or.kr
+방문신청 : 서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어) 24층, 양육비이행관리원
+문의 : 1644-6621",False,True,True,False
+314000000272,양천형 밤샘 긴급돌봄 어린이집 운영,"온라인: 양천구청 홈페이지
+방문: 어린이집
+유선전화 : 양천구청 당직실(2620-3000), 응답소(120)",False,True,True,False
+O00105200003,팔복예술공장 대관 감면,"온라인신청 (https://palbokart.kr/main/inner.php?sMenu=main)
+방문접수(전라북도 전주시 덕진구 구렛들1길 46, 팔복예술공장 a동 1층 팔복기획운영팀)",False,True,True,False

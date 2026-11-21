@@ -1,0 +1,46 @@
+# 모든 설정을 여기 한 곳에 모아둔다. 코드 안에 숫자·경로를 직접 쓰지 않는다.
+# paths의 상대 경로는 실행 위치와 무관하게 ai/ 기준이다.
+paths:
+  rules_file: prompts/extract_rules.md     # docs/services_master_spec.md 등에서 사용자 문장 판정에 필요한 부분만 뽑은 파일
+  domains_file: configs/domains.yaml
+  services: ../data/processed/services_master.csv   # 추천 DB와 시군구 검증에 공통 사용
+  q1_review: ../outputs/03_q1_recommendation/q1_review.json  # 기본 마스터용 로컬 생성 파일
+  q2_info: ../outputs/04_q2_recommendation/q2_info.json      # 기본 마스터용 로컬 생성 파일
+  dev_examples: data/dev_corpus.jsonl      # few-shot 예시 풀 (python -m eval.build_devset, label 있는 문장만 사용)
+  cache_dir: null                          # 모델 캐시 폴더. null이면 기본 위치. 환경변수 MODEL_CACHE_DIR가 우선 (Colab 예: /content/drive/MyDrive/models)
+  dense_cache: data/service_emb_{profile}.npz   # {profile} = retrieval.dense_profile. 구성별 파일 분리, 모델·문서 지문 일치 시만 재사용
+  query_terms: configs/query_terms.yaml    # 2단계 쿼리 사전 v0.1 (미검수)
+  bm25_cache: data/bm25_tokens.pkl         # 문서 토큰화 결과. 데이터·사전·규칙이 바뀌면 자동으로 다시 만든다
+
+models:
+  embedder: BAAI/bge-m3
+  llm: kakaocorp/kanana-2-3b-instruct
+
+retrieval:
+  top_k_each: 100   # BM25, 임베딩 각각 몇 개씩 가져올지
+  rrf_k: 60
+  rrf_top_n: 100    # RRF 통합 후보 수(규칙 단계로 넘기는 개수). 기존 rrf() 기본값과 같음
+  final_top_n: 5
+  dense_profile: core   # Dense 문서 구성(retrieve/dense_texts.py PROFILES). 잠정 운영 core(PR #71 사람 검수 nDCG@5 최고, 질의 4개 개발 평가). baseline으로 되돌릴 수 있고 Q3에서 재비교
+
+evaluation:
+  q3:
+    as_of: '2026-11-14'   # Q3 비교에 고정 적용. 운영은 검색 시점의 한국 날짜 사용
+
+extract:
+  n_examples: 3     # few-shot 예시 개수
+  max_retries: 1
+  postprocess: true  # extract/postprocess.py 규칙 보정 (false면 LLM 결과 그대로)
+
+stage2:              # 2단계 사용자 확인·질문·쿼리 (ai/confirm, ai/query)
+  questions:
+    order: [need, region_sido, activity_range, age]
+    enabled: {need: true, region_sido: true, activity_range: true, age: true}
+    max_total: 2     # 세션 전체 질문 수 (확인 화면, 같은 항목 추가 화면 1회는 세지 않음)
+  rules_pass:        # 규칙 모듈로 넘길지. rules/normalize.py(지역명 정규화, 나이 int 변환) 반영 후 true. false면 None 전달
+    age: true
+    region_sido: true
+    region_sgg: true   # 확인 화면에서 선택 입력. 시·도와 쌍으로 검증된 값만 전달
+  query:
+    access_mode: B1  # A | B1 | B2(실험용) | C. 실험 결과 전까지 잠정
+    caps: {main_core: 4, sub_core: 2, main_exp: 3, sub_exp: 1, access: 2}   # 근거 없는 초기값

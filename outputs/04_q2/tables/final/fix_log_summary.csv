@@ -1,0 +1,8 @@
+﻿file,rule,status,n_cells,n_rows,note
+item_review_R1.csv,4. 증거 칸 위치 교정,fixed,2,1,건수만 기록(행 식별자는 fix_log.csv)
+review_R1.csv,1. gov_id 지수 표기 복원,fixed,22,22,건수만 기록(행 식별자는 fix_log.csv)
+review_R1.csv,3. 구분자 통일('|'),fixed,32,24,건수만 기록(행 식별자는 fix_log.csv)
+review_R3.csv,1. gov_id 지수 표기 복원,fixed,24,24,건수만 기록(행 식별자는 fix_log.csv)
+review_R3.csv,2. 대안 gov_id 지수 표기 복원,fixed,2,2,건수만 기록(행 식별자는 fix_log.csv)
+review_R3.csv,2. 대안 gov_id 지수 표기 복원,unresolved,3,3,건수만 기록(행 식별자는 fix_log.csv)
+review_R3.csv,5. 검수자·일시 공란(수정 안 함),note_unchanged,1,1,건수만 기록(행 식별자는 fix_log.csv)

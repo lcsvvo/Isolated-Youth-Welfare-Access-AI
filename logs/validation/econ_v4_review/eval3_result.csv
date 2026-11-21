@@ -1,0 +1,131 @@
+﻿servId,stratum,q21_10_type,q21_10_tier,q21_10_evidence,need_area_q21,q21_07_beneficiary,tier,type,earmark_area,ambiguous,reason,rule,ai,r10,a10
+WLF00005302,no_signal,none,,,q21_11,,excluded,earmarked,q21_11,no,'월 임대료 할증분 감면으로 주거 안정' — 주거 용도 감면,none,excluded,False,False
+WLF00006569,no_signal,none,,,N,,excluded,earmarked,service,yes,"'발급수수료 지원' — 복지카드 발급 행정수수료 용도, ⑩ 신호 약함",none,excluded,False,False
+WLF00000305,candidate,compensation,candidate,참전유공자 배우자 복지수당,q21_10,,candidate,compensation,,no,"서비스명 '참전유공자 배우자 복지수당', '예우 지원' 목적",candidate,candidate,True,True
+WLF00006698,no_signal,none,,,N,,excluded,earmarked,q21_07,yes,'어린이집 특별활동비 보조금' — 영유아 교육·보육 프로그램 용도(교육/돌봄 경계),none,excluded,False,False
+WLF00001051,candidate,compensation,candidate,국가보훈대상자 사망위로금,q21_10,,candidate,compensation,,no,"서비스명 '국가보훈대상자 사망위로금', '명예선양' — 보훈 예우",candidate,candidate,True,True
+WLF00005046,excluded,earmarked,excluded,medical: 산후조리비지원사업,N,,excluded,earmarked,service,yes,'출생아 1인당 산후조리비 50만원' — 서비스명이 산후조리 용도(현금 일괄지급이라 일시금과 경계),excluded,excluded,False,False
+WLF00005814,no_signal,none,,,N,,none,none,,no,"'작은목욕탕 설치·운영', 지원내용 '해당없음'",none,none,False,False
+WLF00005765,candidate,lump_sum,candidate,전라남도 청년부부 결혼축하금 지원사업,q21_10,,candidate,lump_sum,,no,'결혼축하금 2백만원 일시 지급',candidate,candidate,True,True
+WLF00006547,candidate,lump_sum,candidate,출산축하금,q21_10,,candidate,lump_sum,,no,'출산축하금 ... 1회 지급',candidate,candidate,True,True
+WLF00002168,no_signal,none,,,q21_03,,none,none,,no,"'장난감대여' 서비스, 연회비 부과",none,none,False,False
+WLF00004401,candidate,compensation,candidate,경상북도의사상자 지원,q21_10,,candidate,compensation,,no,"'의사상자 특별위로금·수당', '예우 및 지원'",candidate,candidate,True,True
+WLF00004632,candidate,lump_sum,candidate,출산장려금,q21_10,,candidate,lump_sum,,no,"서비스명 '출산장려금', '출산축하금 및 영유아양육비 지급' — 지자체 출산장려금은 일시금",candidate,candidate,True,True
+WLF00005449,excluded,earmarked,excluded,"service: 지원금액 : 연 200만원한도(최초 지원을 받은 연도를 포함하여 연속 3년까지)지원범위 : 가임력보존 치료에 있어, 가계부담이 큰 전액본인부담금 및 비급여 진료비의 90% 지원지원항목 : -(지원항목) 배아생성 및 보존·이식·동결 보관 비용 암치료 중 난소보호를 위한 약물 및 호르몬 치료, 임신을 위한 각종 면역력 검사비 등 * 난임시술비 지원 항목(배아생성·보존·이식·동결 보관 비용)과 중복지원 불가제외항목 : 병실 입원료, 식대, 한방치료진료비, 가임력보존치료와 관련 없는 진료비, 의료기기 및 의료소모품 구입비, 제증명 서류 발급료, 간이영수증으로 발급받은 진료비, 요양기관에서 환자부담금납부를 면제 또는 감면한 경우의 진료비, 후원단체에서 대납한 진료비, 외국의료기관에서 발생한 진료비",N,,excluded,earmarked,medical,no,'가임력보존 치료 ... 비급여 진료비의 90% 지원',excluded,excluded,False,False
+WLF00001818,excluded,earmarked,excluded,q21_08: 100세시대 어르신일자리 사업,q21_08,,excluded,earmarked,q21_08,no,'어르신 일자리 제공(공익형 월 27만원 등)' — 공공근로·취업 용도,excluded,excluded,False,False
+WLF00003560,no_signal,none,,,N,,none,none,,no,'7만원 상당의 생필품 또는 현물 지원' — 현물 위문품,none,none,False,False
+WLF00005001,no_signal,none,,,q21_03,,none,none,,no,"'개회식, 체육대회, 장기자랑' — 축제 행사, 지급 없음",none,none,False,False
+WLF00003405,main,expense_relief,main,* 지원범위ⓛ 학습활동을 마치고 귀가 시 대중교통(이 조에서 “농어촌버스”라 한다) 운행이 종료된 지역에 거주하는 경우 통학택시비를 지원할 수 있다.② 오전 7시 30분 이전에 운행되는 농어촌버스를 이용하지 않으면 정상적인 등교가 어려운 지역에 거주하는 경우 통학택시비를 지원할 수 있다.,q21_07|q21_10,dependent,excluded,earmarked,q21_07,yes,"'중·고교생 통학택시비 지원' — 통학(교육) 용도, 교통비 경감과 경계",main,excluded,True,False
+WLF00001862,candidate,unrestricted_cash,candidate,❍ 읍․면․동 행정복지센터 및 정부24 접수하여 시청 가족복지과에서 지급대상 여부 검토 후 신청인 계좌로 지원금 입금❍ 접수일부터 15일 이내 지급(지급시 개인별 전화 통보),q21_10,,excluded,earmarked,service,no,'국적취득 신청비용 부담 경감' — 귀화 신청비 용도,candidate,excluded,True,False
+WLF00006189,main,living,main,자녀양육과 경제활동을 병행하기 어려운 한부모가족 특성을 감안하여 저소득 기준을 완화하는 등 생계지원 강화 필요,q21_10,,main,living,,yes,"'생계지원 강화 필요', '자녀 1명당 아동양육비 월 10만 원' — 생계 목적은 배경 서술에만 있음",main,main,True,True
+WLF00006661,excluded,earmarked,excluded,medical: 군포시 치매치료관리비 확대 지원,N,,excluded,earmarked,medical,no,'치매치료관리비 ... 본인부담금 실비 지원',excluded,excluded,False,False
+WLF00006400,candidate,lump_sum,candidate,출산지원금 지원,q21_10,,candidate,lump_sum,,no,'첫째 아이 100만 원(1회 전액 지급)' 출산지원금,candidate,candidate,True,True
+WLF00003991,candidate,compensation,candidate,참전유공자 명예수당 지급,q21_10,,candidate,compensation,,no,"서비스명 '참전유공자 명예수당', '예우 및 지원'",candidate,candidate,True,True
+WLF00001565,candidate,lump_sum,candidate,장애인가정 출산지원금,q21_03|q21_10,,candidate,lump_sum,,yes,'출산 비용을 지원 ... 100만원 이내' 출산지원금 — 출산 의료비 용도와 경계,candidate,candidate,True,True
+WLF00000407,candidate,compensation,candidate,"전상군경,공상군경, 보국수훈자 ,무공수훈자 명예수당",q21_10,,candidate,compensation,,no,서비스명 '전상군경...무공수훈자 명예수당',candidate,candidate,True,True
+WLF00006360,excluded,earmarked,excluded,q21_11: 농어촌 유학생 주거비 지원사업,q21_11,,excluded,earmarked,q21_11,no,'농어촌 유학생 주거비 지원 ... 60만원',excluded,excluded,False,False
+WLF00004430,no_signal,none,,,N,,excluded,earmarked,service,no,'목욕비 지원 ... 위생관리 및 건강증진',none,excluded,False,False
+WLF00006015,excluded,earmarked,excluded,medical: 이천시 장애인 전동보조기기 보험가입 및 지원,N,,excluded,earmarked,service,no,'전동보조기기 보험료 지원' — 민간 보험료·보장구 용도,excluded,excluded,False,False
+WLF00004939,main,living,main,"생계비, 의료비, 주거비 등",q21_10|q21_11,,main,living,q21_11,no,"'생계비, 의료비, 주거비 등' — 생계 명시(주거 다중)",main,main,True,True
+WLF00004254,main,living,main,자립준비청년 생활비 지원으로 생활안정 지원 및 자립의지 고취,q21_10,,main,living,,no,"'자립준비청년 생활비 지원으로 생활안정', 월 30만원",main,main,True,True
+WLF00001241,excluded,earmarked,excluded,"service: 성폭력, 가정폭력 피해에 대한 검사 및 치료비용 본인부담액과 건강보험 또는 의료보호 비적용 진료비용(병실이용료포함)",N,,excluded,earmarked,medical,no,'검사 및 치료비용 본인부담액' 의료비,excluded,excluded,False,False
+WLF00003040,excluded,earmarked,excluded,medical: 치매 정밀검사비 지원,N,,excluded,earmarked,medical,no,"'진단검사, 감별검사비 1회 비용 지원'",excluded,excluded,False,False
+WLF00005758,no_signal,none,,,N,,none,none,,no,'차량 안전벨트 무료 지원' — 현물,none,none,False,False
+WLF00006010,no_signal,none,,,N,,none,none,,no,'50만원 상당의 장수축하물품 지원' — 현물,none,none,False,False
+WLF00000995,candidate,form_only,candidate,[field] srvPvsnNm=현금지급,q21_07|q21_10,dependent,excluded,earmarked,q21_07,no,'학원 및 학습지 ... 학습능력 향상을 위해 월 10만원',candidate,excluded,True,False
+WLF00006524,excluded,org_target,excluded,전북 청년 1인 소상공인농어업인 출산급여 지원사업,q21_08,,candidate,lump_sum,,yes,"'본인 출산 시 90만원, 배우자 출산 시 출산휴가지원금 80만원' — 출산 일시 지급, 경영공백 보전 목적과 경계",excluded,candidate,False,True
+WLF00001310,candidate,compensation,candidate,사망 참전유공자의 배우자 복지수당,q21_10,,candidate,compensation,,no,'사망 참전유공자의 배우자 복지수당 ... 유족의 예우',candidate,candidate,True,True
+WLF00004086,excluded,earmarked,excluded,service: 상당구 행려사망자 및 부랑인 관리,N,,excluded,earmarked,service,no,"'귀향여비 지급', '장제처리' — 보호 서비스 용도 여비",excluded,excluded,False,False
+WLF00004502,no_signal,none,,,q21_03|q21_06|q21_07,dependent,none,none,,no,'기초학습 ... 개별 방문 멘토링' 프로그램,none,none,False,False
+WLF00001539,candidate,compensation,candidate,국가보훈대상자 명예수당 지원,q21_10,,candidate,compensation,,no,"서비스명 '국가보훈대상자 명예수당', '참전명예수당 월 30만원'",candidate,candidate,True,True
+WLF00005571,excluded,earmarked,excluded,medical: 뇌병변장애인 위생용품 구입비 지원,N,,excluded,earmarked,service,no,'대소변흡수용품 ... 구입비의 50%를 지원' — 위생용품 용도,excluded,excluded,False,False
+WLF00006156,no_signal,none,,,N,,excluded,earmarked,service,no,'산후조리비 본인 결제 후 영수증' 청구,none,excluded,False,False
+WLF00000429,candidate,compensation,candidate,호국보훈수당 지급,q21_10,,candidate,compensation,,no,"서비스명 '호국보훈수당', '국가를 위해 희생한 사람 ... 선양'",candidate,candidate,True,True
+WLF00001431,no_signal,none,,,N,,excluded,earmarked,service,no,'귀향여비 ... 목적지 실비 승차권 지급',none,excluded,False,False
+WLF00006574,excluded,earmarked,excluded,q21_07: 기장군 청년 자격시험 응시료 지원사업,q21_07,self,excluded,earmarked,q21_08,no,'자격시험 응시료 실비 지원' — 자격증 취득비는 취업 용도,excluded,excluded,False,False
+WLF00002479,no_signal,none,,,N,,none,none,,no,'통학 ... 운송용 차량' 제공 — 현물 서비스,none,none,False,False
+WLF00000692,no_signal,none,,,N,,excluded,earmarked,service,no,"'활동보조, 방문목욕, 방문간호' 바우처 — 돌봄 서비스 이용 용도",none,excluded,False,False
+WLF00001330,excluded,earmarked,excluded,service: 장애인 고속도로할인카드 발급 수수료 지원,N,,excluded,earmarked,service,no,'장애인고속도로 할인카드 발급비용 지원' — 카드 발급 수수료 용도,excluded,excluded,False,False
+WLF00001667,no_signal,none,,,q21_03,,none,none,,no,'필라테스 교실 운영' 등 건강교실 프로그램,none,none,False,False
+WLF00005271,main,expense_relief,main,군산시 중·고등학생 시내버스 무상교통 사업,q21_10,,main,expense_relief,,no,"'실제 시내버스 이용요금 지원(월 최대 52,000원)' — 반복 대중교통비 경감",main,main,True,True
+WLF00004792,candidate,unrestricted_cash,candidate,"250천원*9개월*18명 = 연도별 40,500,000원 강습수당 지급",q21_03|q21_10,,excluded,org_target,,no,'강습수당 지급' — 생활체육 강사(종사자) 대상,candidate,excluded,True,False
+WLF00003025,candidate,lump_sum,candidate,의로운 군민 위로금 지원,q21_10,,candidate,compensation,,no,'의로운 군민 등에 대한 예우 ... 위로금',candidate,candidate,True,True
+WLF00001249,no_signal,none,,,N,,none,none,,no,'주 3회 이상 식사배달' — 현물 급식,none,none,False,False
+WLF00002400,candidate,lump_sum,candidate,소년소녀가정 및 위탁아동세대 위로금,q21_10,,candidate,lump_sum,,yes,"서비스명 '위로금', '세대당 매월 20천원' — 매월 지급이나 서비스명이 위로금",candidate,candidate,True,True
+WLF00003290,main,expense_relief,main,초 중 고 학생 통학교통비 지원,q21_10,,excluded,earmarked,q21_07,no,'균등한 교육기회 보장 ... 통학교통비' — 통학(교육) 용도,main,excluded,True,False
+WLF00003721,no_signal,none,,,N,,excluded,earmarked,service,no,'귀향 버스요금 및 숙박비' — 행려자 보호 용도 여비,none,excluded,False,False
+WLF00002177,main,expense_relief,main,건강보험료지원,q21_10,,main,expense_relief,,no,'국민건강보험료 및 장기요양보험료를 지원' — 사회보험료 경감,main,main,True,True
+WLF00004875,candidate,lump_sum,candidate,결혼축하금,q21_10,,candidate,lump_sum,,no,'결혼축하금',candidate,candidate,True,True
+WLF00002721,main,expense_relief,main,저소득주민 국민건강보험료 지원,q21_10,,main,expense_relief,,no,'국민건강보험료 및 노인장기요양보험료를 지원',main,main,True,True
+WLF00000476,candidate,compensation,candidate,참전유공자 사망위로금,q21_10,,candidate,compensation,,no,"서비스명 '참전유공자 사망위로금', '명예 선양'",candidate,candidate,True,True
+WLF00000415,no_signal,none,,,N,,excluded,earmarked,service,no,"'교통비, 숙식비 등 지급' — 행려자 보호 용도",none,excluded,False,False
+WLF00006217,no_signal,none,,,q21_08,,none,none,,no,"'취업활동계획 수립, 직업훈련' 등 서비스, 현금 지급 없음",none,none,False,False
+WLF00006458,no_signal,none,,,N,,none,none,,no,"'50만원 상당의 한우세트, 밥솥 ... 택 1' — 현물",none,none,False,False
+WLF00002996,candidate,compensation,candidate,보훈대상자 사망위로금 지급,q21_10,,candidate,compensation,,no,"서비스명 '보훈대상자 사망위로금', '국가유공자의 사기 앙양'",candidate,candidate,True,True
+WLF00005250,excluded,earmarked,excluded,service: 무연고사망자 장제처리 및 행려자 구호,N,,excluded,earmarked,service,no,"'무연고 사망 위탁처리비', '귀향여비' — 장제·보호 용도",excluded,excluded,False,False
+WLF00002828,no_signal,none,,,N,,candidate,lump_sum,,no,'명절위문품 ... 1만원 상당의 온누리상품권' — 용도 제한 없는 위문,none,candidate,False,True
+WLF00001420,no_signal,none,,,N,,excluded,earmarked,medical,no,'의료비(진료비 및 약제비) 일부 지원',none,excluded,False,False
+WLF00002778,no_signal,none,,,N,,excluded,earmarked,service,no,"'활동 보조, 방문 목욕, 방문 간호' 바우처",none,excluded,False,False
+WLF00000359,no_signal,none,,,q21_11,,none,none,,no,"'도배, 장판 교체 ... 주거환경 개선' — 현물 시공",none,none,False,False
+WLF00004331,main,expense_relief,main,무주군 혈액투석환자 교통비 지원,q21_10,,excluded,earmarked,medical,no,'혈액투석에 따른 교통비' — 진료 목적 교통비,main,excluded,True,False
+WLF00003847,candidate,compensation,candidate,국가유공자 생활보조보훈수당 지원,q21_10,,main,living,,no,"서비스명 '생활보조보훈수당', '국가유공자 생계 유지 지원'",candidate,main,True,True
+WLF00002737,candidate,compensation,candidate,참전유공자 사망위로금 지급,q21_10,,candidate,compensation,,no,'참전유공자의 숭고한 뜻을 기리기 위해 사망위로금',candidate,candidate,True,True
+WLF00001148,main,living,main,근로·자녀장려금,q21_10,,main,living,,no,'근로장려금과 자녀장려금 ... 소득과 자녀양육비를 지원',main,main,True,True
+WLF00002306,candidate,lump_sum,candidate,장수축하금 지원,q21_10,,candidate,lump_sum,,no,'장수축하금 ... 만 90세 10만원 현금',candidate,candidate,True,True
+WLF00003462,main,living,main,"복지급여 신청에 따른 통합조사 방문가구 : 가구당 25천원 상당의 물품 제공(식용유, 라면 등 식료품 세트)",q21_10,,none,none,,no,'25천원 상당의 물품 제공(식료품 세트)',main,none,True,False
+WLF00003027,no_signal,none,,,N,,none,none,,no,'응급구호세트 ... 재해구호물자' 현물,none,none,False,False
+WLF00004701,excluded,earmarked,excluded,medical: 노인 무릎인공관절수술비 및 개안수술비 지원,N,,excluded,earmarked,medical,no,'무릎인공관절 수술 ... 수술비' 의료비,excluded,excluded,False,False
+WLF00006088,no_signal,none,,,N,,none,none,,no,'간편식 등 지원' — 현물·안부확인,none,none,False,False
+WLF00002893,candidate,lump_sum,candidate,출산공무원 축하지원금,q21_10,,excluded,org_target,,yes,'음성군 소속의 출산공무원' 복지포인트 — 기관 종사자 대상,candidate,excluded,True,False
+WLF00005809,main,living,main,여수시 출생기본소득,q21_10,,main,living,,yes,"서비스명 '출생기본소득', '월 10만원 출생소득' — 기본소득 명시이나 아동 양육수당 성격",main,main,True,True
+WLF00003470,excluded,earmarked,excluded,q21_07: 조손가정 손자녀 대학신입생 입학금(등록금) 지원,q21_07,self,excluded,earmarked,q21_07,no,'신입생 입학금 및 1학기 등록금',excluded,excluded,False,False
+WLF00001106,main,living,main,"(생활안정지원금) 월 1,976,000원 정액급여 지급",q21_10,,main,living,,no,"서비스명 '생활안정지원사업', '생활안정지원금 월 1,976,000원'",main,main,True,True
+WLF00005909,no_signal,none,,,N,,none,none,,no,'1회 50만원 이하 물품 지급' — 현물,none,none,False,False
+WLF00002097,candidate,lump_sum,candidate,출산장려금 지원,q21_10,,candidate,lump_sum,,no,'첫째아 100만원 ... 출산장려금',candidate,candidate,True,True
+WLF00006556,no_signal,none,,,N,,none,none,,no,'24시간 돌봄 ... 보육서비스 제공',none,none,False,False
+WLF00003781,candidate,compensation,candidate,보훈대상자 위문금 지원,q21_03|q21_10,,candidate,compensation,,yes,"서비스명 '보훈대상자 위문금', '예우를 위하여 ... 위문금' — 보상과 위문금 경계",candidate,candidate,True,True
+WLF00002020,no_signal,none,,,N,,none,none,,no,'엽산제 및 의료기자재' 현물,none,none,False,False
+WLF00005595,main,expense_relief,main,만6세~만12세 어린이 대중교통 요금 무료화 사업,q21_10,,main,expense_relief,,no,'대중교통 이용시 요금 무료 ... 가계 부담 완화',main,main,True,True
+WLF00000033,excluded,org_target,excluded,노인복지민간단체지원,N,,excluded,org_target,,no,'비영리민간단체 ... 국고보조금',excluded,excluded,False,False
+WLF00001889,excluded,earmarked,excluded,medical: 저소득층 노인 안질환 의료비 지원사업,N,,excluded,earmarked,medical,no,"'백내장, 녹내장 수술비 및 사전검사비'",excluded,excluded,False,False
+WLF00005735,main,expense_relief,main,철도 정기승차권 교통비 지원사업,q21_10,,main,expense_relief,,no,'정기승차권 금액의 25% 지원 ... 교통비 부담 경감',main,main,True,True
+WLF00001577,no_signal,none,,,N,,excluded,earmarked,service,no,"'무연고사망자 장제비', '행려자 귀가여비' — 장제·보호 용도",none,excluded,False,False
+WLF00003167,candidate,form_only,candidate,[field] srvPvsnNm=현금지급,q21_10,,candidate,lump_sum,,no,'출산 전 준비금 50만원을 임신중 1회 지원' — 용도 제한 없는 일시금,candidate,candidate,True,True
+WLF00002979,main,expense_relief,main,저소득주민 건강보험료지원,q21_10,,main,expense_relief,,no,'건강보험료 및 장기요양보험료 지원',main,main,True,True
+WLF00006033,excluded,earmarked,excluded,service: 여성농업인 행복바우처 확대 지원,N,,candidate,unrestricted_cash,,yes,"'사용처: 모든 업종'인 행복바우처, 목적은 '삶의 질 향상' — 생활비 명시 없음",excluded,candidate,False,True
+WLF00004163,excluded,earmarked,excluded,q21_11: 여주시 청년 신혼부부 주택 전세자금 대출이자 지원,q21_11,,excluded,earmarked,q21_11,no,'주택 전세자금 대출이자 ... 연 최대 200만원',excluded,excluded,False,False
+WLF00004558,main,expense_relief,main,"수급자(생계, 의료, 주거, 교육, 차상위계층, 장애인(1~3급), 3세대 가정, 다자녀 가구) : 가정용 상수도 월 10㎥이내(월7,020원 한도) 요금 감면",q21_10|q21_11,,main,expense_relief,,no,'상수도 사용료 감면을 통한 생활안정',main,main,True,True
+WLF00002345,no_signal,none,,,N,,none,none,,no,'반찬지원 및 안부확인' 현물·서비스,none,none,False,False
+WLF00000227,main,living,main,저소득한부모가족/소년소녀가정·가정위탁아동 생활용품지원를 통한 생계지원,q21_10,,main,living,,yes,"'생활용품지원를 통한 생계지원', '생활용품 지원금' — 제공유형은 현물",main,main,True,True
+WLF00006786,excluded,earmarked,excluded,medical: 선천성 장애아 발견을 위한 기형아 검사비 지원,N,,excluded,earmarked,medical,no,'기형아 진료비 본인부담금 ... 3만원',excluded,excluded,False,False
+WLF00003268,no_signal,none,,,q21_05,,excluded,earmarked,medical,no,"'상해보험 단체 가입 ... 입원, 통원 의료비' — 민간 보험료",none,excluded,False,False
+WLF00004373,no_signal,none,,,q21_08|q21_11,,none,none,,no,'교육 이수 중 시설 거주' — 시설입소,none,none,False,False
+WLF00003551,no_signal,none,,,N,,excluded,earmarked,service,no,"'숙박비, 교통비, 식비 지원' — 노숙인 귀향 보호 용도",none,excluded,False,False
+WLF00000427,excluded,earmarked,excluded,medical: 노인에 대한 성인용 보행기 구입 본인부담금 지원,N,,excluded,earmarked,medical,no,'성인용보행기 구입시 본인부담금 지원' — 보조기기 용도,excluded,excluded,False,False
+WLF00005777,excluded,earmarked,excluded,culture: 군산근대역사박물관 다자녀가정 관람료 지원,q21_03,,excluded,earmarked,culture,no,'박물관 다자녀가정 관람료 면제' — 문화 용도,excluded,excluded,False,False
+WLF00006279,no_signal,none,,,N,,excluded,earmarked,q21_11,yes,'LPG호스 금속배관 교체 ... 시설개선 비용 일부 지원' — 주거 안전시설 용도,none,excluded,False,False
+WLF00002766,main,expense_relief,main,저소득주민 복리증진 (저소득층 국민건강보험료 지원),q21_10,,main,expense_relief,,no,'월 최저보험료 이하의 건강보험료 전액 지원',main,main,True,True
+WLF00004530,main,expense_relief,main,저소득 취약계층에 대한 건강보험료지원으로 국민건강 보호,q21_10,,main,expense_relief,,no,"'국민건강보험료 및 노인장기요양보험 ... 공단으로 일괄 지급', 종량제 봉투",main,main,True,True
+WLF00003898,main,living,main,"생계비, 주거비, 직업훈련비",q21_08|q21_10|q21_11,,main,living,q21_11;q21_08,no,'생계·주거·직업훈련비를 지원' — 생계 명시(주거·취업 다중),main,main,True,True
+WLF00003388,no_signal,none,,,q21_05,,excluded,earmarked,service,no,'응급안전알림서비스 장비 ... 통신비' — 돌봄 장비 유지 용도,none,excluded,False,False
+WLF00005816,main,expense_relief,main,다자녀 상수도 요금감면,q21_10,,main,expense_relief,,no,'상수도 사용료 20% 감면',main,main,True,True
+WLF00005092,excluded,earmarked,excluded,service: o 돌봄수당 지원- 돌봄수당 (일 4시간이상) : 20만원/월,N,,excluded,earmarked,service,no,'손자녀 돌봄수당 20만원/월' — 돌봄 용도,excluded,excluded,False,False
+WLF00000984,main,living,main,[대학생생활안정지원금],q21_10,,excluded,earmarked,q21_07,yes,"서비스명 '진로지원', '대학생생활안정지원금·학원비·수학여행비' — 생활안정 문구가 있으나 교육 용도 중심",main,excluded,True,False
+WLF00002898,no_signal,none,,,N,,excluded,earmarked,medical,no,"'틀니, 가교 시술비 지원'",none,excluded,False,False
+WLF00006250,main,living,main,농어촌 기본소득 시범사업,q21_10,,main,living,,no,'기본소득 지급 ... 월 15만원씩 지역사랑상품권',main,main,True,True
+WLF00000890,candidate,compensation,candidate,보훈대상자 위문,q21_10,,candidate,compensation,,yes,"서비스명 '보훈대상자 위문', '명절 3만원 현금 지급' — 보상과 위문금 경계",candidate,candidate,True,True
+WLF00002092,main,living,main,저소득층 생활안정 기반 마련을 위해 저금리의 자금 융자,q21_10,,main,living,,yes,'저소득층 생활안정 기반 마련을 위해 저금리의 자금 융자' — 자활기업 등 기관도 대상,main,main,True,True
+WLF00005793,main,expense_relief,main,하수도요금 감면,q21_10,,main,expense_relief,,no,'하수도 월사용료 ... 요금을 감면',main,main,True,True
+WLF00001525,no_signal,none,,,N,,none,none,,no,'인플루엔자 예방접종' 무료 접종 서비스,none,none,False,False
+WLF00001941,excluded,earmarked,excluded,"medical: 신변처리용품(기저귀, 패드 등) 사용에 따른 뇌병변장애인의 생활 불편 및 경제적 부담 완화",N,,excluded,earmarked,service,no,'신변처리용품 월 구입비의 50% 지원' — 위생용품 용도,excluded,excluded,False,False
+WLF00000285,excluded,earmarked,excluded,q21_07: 법정저소득층 입학준비금,q21_03|q21_07,dependent,excluded,earmarked,q21_07,no,"'어린이집 입학준비금 ... 원복, 체육복, 가방 구입비'",excluded,excluded,False,False
+WLF00003257,main,expense_relief,main,이동통신요금감면,q21_10|q21_11,,main,expense_relief,,no,'가계통신비 부담완화를 위해 통신요금을 감면',main,main,True,True
+WLF00003796,main,expense_relief,main,저소득주민 국민건강보험료 지원,q21_10,,main,expense_relief,,no,'국민건강보험료를 지원',main,main,True,True
+WLF00005613,excluded,earmarked,excluded,q21_07: 어린이집입학준비금지원사업,q21_07,dependent,excluded,earmarked,q21_07,yes,"서비스명 '어린이집입학준비금', '1인당 110천원' — 용도 증빙 없어 일시금과 경계",excluded,excluded,False,False
+WLF00002155,excluded,earmarked,excluded,medical: 자살시도자 및 정신질환자 응급의료비 지원,N,,excluded,earmarked,medical,no,'정신의료기관 외래진료 및 치료비',excluded,excluded,False,False
+WLF00006227,main,expense_relief,main,"유선전화(인터넷요금전화포함), 초고속(인터넷통신)요금감면",q21_10,,main,expense_relief,,no,'가계통신비 부담완화 ... 통신요금 감면',main,main,True,True
+WLF00006328,excluded,earmarked,excluded,medical: 소아‧청소년 제1형 당뇨병 환자 지원사업,N,,excluded,earmarked,medical,no,'당뇨관리기기 ... 본인부담금 일부 지원',excluded,excluded,False,False
+WLF00003299,main,expense_relief,main,저소득층 냉·난방비 지원사업,q21_10,,main,expense_relief,,no,"'냉방비 10만원, 난방비 20만원' — 생활 필수 연료비 경감",main,main,True,True
+WLF00000568,no_signal,none,,,N,,excluded,earmarked,medical,no,"'임부 초음파검사(2만원 이내, 5회)'",none,excluded,False,False
+WLF00001963,excluded,earmarked,excluded,medical: 산모신생아 건강관리서비스 본인부담금 지원,N,,excluded,earmarked,service,no,'산모 신생아 건강관리 서비스 본인부담금 90% 지원',excluded,excluded,False,False
+WLF00004428,candidate,form_only,candidate,[field] srvPvsnNm=현금지급,q21_10|q21_11,,excluded,earmarked,service,no,"'식대, 숙박비 등' — 위기 여성 보호 용도",candidate,excluded,True,False

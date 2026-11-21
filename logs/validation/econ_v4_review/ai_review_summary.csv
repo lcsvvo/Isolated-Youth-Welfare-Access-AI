@@ -1,0 +1,6 @@
+﻿review,n,result,note
+holdout_1,50,"main 17/20, candidate 13/15, excluded 12/15 (Claude 판정)",AI 판정. 사람 검수 아님. 정확도로 쓰지 않는다
+ai_review_1_pre_fix,90,"tier 오류 main 1, candidate 5, excluded 2 (독립 에이전트, 수정 전 규칙)",AI 판정. 사람 검수 아님. 정확도로 쓰지 않는다
+ai_review_2_post_fix,90,"tier 오류 main 2, candidate 3, excluded 2 (독립 에이전트, v4a 규칙)",AI 판정. 사람 검수 아님. 정확도로 쓰지 않는다
+ai_review_3_blind,130,"규칙과 불일치: main 5/30(경계 2), candidate 6/30(경계 1), excluded 2/30(경계 2), ⑩ 신호 없음 1/40. ⑩ 포함 여부 불일치 13/130","블라인드(규칙 값 미제공) AI 판정, 사용 사례·사람 검수 표본 제외. 정확도로 쓰지 않는다"
+ai_review_3_edu_blind,40,⑦ 수혜자 일치 32/40,"S2_AB ⑦ 표본, 블라인드 AI 판정"

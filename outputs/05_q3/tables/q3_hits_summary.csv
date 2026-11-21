@@ -1,0 +1,17 @@
+﻿cond_id,query_type,n_queries,median_n_hits,min_n_hits,max_n_hits,n_zero_result,n_cutoff_tie
+short_t0_or,admin,30,322.0,6,688,0,27
+short_t0_or,daily,30,41.0,0,429,3,22
+full_t0_or,admin,30,397.5,8,1005,0,25
+full_t0_or,daily,30,131.5,2,681,0,22
+short_t1_or,admin,30,381.0,191,1007,0,24
+short_t1_or,daily,30,107.5,13,1038,0,26
+full_t1_or,admin,30,639.5,340,2207,0,11
+full_t1_or,daily,30,429.0,62,1797,0,17
+short_t0_and,admin,30,0.0,0,133,18,4
+short_t0_and,daily,30,0.0,0,0,30,0
+full_t0_and,admin,30,2.5,0,225,10,7
+full_t0_and,daily,30,0.0,0,0,30,0
+short_t0_or_nodf,admin,30,4324.0,16,4443,0,23
+short_t0_or_nodf,daily,30,44.0,0,1724,3,23
+full_t0_or_nodf,admin,30,4835.0,67,4915,0,14
+full_t0_or_nodf,daily,30,168.0,4,2160,0,22

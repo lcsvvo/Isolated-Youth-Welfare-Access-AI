@@ -1,0 +1,133 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (원자료와 전처리 데이터는 공개하지 않음)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/.gitignore
+data/processed/*
+!data/processed/.gitkeep
+*.csv
+!tests/data/*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.sav
+*.dta
+*.sas7bdat
+*.zip
+*.gz
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.geojson
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Personal workspace
+private/*
+!private/.gitkeep
+
+# Documents (managed in Notion)
+*.pdf
+*.pptx
+*.docx
+*.hwp
+*.hwpx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 단계별 결과표는 공유 (outputs/<stage_id>/tables/)
+!outputs/**/*.csv
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials*.json
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# STEP 02 채점 키는 블라인드 라벨링을 위해 공유하지 않는다 (notebooks/02_labeling.ipynb 실행 시 생성)
+outputs/02_labeling/tables/labeling_key.csv
+
+outputs/02_labeling/tables/labeling_key_round1b_youth_scope.csv
+outputs/02_labeling/tables/labeling_key_round1c_rule_disagreement.csv
+outputs/02_labeling/tables/label_disagreement_causes.csv
+outputs/02_labeling/tables/labeling_key_round1d_econ.csv
+
+# Q1 공급 민감도 결과표는 공유 (python -m src.gap_index.q1_supply 실행 시 생성)
+!logs/validation/q1_supply_sensitivity/*.csv
+!logs/validation/q1_access_verification/
+!logs/validation/q1_access_verification/*.csv
+!logs/validation/econ_v4_review/
+!logs/validation/econ_v4_review/*.csv
+!logs/validation/label_qc_2026-11-05/
+!logs/validation/label_qc_2026-11-05/*.csv
+!logs/validation/q1_labor_future_review/
+!logs/validation/q1_labor_future_review/*.csv
+
+# Q1·말뭉치 검수자 배포 파일과 배정표는 공유 (python -m src.labeling.review_split 실행 시 생성)
+!logs/validation/q1_round1_review/
+!logs/validation/q1_round1_review/**/*.csv
+!logs/validation/corpus_gold_review/
+!logs/validation/corpus_gold_review/**/*.csv
+
+# AI 파이프라인: 임베딩·BM25 토큰 캐시는 제외하고, 연결 확인용 가짜 자료만 공유
+ai/data/*.npy
+ai/data/*.pkl
+ai/data/*.pkl.tmp
+!ai/data/sample_services.csv
+!ai/data/dev_sample.jsonl
+
+# Q2 최종 분석: 검수 파일 정정본과 정정 로그 공유
+!logs/validation/q2_final/
+!logs/validation/q2_final/**/*.csv
+ai/data/*.npz
+ai/data/*.tmp
+ai/data/models/
+
+.test-deps/
+
+
+
+dense-colab/
+
+# Local follow-up results and reviewer workbooks; scripts are tracked separately.
+/outputs/03_q1_recommendation/
+/outputs/04_q2_recommendation/
+/outputs/05_q3_rebaseline/
+/outputs/05_q3_independent/
+/outputs/05_q3_top5_audit/
+/outputs/10_dense_ops/
+/outputs/11_rrf_weights/
+/outputs/runtime_data/
