@@ -14,6 +14,11 @@
 - 서비스 건수에는 정원, 예산, 실제 이용 인원이 반영되지 않음
 - 앱: [banggeoleum.streamlit.app](https://banggeoleum.streamlit.app/)
 
+<p align="center">
+  <img src="docs/images/bangeoreum_app.png" width="90%" alt="반 걸음 앱 첫 화면">
+</p>
+<p align="center"><sub>「반 걸음」 첫 화면. 상황을 일상어로 적거나 예시 문장을 고르면 대화로 필요한 지원과 조건을 확인함.</sub></p>
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
@@ -28,7 +33,7 @@
 | 보조금24 공공서비스 | 2026-10-31 수집 | 서비스 10,942건 | 행정안전부, 공공데이터포털 |
 | 2023 고립, 은둔 청년 실태조사 | 2023 | 은둔 표본 4,448명, 고립 보조집단 3,032명 | 보건복지부, 한국보건사회연구원 |
 | 2024 청년의 삶 실태조사 | 2024 | 은둔 정의 문항 근거 | 국무조정실 |
-| 검색 평가 자료 | 2026-11 | 질의쌍 30개, 평가 카드 32장 | 팀 작성, 사람 판정 |
+| 검색 평가 자료 | 2026-11 | 질의쌍 30개, 독립 평가 카드 80장 | 팀 작성, 사람 판정 |
 
 - 원자료와 전처리 데이터는 저장소에 포함하지 않음. 출처와 배치 경로는 [data/README.md](data/README.md)
 - 실태조사 응답 자료는 이용허락 범위에 따라 재배포하지 않음
@@ -58,9 +63,10 @@
    - 위기 표현은 키워드 규칙과 LLM 판정 중 하나라도 감지하면 추천을 멈추고 전문기관 안내
 
 5. **추천 성능 평가**
-   - 평가 카드 32장의 상위 5개 추천을 사람이 읽고 요청에 직접 도움이 되는지 판정
-   - Precision@5, nDCG@5, Success@5, 검수 후보군 Recall@5 계산
-   - 단계별 차이는 카드 단위 대응 부트스트랩(10,000회) 95% 구간으로 확인
+   - 팀원이 작성한 독립 평가 카드 80장을 개발 자료와 분리해 평가에만 사용
+   - 검색 방식 비교는 80장 중 사전 선정한 32장(검수자별 8장)의 상위 5개 추천을 작성자가 아닌 팀원이 판정
+   - Precision@5, nDCG@5, Success@5, 검수 후보군 Recall@5를 계산하고 단계별 차이는 카드 단위 대응 부트스트랩(10,000회) 95% 구간으로 확인
+   - Kanana 추출부터 추천까지의 전체 처리는 80장 원문을 그대로 넣어 위기 판단, 욕구 추출, 추천 결과 확인
 
 ## Analysis Workflow
 
@@ -73,7 +79,7 @@ flowchart LR
     B --> Q3[Q3<br/>일상어 검색]
     Q1 -- 수요 영역 --> M[반 걸음<br/>연결 모델]
     Q3 -- 검색 격차 --> M
-    M -- 카드 32장 --> E[사람 판정<br/>성능 평가]
+    M -- 독립 카드 80장 --> E[사람 판정<br/>성능 평가]
 ```
 
 ## Key Results
@@ -106,7 +112,7 @@ flowchart LR
 ### Q3. 일상어 입력으로 도움이 되는 서비스를 찾는가
 
 - 일상어와 행정어 질의쌍 30개의 상위 10개 목록에서 평균 공통 서비스는 0.87개, 공통 서비스가 없는 쌍은 21개(서비스명, 요약, 대상 기준)
-- 평가 카드 32장에서 Precision@5는 BM25 0.088, BM25와 BGE-M3를 결합한 RRF 0.213, 규칙 적용 0.231
+- 독립 평가 카드 80장 중 검색 비교용 32장에서 Precision@5는 BM25 0.088, BM25와 BGE-M3를 결합한 RRF 0.213, 규칙 적용 0.231
 - RRF의 BM25 대비 Precision@5 차이는 **+0.125** (95% 구간 +0.056–+0.200)
 - 규칙 적용의 추가 차이 +0.019는 95% 구간이 0을 포함하고, Q1 수요 가점은 Precision@5 변화 없음
 - 재현율은 사람이 검토한 후보 안에서만 계산했으며 전체 서비스 기준 재현율이 아님
@@ -121,14 +127,28 @@ flowchart LR
 <p align="center">
   <img src="outputs/final_bangeoreum/figures/q3_precision_comparison.png" width="85%" alt="검색 방식별 Precision@5와 단계별 차이">
 </p>
-<p align="center"><sub>평가 카드 32장, 저장된 순위와 사람 관련성 판정 기준. 오른쪽 구간은 카드 단위 대응 부트스트랩 95% 구간. 개인 자격 적합성은 별도 판정.</sub></p>
+<p align="center"><sub>독립 평가 카드 80장 중 검색 비교용 32장, 저장된 순위와 사람 관련성 판정 기준. 오른쪽 구간은 카드 단위 대응 부트스트랩 95% 구간. 개인 자격 적합성은 별도 판정.</sub></p>
+
+#### Kanana 포함 전체 처리 (독립 평가 카드 80장)
+
+| 항목 | 결과 |
+|---|---:|
+| 위기 재현율, 오탐 | 8/8, 0/72 |
+| 욕구 영역 F1 (위기 아닌 72장) | 0.675 |
+| 주욕구 정확도 | 0.609 |
+| 검색이 필요한 64장 중 실제 검색 | 44장 |
+| 추천 정밀도, Success (64장, 사용자 확인 없는 자동 실행) | 0.439, 31/64 |
+
+- 카드 원문만 Kanana-2-3B-Instruct에 넣어 위기 판단부터 추천(최대 5개)까지 앱과 같은 경로로 실행
+- 32장 외 48장의 추천 관련성은 블라인드 AI 판정을 사용했으며, AI 판정은 사람 판정 60쌍 대비 정확도 0.85
+- 유의성 검정은 하지 않았으며 상세는 [Q3 Kanana 전체 검증](docs/Q3_KANANA_E2E_2026-11-18.md)
 
 ## Limitations
 
 - 수요 조사와 공급 자료는 시점과 단위가 달라 개인에게 공급이 충분한지 직접 측정할 수 없음
 - 실태조사 표본은 비가중, 비확률 표본이라 전체 청년의 필요도로 일반화하기 어려움
 - 접근성 라벨은 API 원문에 의존하며 본인 인증, 서류 준비 같은 실제 신청 부담은 반영하지 못함
-- 검색 평가는 카드 32장 규모이며 실제 청년과 복지 실무자 대상 사용성 검증은 수행하지 않음
+- 검색 방식 비교는 32장, 전체 처리 검증은 80장 규모이며 실제 청년과 복지 실무자 대상 사용성 검증은 수행하지 않음
 - 모델 성능은 평가 시점의 결과이며 추출, 검색어 생성, 추천 단계는 개선 과정에 있음
 
 ## Repository Structure
@@ -147,5 +167,5 @@ flowchart LR
 
 - 최종 분석: [notebooks/FINAL_bangeoreum.ipynb](notebooks/FINAL_bangeoreum.ipynb)
 - 앱 실행과 모델 구성: [ai/README.md](ai/README.md)
-- Q3 평가 상세: [docs/Q3_FINAL_EVALUATION_2026-11-17.md](docs/Q3_FINAL_EVALUATION_2026-11-17.md)
+- Q3 평가 상세: [검색 방식 비교](docs/Q3_FINAL_EVALUATION_2026-11-17.md), [Kanana 전체 검증](docs/Q3_KANANA_E2E_2026-11-18.md)
 - 데이터 출처와 배치: [data/README.md](data/README.md)
